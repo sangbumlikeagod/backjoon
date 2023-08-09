@@ -1,15 +1,18 @@
 import sys
 
-file = open('', 'r')
+
+name = __file__.split('\\')[-1][:-3]
+file = open(f'{name}.txt', 'r')
 sys.stdin = file
+test_case = int(input())
 
-long, short = map(int, input().split())
-lst = list(map(int, input().split()))
 
-max_sum = partial_sum = sum(lst[:short])
-for _ in range(long - short):
-    partial_sum -= lst[_]
-    partial_sum += lst[short + _ ]
-    if partial_sum > max_sum:
-        max_sum = partial_sum
-print(max_sum)
+for num in range(test_case):
+    return_value = 0
+
+
+
+
+
+
+    print(f'#{num + 1} {return_value}')
