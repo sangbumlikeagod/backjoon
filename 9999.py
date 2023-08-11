@@ -17,7 +17,7 @@ for num in range(test_case):
     prev = 0
     for i in range(num_of_peek):
         N, M = map(int, input().split())
-        num_with_interval.append((N - prev,0))
+        num_with_interval.append((N - prev, 0))
         num_with_interval.append((M - N,1))
         prev = M
     max_count = 0
