@@ -8,7 +8,7 @@ test_case = int(input())
 test_case = 20
 
 from collections import deque
-
+times = [0] * 200000
 for num in range(test_case):
     return_value = 0
     length = int(input())

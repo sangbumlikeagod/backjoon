@@ -44,12 +44,12 @@ for num in range(test_case):
                 Sum_only_peek += times[i] - prev
                 q.append((times[i] - prev, 1))
             else:
-                if times[i] - prev > length:
-                    q = deque()
-                    prev = times[i]
-                    i += 1
-                    Sum_only_peek = Sum_with_blank = 0
-                    continue
+                # if times[i] - prev > length:
+                #     q = deque()
+                #     prev = times[i]
+                #     i += 1
+                #     Sum_only_peek = Sum_with_blank = 0
+                #     continue
                 Sum_with_blank += times[i] - prev
                 q.append((times[i] - prev, 0))
             prev = times[i]
