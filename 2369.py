@@ -38,5 +38,5 @@ for i in range(1, N + 1):
                 #     count += 1
                     
         # 합에 대해서만 따로 할 수 있게? 
+        
 print(count)
-                
