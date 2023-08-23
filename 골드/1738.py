@@ -16,7 +16,7 @@ heap = []
 
 
 def search(node, byfar):
-    # print(node, heap)
+    print(node, heap)
     overlap[node] = 1
 
     if node == N:
@@ -54,8 +54,11 @@ def search(node, byfar):
             value, new_node, new_lst = heapq.heappop(heap)
             return search(new_node, new_lst)
         
-
+    
+ans = -1
+# 도착을 할 수 있다면 일단 넣는다 그냥 휘둘리면 뺴야할 뿐 그런데 이게 어떻게 최단시간 알고리즘에서 역행을 하길래 
 def search(node, byfar):
+    print(node, lst)
     overlap[node] = 1
     if node == N:
         if not heap:
@@ -69,7 +72,12 @@ def search(node, byfar):
         for i in dic[node]:
             if lst[i[1]] > i[0] + lst[node]:
                 if i[1] in byfar:
-                    return -1
+                    if not heap:
+                        return -1
+                    else: 
+                        value, new_node, new_lst = heapq.heappop(heap)
+                        result = search(new_node, new_lst)
+                        
                 lst[i[1]] = i[0] + lst[node]
                 overlap[i[1]] = 1
                 heapq.heappush(heap, (lst[i[1]], i[1], byfar + [i[1]]))
