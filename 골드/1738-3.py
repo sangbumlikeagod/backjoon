@@ -12,29 +12,30 @@ class RoadtoGoal:
         self.heap = []
         
     def findway(self, node):
-        if node == N:
-            return self.stack
-        self.stack.append(node)
-        
-        if node in dic:
-            for i in dic[node]:
-                if self.gogo[i[1]] > i[0] + self.gogo[node] and i[1] in self.stack:
-                    if not self.heap:
-                        return -1
-                    else:
-                        new_course = heapq.heappop(self.heap)
-                        while new_course in  dic.get(self.stack[-1], []):
-                            self.stack.pop()
-                    self.gogo[i[1]] = i[0] + self.gogo[node]
+        while self.heap:
+            if node == N:
+                return self.stack
+            self.stack.append(node)
+            
+            if node in dic:
+                for i in dic[node]:
+                    if self.gogo[i[1]] > i[0] + self.gogo[node] and i[1] in self.stack:
+                        if not self.heap:
+                            return -1
+                        else:
+                            new_course = heapq.heappop(self.heap)
+                            while new_course in  dic.get(self.stack[-1], []):
+                                self.stack.pop()
+                        self.gogo[i[1]] = i[0] + self.gogo[node]
 
-                    heapq.heappush(self.heap, (self.gogo[i[1]], i[1]))
-        else:
-            if not self.heap:
-                return 
+                        heapq.heappush(self.heap, (self.gogo[i[1]], i[1]))
             else:
-                new_course = heapq.heappop(self.heap)
-                while new_course in  dic.get(self.stack[-1], []):
-                    self.stack.pop()
+                if not self.heap:
+                    return 
+                else:
+                    new_course = heapq.heappop(self.heap)
+                    while new_course in  dic.get(self.stack[-1], []):
+                        self.stack.pop()
         
         pass
 for num in range(test_case):
