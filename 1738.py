@@ -32,6 +32,7 @@ def search(node, byfar):
         
     if node in dic:
         for i in dic[node]:
+            print(i)
             if lst[i[1]] > i[0] + lst[node]:
                 if i[1] in byfar:
                     return -1
@@ -67,6 +68,7 @@ def search(node, byfar):
 
     if node in dic:
         for i in dic[node]:
+            print(i)
             if lst[i[1]] > i[0] + lst[node]:
                 if i[1] in byfar:
                     return -1
