@@ -84,8 +84,7 @@ for case in range(test_case):
                         
                         while cond:
                             hexa = bin(int(lst[ro][tmp], base = 16))[2:].zfill(4)
-                            if tmp == col:
-                                hexa = hexa.rstrip('0')
+                            if tmp == col:                                hexa = hexa.rstrip('0')
                             print(hexa, word)
                             for i in range(len(hexa) - 1 + comp, -1, -step):
                                 word = hexa[i] + word
