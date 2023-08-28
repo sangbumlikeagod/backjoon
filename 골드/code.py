@@ -50,11 +50,11 @@ for case in range(test_case):
                         tmp = col
                         cond = True
                         comp = 0
-                        while cond:
+                        while cond and tmp >= 0:
                             hexa = bin(int(lst[ro][tmp], base = 16))[2:].zfill(4)
                             if not word:
                                 hexa = hexa.rstrip('0')
-                            print(hexa, word)
+                            # print(hexa, word, tmp)
                             for i in range(len(hexa) - 1 + comp, -1, -step):
                             # for i in hexa:
                                 word = hexa[i] + word
@@ -62,15 +62,19 @@ for case in range(test_case):
                                     cond = False
                                     break
                             else:
-                                print('\t\t' , i)
+                                # print('\t\t' , i, '\t' , step, comp)
                                 # if i != 0:
                                 comp = i - step + 1
+                                while abs(comp) >= 4:
+                                    tmp -= 1
+                                    comp += 4
+                                
                                 
                             tmp -= 1
                         
                         # print(word)
                         if int(f'0b{word}' , base=0) in dic:
-                            print(dic[int(f'0b{word}' , base=0)])
+                            # print(dic[int(f'0b{word}' , base=0)])
                             not_find = False
                     print(step)
                     true_code = ''
@@ -82,11 +86,11 @@ for case in range(test_case):
                         print(comp)
                         cond = True
                         
-                        while cond:
+                        while cond and tmp > 0:
                             hexa = bin(int(lst[ro][tmp], base = 16))[2:].zfill(4)
                             if tmp == col:
                                 hexa = hexa.rstrip('0')
-                            print(hexa, word)
+                            # print(hexa, word, tmp)
                             for i in range(len(hexa) - 1 + comp, -1, -step):
                                 word = hexa[i] + word
                                 if len(word) == 7:
@@ -99,7 +103,7 @@ for case in range(test_case):
                                     # if ttmp < 0:
                                     #     comp = -step + 1
                                     #     break
-                                        
+                                    
                                     while ttmp - step >= 0:
                                         ttmp -= step
                                         word = hexa[ttmp] + word
@@ -110,10 +114,21 @@ for case in range(test_case):
                                     # word = hexa[:i:step]
                                     # word = ''
                                     comp = ttmp - step + 1
+                                    # while abs(comp) >= 4:
+                                    #     for i in range(end, ro + 1):
+                                    #         lst[i][tmp] = '0'
+                                    #     tmp -= 1
+                                    #     comp += 4
                                     # print(word)
+                                    # print(word, comp)
                                     break
                             else:
                                 comp = i - step + 1
+                                while abs(comp) >= 4:
+                                        for i in range(end, ro + 1):
+                                            lst[i][tmp] = '0'
+                                        tmp -= 1
+                                        comp += 4
                             for i in range(end, ro + 1):
                                 lst[i][tmp] = '0'
                             tmp -= 1
