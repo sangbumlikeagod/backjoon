@@ -39,7 +39,8 @@ def moving(direction, remain, new_array):
     
     # 앞으로 쫙 땡겨야한다는 뜻이었지
     # 1을 더한다는건 아래 오른쪽으로 이동한다는것 낮은쪽에서 높은쪽으로 간다는것 
-    if sum(direction) == 1:
+    if sum(direction) == -1:
+        que = []
         for row in range(length):
             for column in range(length):
                 # 어느방향으로 움직일지는 dir이 알려준다 처음부터 쭉 움직인다.
@@ -55,9 +56,17 @@ def moving(direction, remain, new_array):
                         # 같은애를 만났을 시 합쳐준다
                         if 0 <= row_copy + direction[0] < length and 0 <= column_copy + direction[1] < length and \
                             array[row_copy + direction[0]][column_copy + direction[1]] == array[row][column]:
-                            array[row_copy + direction[0]][column_copy + direction[1]] *= 2
-                            array[row][column] = 0
+                            array[row][column] *= 2
+                            array[row_copy + direction[0]][column_copy + direction[1]] = 0
+                            que.append([row, column])
+        for rorow, cocolumn in que:
+            while 0 <= rorow + direction[0] < length and 0 <= cocolumn + direction[1] < length and array[rorow + direction[0]][cocolumn + direction[1]] == 0:
+                        array[rorow + direction[0]][cocolumn + direction[1]], array[rorow][cocolumn] = array[row][column], 0 
+                        rorow += direction[0]
+                        cocolumn += direction[1]
+        
     else:
+        que = []
         for row in range(length - 1, -1 ,-1):
             for column in range(length - 1, -1 ,-1):
                 if array[row][column]: # 값이 있을때만 이동
@@ -72,12 +81,19 @@ def moving(direction, remain, new_array):
                         # 같은애를 만났을 시 합쳐준다
                         if 0 <= row_copy + direction[0] < length and 0 <= column_copy + direction[1] < length and \
                             array[row_copy + direction[0]][column_copy + direction[1]] == array[row][column]:
-                            array[row_copy + direction[0]][column_copy + direction[1]] *= 2
-                            array[row][column] = 0
+                            array[row][column] *= 2
+                            array[row_copy + direction[0]][column_copy + direction[1]] = 0
+                            que.append([row, column])
+        for rorow, cocolumn in que:
+            while 0 <= rorow + direction[0] < length and 0 <= cocolumn + direction[1] < length and array[rorow + direction[0]][cocolumn + direction[1]] == 0:
+                        array[rorow + direction[0]][cocolumn + direction[1]], array[rorow][cocolumn] = array[row][column], 0 
+                        rorow += direction[0]
+                        cocolumn += direction[1]
+            
     ret_value = 0
     print( * array , sep=' \n ')
     # for i in [[-1,0], [1, 0], [0, -1], [0, 1]]:
-    for i in [[-1,0]]:
+    for i in [[0,-1]]:
         cand = moving(i, remain - 1, array)
         if cand > ret_value:
             ret_value = cand
@@ -86,7 +102,7 @@ def moving(direction, remain, new_array):
 return_value = 0
 for i in [[-1,0]]:
 # for i in [[-1,0], [1, 0], [0, -1], [0, 1]]:
-    cand = moving(i, 5, board)
+    cand = moving(i, 2, board)
     if cand > return_value:
         return_value = cand
     
@@ -96,6 +112,4 @@ print(return_value)
  
 
 # 동서남북 전부다 구현했으면 다음 단계
-
 # 움직이질 못하게 되네
-# 
