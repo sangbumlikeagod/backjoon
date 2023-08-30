@@ -77,7 +77,7 @@ def moving(direction, remain, new_array):
     ret_value = 0
     print( * array , sep=' \n ')
     # for i in [[-1,0], [1, 0], [0, -1], [0, 1]]:
-    for i in [[-1,0]]:
+    for i in [[-1,0]]: 
         cand = moving(i, remain - 1, array)
         if cand > ret_value:
             ret_value = cand
