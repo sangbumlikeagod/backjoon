@@ -14,8 +14,7 @@ for i in range(N):
                 camera.append((i, j))
             else: mamamax -= 1
     room += [local]
-# print(*room, camera, sep='\n')
-# 카메라의 4방향 좌표들 확인.
+
 if not camera:
     print(mamamax)
 else:
@@ -40,29 +39,24 @@ else:
                 room[i[0] + k * lrud[0]][i[1] + k * lrud[1]] != 6:
                     tmp.add((i[0] + k * lrud[0], i[1] + k * lrud[1]))
                     k += 1
-            # print(tmp)
             camera_lst += [tmp]
-        # print(camera_lst)
         for coverage in securitiy_dic[room[i[0]][i[1]]]:
             total_set = set()
             for specific in coverage:
                 total_set = total_set | camera_lst[specific]
             camera_dic[i] = camera_dic.get(i, []) + [total_set]
         
-    # print(camera_dic)
     max_val = 0
-    # print(camera_dic)
+
     def search(idx, sett):
         global max_val 
-        # print(sett)
-        # print(idx)
         if idx == len(camera) - 1:
             for i in camera_dic[camera[idx]]:
                 if len(sett | i) > max_val:
                     max_val = len(sett | i)
             return
                 
-        # print(camera[idx])
+
         for i in camera_dic[camera[idx]]:
             search(idx + 1, sett | i)
 
@@ -72,7 +66,6 @@ else:
         
         
         
-    # 카메라의 위치별로 
 
             
 
