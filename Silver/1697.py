@@ -111,7 +111,7 @@ else:
             if count < low_count:
                 low_count = count 
         elif next > N:
-            if next // 2 < N:
+            if (next + 1)// 2 < N:
                 if next % 2:
                     if min( next - N, N - (next + 1) // 2 + 2 , N - (next - 1) // 2 + 2) + count < low_count:
                         low_count = min( next - N, N - (next + 1) // 2 + 2 , N - (next - 1) // 2 + 2) + count
