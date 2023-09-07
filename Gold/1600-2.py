@@ -1,58 +1,53 @@
 import sys
 sys.stdin = open(__file__.split('\\')[-1][:-5] + '.txt','r')
+K = int(input())
 
-K = int(sys.stdin.readline())
-
-H, W = map(int, sys.stdin.readline().split())
-road = [list(sys.stdin.readline().split()) for _ in range(W)]
+H, W = map(int, input().split())
+road = [input().split() for _ in range(W)]
 #print(*road, sep='\n')
 from collections import deque
-
-que = deque()
-que.append((0, 0, 0))
+que = deque([(0, 0, 0, K)])
     
-visited = [[-1] * H for _ in range(W)]
-visited[0][0] = K
+visited = [[-1 for _ in range(H)] for _ in range(W)]
+monkey = [[1, 0], [-1, 0], [0, 1], [0, -1]]
+horse = [[-2, 1], [-1, 2], [1, 2], [2, 1], [2, -1], [1, -2], [-1, -2], [-2, -1]]
 
-# 상하좌우 뒤 말 움직임 시계방향
-# dx_for_horse = [-2, -1, 1, 2, 2, 1, -1, -2]
-# dy_for_horse = [1, 2, 2, 1, -1, -2, -2, -1]
-# dx_for_monkey = [1, -1, 0, 0]
-# dy_for_monkey = [0, 0, 1, -1]
-d_for_monkey = [[1, 0], [-1, 0], [0, 1], [0, -1]]
-dy_for_horse = [[-2, 1], [-1, 2], [1, 2], [2, 1], [2, -1], [1, -2], [-1, -2], [-2, -1]]
+W, H = W-1, H-1
+answer = -1
 
+def why_not_working(next_x, next_y):
+    if 0 <= next_x <= W and 0 <= next_y <= H:
+        return False
+    return True 
+    
+    
 while que:
-    cordx, cordy, count = que.popleft()
-    # print('=============================')
-    # print(cordx, cordy, count, que)
-    # print(*visited , sep = '\n')
-    # print('=============================')
+    cordx, cordy, count, remain = que.popleft()
     
-    if cordx == W - 1 and cordy == H - 1:
-        print(count)
+    if cordx == W and cordy == H:
+        answer = count
         break
-    if visited[cordx][cordy]:
-        for i in dy_for_horse:
-            if not(0 <= cordx + i[0] < W and 0 <= cordy +i[1] < H) \
-                or road[cordx + i[0]][cordy +i[1]] == '1':
+    if remain >= 1:
+        for i in horse:
+            next_x, next_y = cordx + i[0], cordy +i[1]
+            if why_not_working(next_x, next_y) \
+                or road[next_x][next_y] == '1':
                     continue
-            if visited[cordx + i[0]][cordy +i[1]] < visited[cordx][cordy]:
-                visited[cordx + i[0]][cordy +i[1]] = visited[cordx][cordy] - 1
-                que.append((cordx + i[0], cordy +i[1], count + 1))
+            if visited[next_x][next_y] < remain:
+                visited[next_x][next_y] = remain - 1
+                que.append((next_x, next_y, count + 1, remain - 1))
 
-    for i in d_for_monkey:
-        if not(0 <= cordx + i[0] < W and 0 <= cordy +i[1] < H) or\
-            road[cordx + i[0]][cordy +i[1]] == '1': 
+    for i in monkey:
+        next_x, next_y = cordx + i[0], cordy +i[1]
+        if why_not_working(next_x, next_y) or\
+            road[next_x][next_y] == '1': 
                 continue
             
-            # que.append((cordx + i[0], cordy +i[1], count + 1, remain))
-        if visited[cordx + i[0]][cordy +i[1]] < visited[cordx][cordy]:
-            visited[cordx + i[0]][cordy +i[1]] = visited[cordx][cordy]
-            que.append((cordx + i[0], cordy +i[1], count + 1))
+        if visited[next_x][next_y] < remain:
+            visited[next_x][next_y] = remain
+            que.append((next_x, next_y, count + 1 , remain))
 
 # 칸을 3개로 줄일 수 있음
 # 그런데 remain빼기 가능하지 않을까?
 
-else:
-    print(-1)
+print(answer)
