@@ -22,7 +22,8 @@ else:
     while que:
         next, count = que.popleft()
         if next == K:
-            if value >  
+            if value >  1:
+                continue
         for i in [next * 2, next + 1, next - 1]:
             if N <= i <= K and not visited[i]:
                 visited[i] = 1
