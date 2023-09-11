@@ -17,6 +17,7 @@ for i in range(N):
 # 
 
 def dfs(vil, num, visited, origin):
+    print(dic)
     local = []
     if num == N:
         return NbyN[vil][origin] if NbyN[vil][origin] else 2 ** 31 - 1
