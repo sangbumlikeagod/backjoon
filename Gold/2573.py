@@ -17,13 +17,14 @@ for i in range(M):
             mass -= 1
             que.append((i, j))
     sea += [lst]
-# print(*sea, sep = '\n', end='\n')
-# print()
-# print(que)
+
+
 
 one_dung = True
+# 한 덩어리인지 확인해주는 코드
 scount = 0
 while one_dung:
+    # 녹이는 회차의 BFS
     change = []
     for _ in range(len(que)):
         i, j = que.popleft()
@@ -36,8 +37,7 @@ while one_dung:
                     ttmp -= 1
                 else:
                     tmp.append((i + nwes[0], j + nwes[1]))
-        # 흐음 어딨냐 
-        
+        # 빙산이 남아있으면 다시 추가를 준비
         if ttmp:
             que.append((i, j))
         change.append((i, j, ttmp))
@@ -45,10 +45,10 @@ while one_dung:
     for arg in change:
         x, y, val = arg
         sea[x][y] = val
-    
-    
-    # print(que)
+    # 년수에 1년 더함 
     scount  += 1
+
+    # 녹았는지를 확인하는 BFS
     if que:
         new_queue = deque()
         new_queue.append(tuple(que[0]))
@@ -66,13 +66,11 @@ while one_dung:
                     and sea[x + nwes[0]][y + nwes[1]]:
                     visited[x + nwes[0]][y + nwes[1]] = 1
                     new_queue.append(( x + nwes[0] , y + nwes[1] ))    
-        
+    
+    # 이하의 조건에서 재귀 종료
     else:
-        # print(count)
         one_dung = False
-        
     if tmp_count < len(que):
-        # print(count)
         one_dung = False
 
         
@@ -84,6 +82,4 @@ else:
     print(0)
     
     
-    # print(*sea, sep = '\n', end='\n')
-    # print()
-                
+
