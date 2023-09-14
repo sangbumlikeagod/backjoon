@@ -1,8 +1,6 @@
 
 import sys
 sys.stdin = open(__file__.split('\\')[-1][:-3] + '.txt','r')
-
-from itertools import accumulate
 st = sys.stdin.readline
 C = int(st())
 A, B = map(int, st().split())
@@ -17,18 +15,6 @@ for _ in range(B):
 # print(pizza_A, pizza_B)
 dic = {}
 count = 0
-
-pizza_A_AC = []
-pizza_B_AC = []
-
-for i in range(A):
-    pizza_A_AC.append(list(accumulate(pizza_A[i:] + pizza_A[ : i])))
-for i in range(B):
-    pizza_B_AC.append(list(accumulate(pizza_B[i:] + pizza_B[ : i])))
-
-print(pizza_A_AC)
-print(pizza_B_AC)
-
 def pizza_A_find():
     global count
     ss = sum(pizza_A)
@@ -37,36 +23,46 @@ def pizza_A_find():
 
         
     for i in range(A):
-        for j in range(A - 1):
-            if pizza_A_AC[i][j] > C:
+        # print(i, end=' ')
+        local = pizza_A[i]
+        two_pointer = (i + 1) % A
+        while local < C:
+            if local == ss:
                 break
-            elif pizza_A_AC[i][j] == C:
-                count += 1
+            if two_pointer == i:
                 break
+            # print(two_pointer, end=' ')
+            if C - local in dic:
+                count += dic[C - local]
             else:
-                if C - pizza_A_AC[i][j] in dic:
-                    count += dic[C - pizza_A_AC[i][j]]
-                else:
-                    dic[C - pizza_A_AC[i][j]] = pizza_B_find(C - pizza_A_AC[i][j])   
-                    count += dic[C - pizza_A_AC[i][j]]
+                dic[C- local] = pizza_B_find(C - local)   
+                count += dic[C - local]   
+            local += pizza_A[two_pointer]
+            two_pointer = (two_pointer + 1) % A
+        if local == C:
+            count += 1
 
-      
+            
 def pizza_B_find(num):
-    if len(pizza_B) == 1:
-        return num == pizza_B[0]
+
+    if num == 0:
+        return 1
+    elif sum(pizza_B) == num:
+        return 1
     for i in range(B):
-        start = 0
-        end = B - 1
-        while start <= end:
-            mid = (start + end) // 2
-            if pizza_B_AC[i][mid] == num:
-                return 1
-            elif pizza_B_AC[i][mid] < num:
-                start = mid + 1
-            else:
-                end = mid - 1
+        local = pizza_B[i]
+        two_pointer = (i + 1) % A
+        while local < num:
+            if two_pointer == i:
+                break
+            local += pizza_A[two_pointer]
+            two_pointer = (two_pointer + 1) % A
+        if local == num:
+            return 1
     return 0
 pizza_A_find()
+
+# print(dic)
 print(count)
             
 
@@ -77,4 +73,6 @@ print(count)
 # 빠지는게 1000개 짜리 가 가능하니까 가능성은 또 무궁무진함 
 # 메모이 제이션으로 같은 값은 어느정도 방어하는 방법을 만들 수도 있음 
 
-# 해봤자 슬라이딩 윈도우인데
+# 시간초과가 난 관계로 다른 방식에 도전하겠다.
+
+# 어딘가에 분명히 존재하는 중복을 제거해줘야한다.
