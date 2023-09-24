@@ -1,5 +1,2 @@
-    
-
-
-# visited = [0] * N
-# visited[0] = 1
+000000007)
+        # print(round((2 * round(a, 18) * round(b, 18)), 18) % 1000000007)

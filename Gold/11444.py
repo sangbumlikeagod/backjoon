@@ -17,19 +17,29 @@ def fibo(N):
 
 # for i in range(1, 18):
     # print(fibo(i))
+
+# for i in range(1, N + 1):
 print(fibo(N) % 1000000007)
 # print(dic)
 
-def fibo_generic(num):
-    if num == 1:
-        return (0.5, 0.5)
-    elif num % 2:
-        tmp = fibo_generic(num - 1)
-        return (0.5 * tmp[0] + 0.5 * tmp[1] * 5 , 0.5 * tmp[0] + 0.5 * tmp[1])
-    else:
-        tmp = fibo_generic(num // 2)
-        return (tmp[0] ** 2 + tmp[1] ** 2 * 5, tmp[0] * tmp[1] * 2)
 
-res = fibo_generic(3)
-print(res)
-print(4 * res[0] * res[1] % 1000000007)
+dic = {
+    0 : (0.5, 0.5)
+    }
+
+for i in range(1, N + 1):
+    n = 0
+    start = None
+    while 1 << n <= i:
+        if n not in dic:
+            a, b = dic[n - 1]
+            dic[n] = ((a ** 2 + 5 * b ** 2) % 1000000007, (2 * a * b) % 1000000007)
+        if 1 << n & i:
+            if not start:
+                start = dic[n]
+            else:
+                start = ((start[0] * dic[n][0] + start[1] * dic[n][1] * 5)  % 1000000007, (dic[n][0] * start[1] + dic[n][1] * start[0]) % 1000000007 )
+                    
+        n += 1
+    # print(int(start[1] * 2))
+# print(dic)

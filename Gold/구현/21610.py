@@ -17,7 +17,7 @@ class Field:
 
     def mandmcloud(self, di, s, sett):
         def move(cord, di, s):
-            # N이 0이되고 -1은 N - 1이 되니 
+            # N이 0이되고 -1은 N - 1 s이 되니 
             if di == 1:
                 tmp = cord[1] - s
                 while tmp < 0:
