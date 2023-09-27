@@ -92,13 +92,13 @@ while 1 << n <= N:
     if n not in dic:
         dic[n] = vector(dic[n - 1], dic[n - 1])
     if 1 << n & N:
-        print(n)
+        # print(n)
         if not start:
             start = dic[n]
         else:
             start = vector(start, dic[n])
     n += 1
     
-print(start)
+# print(start)
 print(int(start[1] * 2) % 1000000007)
-print(dic)
+# print(dic)
