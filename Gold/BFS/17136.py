@@ -1,9 +1,9 @@
 import sys
-
 name = __file__.split('\\')[-1][:-3]
 file = open(f'{name}.txt', 'r', encoding='utf-8')
 sys.stdin = file
-
+import sys
+from copy import deepcopy
 
 table = []
 total = 0
@@ -16,14 +16,13 @@ for i in range(10):
                 start = (i, j)
             total += 1
     table.append(tmp)
-    
-print(start)
-print(total)
+
+# print(total)
 if not total:
     print(0)
     exit()
     
-ans = -1
+# ans = -1
 
 dic = {
     1 : 5,
@@ -40,13 +39,66 @@ table_lst = {
     5 : [(a, b) for a in range(5) for b in range(5) if a == 4 or b == 4],
     }
 
-def dfs(cord):
+count = 80
+minn = 25
+visitied = [[0] * 10 for _ in range(10)]
+def dfs(cord, visitied):
+    # global count
+    # # if 70 < count < 80:
+    # #     print(*visitied, sep='\n')
+    # #     print(dic, cord)
+    # #     print()
+    # if count:
+    #     count -= 1
     d = 1
-    while d <= 5:
+    flag = True
+    while d <= 5 and flag:
         for arg in table_lst[d]:
-            if 
-            
+            nx = cord[0] + arg[0]
+            ny = cord[1] + arg[1]
+            if not (0 <= nx < 10 and 0 <= ny < 10 and table[nx][ny] and not visitied[nx][ny]):
+                flag = False
+                break
+        
+        else:
+            for arg in table_lst[d]:
+                nx = cord[0] + arg[0]
+                ny = cord[1] + arg[1]
+                visitied[nx][ny] = 1
+            ne_visited = deepcopy(visitied)
+            s_flag = True
+            if dic[d]:
+                for i in range(10):
+                    for j in range(10):
+                        if table[i][j] and not ne_visited[i][j]:
+                            dic[d] -= 1
+                            dfs((i, j), ne_visited)
+                            # if cord == start:
+                            #     print(*visitied, sep='\n')
+                            #     print(dic, cord)
+                            #     print()
+                            dic[d] += 1
+                            s_flag = False
+                            break  
+                    if not s_flag:
+                        break
+                else:
+                    tmp = 0
+                    for i in dic:
+                        tmp += dic[i]
+                    tmp -= 1
+                    global minn
+                    minn = min(minn, 25 - tmp)       
+        d += 1
     return
+
+dfs(start, visitied)
+if minn == 25:
+    print(-1)
+else:
+    print(minn)
+
+
     # 언제까지 
 
 # for i in range(1, 6):
