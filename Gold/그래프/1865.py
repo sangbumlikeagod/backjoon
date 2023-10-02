@@ -6,3 +6,4 @@ st = sys.stdin.readline
 testcase = int(st())
 for i in range(testcase):
     N, M, W = map(int, input().split())
+    
