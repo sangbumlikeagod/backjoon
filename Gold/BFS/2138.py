@@ -39,4 +39,3 @@ while que:
             visited[stage] = 1
             que.append((stage, round + 1))
         
-print('ss')
