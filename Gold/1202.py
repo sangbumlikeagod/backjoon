@@ -33,7 +33,7 @@ for i in lst_bag:
 # 가격순으로 매번 정렬할 필요가 없잖아
 # 한 번 만들면 매번 정렬된 상태로 유지해주는 힙이 있으니까
 print(total)
-
+print('st')
 
 
 
