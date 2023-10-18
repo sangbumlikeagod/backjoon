@@ -36,10 +36,10 @@ def find_way(start, end):
     heapq.heappush(que, (0, start))
     visited[start] = 1
     while que:
+        # print(que)
         val, this = heapq.heappop(que)
-        # print(val)
-        if this == end and v1 in visited and v2 in visited:
-            print(val)
+        if this == end:
+            # print(val)
             return val
         for i in range(N):
             if lst[this][i] and not visited[i]:
@@ -48,13 +48,19 @@ def find_way(start, end):
     return float('inf')
 
 a = find_way(0, v1)
+# print('----------------------')
 b = find_way(0, v2)
+# print('----------------------')
 c = find_way(v1, v2)
+# print('----------------------')
 d = find_way(v1, N - 1)
+# print('----------------------')
 e = find_way(v2, N - 1)
+# print('----------------------')
 f = find_way(0, N - 1)
+# print('----------------------')
 # print(a, b, c, d, e, f)
-ans = min([a + c + d, b + c + e, 2 * a + b + e, 2 * b + a + d + 2 * a + 2 * b + f])
+ans = min([a + c + e, b + c + d, 2 * a + b + e, 2 * b + a + d, 2 * a + 2 * b + f])
 print(-1) if ans == float('inf') else print(ans)
     
 # 1 v1 v2 N 
