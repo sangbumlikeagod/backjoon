@@ -11,6 +11,7 @@
         "iostream": "cpp",
         "utility": "cpp",
         "vector": "cpp",
-        "map": "cpp"
+        "map": "cpp",
+        "xstddef": "cpp"
     }
 }
