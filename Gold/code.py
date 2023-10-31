@@ -88,14 +88,11 @@ for case in range(test_case):
                         
                         while cond and tmp > 0:
                             hexa = bin(int(lst[ro][tmp], base = 16))[2:].zfill(4)
-<<<<<<< HEAD:골드/code.py
+
                             if tmp == col:
                                 hexa = hexa.rstrip('0')
                             # print(hexa, word, tmp)
-=======
-                            if tmp == col:                                hexa = hexa.rstrip('0')
-                            print(hexa, word)
->>>>>>> 2d1e7b44ab3ea5d82827d6b8fde70f0895a6beed:Gold/code.py
+
                             for i in range(len(hexa) - 1 + comp, -1, -step):
                                 word = hexa[i] + word
                                 if len(word) == 7:

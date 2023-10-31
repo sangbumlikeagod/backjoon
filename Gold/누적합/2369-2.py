@@ -11,4 +11,4 @@ M, N, K = map(int, input().split())
 그리고 저 1개당 3개의 줄에 대해서 반복됨
 '''
 
-for i in range()
+# for i in range()

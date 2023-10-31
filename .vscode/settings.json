@@ -12,6 +12,7 @@
         "utility": "cpp",
         "vector": "cpp",
         "map": "cpp",
-        "xstddef": "cpp"
+        "xstddef": "cpp",
+        "ios": "cpp"
     }
 }
