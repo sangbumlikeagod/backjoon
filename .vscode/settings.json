@@ -13,6 +13,7 @@
         "vector": "cpp",
         "map": "cpp",
         "xstddef": "cpp",
-        "ios": "cpp"
+        "ios": "cpp",
+        "algorithm": "cpp"
     }
 }

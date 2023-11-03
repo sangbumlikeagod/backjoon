@@ -13,11 +13,9 @@ struct node{
         if (arg -> val >= val){
             if (rightchild == nullptr){
                 rightchild = arg;
-                // cout << this->val << "뿌잉" << this->rightchild << '\n';
                 (*arg).parent = this;
             } else {
                 rightchild -> insert(arg);
-                // cout << this->val << "뿌잉" << '\n';
                 (*arg).parent = this;
 
                 // (*arg->parent) = *this;
