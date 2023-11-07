@@ -44,6 +44,7 @@ int main()
             levelS1 -= (levelS2 + 1);
         }
     }
+
     if (levelS1 == 0)
     {
         cout << "FRULA";
