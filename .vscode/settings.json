@@ -15,6 +15,7 @@
         "xstddef": "cpp",
         "ios": "cpp",
         "algorithm": "cpp",
-        "xstring": "cpp"
+        "xstring": "cpp",
+        "string": "cpp"
     }
 }
