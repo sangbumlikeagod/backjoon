@@ -16,6 +16,7 @@
         "ios": "cpp",
         "algorithm": "cpp",
         "xstring": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "variant": "cpp"
     }
 }
