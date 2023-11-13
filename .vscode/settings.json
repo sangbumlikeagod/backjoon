@@ -1,22 +1,23 @@
 {
-    "files.associations": {
-        "**/*.html": "html",
-        "**/templates/**/*.html": "django-html",
-        "**/templates/**/*": "django-txt",
-        "**/requirements{/**,*}.{txt,in}": "pip-requirements",
-        "ostream": "cpp",
-        "queue": "cpp",
-        "iosfwd": "cpp",
-        "xiosbase": "cpp",
-        "iostream": "cpp",
-        "utility": "cpp",
-        "vector": "cpp",
-        "map": "cpp",
-        "xstddef": "cpp",
-        "ios": "cpp",
-        "algorithm": "cpp",
-        "xstring": "cpp",
-        "string": "cpp",
-        "variant": "cpp"
-    }
+  "files.associations": {
+    "**/*.html": "html",
+    "**/templates/**/*.html": "django-html",
+    "**/templates/**/*": "django-txt",
+    "**/requirements{/**,*}.{txt,in}": "pip-requirements",
+    "ostream": "cpp",
+    "queue": "cpp",
+    "iosfwd": "cpp",
+    "xiosbase": "cpp",
+    "iostream": "cpp",
+    "utility": "cpp",
+    "vector": "cpp",
+    "map": "cpp",
+    "xstddef": "cpp",
+    "ios": "cpp",
+    "algorithm": "cpp",
+    "xstring": "cpp",
+    "string": "cpp",
+    "variant": "cpp",
+    "cstdlib": "cpp"
+  }
 }
