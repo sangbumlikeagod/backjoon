@@ -1,6 +1,6 @@
 #include <iostream>
-#include <algorithm>
 #include <fstream>
+#include <algorithm>
 #include <vector>
 #include <queue>
 using namespace std;
@@ -20,7 +20,6 @@ int dp(int i, int j)
     }
     if (i <= 1)
     {
-        dp_arr[i][j] = 0;
         return 0;
     }
     if (!j)
@@ -33,6 +32,7 @@ int dp(int i, int j)
     if (i == j + 1)
     {
         int tmp = 0;
+        int tmp2 = 0;
         int res1 = 0;
         int res2 = 0;
         for (int j_j = 0; j_j < j - 1; j_j++)
@@ -40,6 +40,7 @@ int dp(int i, int j)
             res1 = 0;
             res2 = 0;
             tmp = dp(i - 2, j_j);
+            // tmp2 = dp(i, j_j);
 
             if (j_j)
             {
@@ -79,6 +80,7 @@ int dp(int i, int j)
             }
         }
     }
+
     dp_arr[i][j] = res;
     return res;
 }
@@ -87,13 +89,11 @@ int main()
     ios::sync_with_stdio(false), cin.tie(0), cin.tie(0);
     ifstream cin("11570.txt", ios_base::in);
     fill_n(&dp_arr[0][0], 2001 * 2001, -1);
-
     cin >> N;
     for (int i = 1; i <= N; i++)
     {
         cin >> arr[i];
     }
-
     int res = 2000 * 1000000;
     for (int i = N; i; i--)
     {
@@ -102,13 +102,4 @@ int main()
             res = tmp;
     }
     cout << res << '\n';
-
-    // for (int i = 1; i <= N; i++)
-    // {
-    //     for (int j = 1; j <= N; j++)
-    //     {
-    //         cout << dp_arr[i][j] << '\t';
-    //     }
-    //     cout << '\n';
-    // }
 }
