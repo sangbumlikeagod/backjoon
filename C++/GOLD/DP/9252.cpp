@@ -20,15 +20,19 @@ int LCS(int indexBase, int indexCompare){
     }
     int res = 0;
     int tmp = 0;
-    int k = 1;
+    int k = 0;
 
-    while (indexCompare - k){
+    while (indexCompare - k >= 0){
         if (baseword[indexBase] == compareword[indexCompare - k]){
             tmp = LCS(indexBase - 1, indexCompare - k - 1) + 1;
+
             if (res < tmp){
                 res = tmp;
-                // LCSARRAY[indexBase + 1][indexCompare + 1].second = make_pair(indexBase + 1, indexCompare - k + 1);
                 LCSARRAY[indexBase + 1][indexCompare + 1].second = make_pair(indexBase, indexCompare - k);
+                
+                // LCSARRAY[indexBase + 1][indexCompare + 1].second = make_pair(indexBase + 1, indexCompare - k + 1);
+                
+                // LCSARRAY[indexBase + 1][indexCompare + 1].second = make_pair(indexBase, indexCompare - k);
 
                 // if (baseword[indexBase - 1] == compareword[indexCompare - k - 1]){
                 //     LCSARRAY[indexBase + 1][indexCompare + 1].second = make_pair(indexBase, indexCompare - k);
@@ -45,11 +49,14 @@ int LCS(int indexBase, int indexCompare){
     tmp = LCS(indexBase - 1, indexCompare);
     if (res < tmp){
         res = tmp;
-        if (baseword[indexBase - 1] == compareword[indexCompare]){
-            LCSARRAY[indexBase + 1][indexCompare + 1].second = make_pair(indexBase, indexCompare + 1);
-        } else {
-            LCSARRAY[indexBase + 1][indexCompare + 1].second = LCSARRAY[indexBase][indexCompare + 1].second;
-        }
+        // LCSARRAY[indexBase + 1][indexCompare + 1].second = make_pair(indexBase, indexCompare + 1);
+        LCSARRAY[indexBase + 1][indexCompare + 1].second = LCSARRAY[indexBase][indexCompare + 1].second;
+        
+        // if (baseword[indexBase - 1] == compareword[indexCompare]){
+        //     LCSARRAY[indexBase + 1][indexCompare + 1].second = make_pair(indexBase, indexCompare + 1);
+        // } else {
+        //     LCSARRAY[indexBase + 1][indexCompare + 1].second = LCSARRAY[indexBase][indexCompare + 1].second;
+        // }
     }
 
     LCSARRAY[indexBase + 1][indexCompare + 1].first = res;
@@ -75,22 +82,25 @@ int main(){
 
     int res = LCS(wordlength - 1, comparelength - 1);
     cout << res << '\n';
-    for (int i = 0; i <= wordlength; i++){
-        for (int j = 0; j <= wordlength; j++){
-            cout << LCSARRAY[i][j].first << '(' << LCSARRAY[i][j].second.first << ' ' << LCSARRAY[i][j].second.second << ')' << ' ';
-        }
-        cout << '\n';
-    }
+
+    // for (int i = 0; i <= wordlength; i++){
+    //     for (int j = 0; j <= wordlength; j++){
+    //         cout << LCSARRAY[i][j].first << '(' << LCSARRAY[i][j].second.first << ' ' << LCSARRAY[i][j].second.second << ')' << ' ';
+    //     }
+    //     cout << '\n';
+    // }
+
     vector<char> stack;
     if (res){
-        if (baseword[wordlength - 1] == compareword[comparelength - 1]) { stack.push_back(baseword[wordlength - 1]); }
         pair<int, int> tracking = LCSARRAY[wordlength][comparelength].second;
         while (tracking.first > 0 | tracking.second > 0){
-            stack.push_back(baseword[tracking.first - 1]);
-            if (tracking == LCSARRAY[tracking.first][tracking.second].second) break;
+            if (baseword[tracking.first] == compareword[tracking.second]){
+            stack.push_back(baseword[tracking.first]);}
             tracking = LCSARRAY[tracking.first][tracking.second].second;
         }
+        if (baseword[0] == compareword[0]){stack.push_back(baseword[0]);}
     }
+
 
     while (!stack.empty())
     {

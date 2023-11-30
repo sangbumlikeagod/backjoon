@@ -18,6 +18,10 @@
     "xstring": "cpp",
     "string": "cpp",
     "variant": "cpp",
-    "cstdlib": "cpp"
+    "cstdlib": "cpp",
+    "__locale": "cpp",
+    "string_view": "cpp",
+    "__split_buffer": "cpp",
+    "deque": "cpp"
   }
 }
