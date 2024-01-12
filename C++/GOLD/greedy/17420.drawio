@@ -1,0 +1,88 @@
+<mxfile host="Electron" modified="2024-01-12T03:03:05.216Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.16 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="g1MGBoL0XNg19rzZNm8o" version="22.1.16" type="device">
+  <diagram name="페이지-1" id="TK4xgJfwBjSerE8aX63M">
+    <mxGraphModel dx="1232" dy="472" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="KdETH67Fgxt96UE34UPk-1" value="N 입력 받음" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KdETH67Fgxt96UE34UPk-4" value="N회 동안 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="240" width="400" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="KdETH67Fgxt96UE34UPk-5" value="schedule.push(make_pair(a, b ))" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="KdETH67Fgxt96UE34UPk-4">
+          <mxGeometry x="50" y="75" width="320" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KdETH67Fgxt96UE34UPk-6" value="priority_queue&amp;lt;pair&amp;lt;int, int&amp;gt;, vector&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt; , greater&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt;&amp;gt; schedule" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="90" width="420" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="KdETH67Fgxt96UE34UPk-7" value="schedule 이 비어있지 않은 동안 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="480" width="560" height="480" as="geometry" />
+        </mxCell>
+        <mxCell id="KdETH67Fgxt96UE34UPk-8" value="pair&amp;lt;int., int&amp;gt; top = schedule.top()" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="KdETH67Fgxt96UE34UPk-7">
+          <mxGeometry x="60" y="70" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="KdETH67Fgxt96UE34UPk-9" value="top.first가 top.second 보다 같거나 큰가" style="rounded=0;whiteSpace=wrap;html=1;shape=rhombus;perimeter=rhombusPerimeter;" vertex="1" parent="KdETH67Fgxt96UE34UPk-7">
+          <mxGeometry x="60" y="140" width="220" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KdETH67Fgxt96UE34UPk-10" value="schedule.pop()" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="KdETH67Fgxt96UE34UPk-7">
+          <mxGeometry x="110" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KdETH67Fgxt96UE34UPk-11" value="schedule.push(make_pair(top.first + 30, top.second))" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="KdETH67Fgxt96UE34UPk-7">
+          <mxGeometry x="310" y="165" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KdETH67Fgxt96UE34UPk-12" value="schedule.pop()" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="KdETH67Fgxt96UE34UPk-7">
+          <mxGeometry x="310" y="95" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KdETH67Fgxt96UE34UPk-13" value="ans++" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="KdETH67Fgxt96UE34UPk-7">
+          <mxGeometry x="310" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KdETH67Fgxt96UE34UPk-14" value="pair&amp;lt;int, int&amp;gt; 100000 schedule" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="135" y="1030" width="210" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KdETH67Fgxt96UE34UPk-15" value="schedule 정렬" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="135" y="1100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KdETH67Fgxt96UE34UPk-16" value="처음부터 끝까지 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="1220" width="702.5" height="590" as="geometry" />
+        </mxCell>
+        <mxCell id="KdETH67Fgxt96UE34UPk-17" value="schedulde[i] .first // 기간 // 이&amp;nbsp;&lt;br&gt;maxVal보다 같거나 작은가?" style="rounded=0;whiteSpace=wrap;html=1;shape=rhombus;perimeter=rhombusPerimeter;" vertex="1" parent="KdETH67Fgxt96UE34UPk-16">
+          <mxGeometry x="332.5" y="117.5" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KdETH67Fgxt96UE34UPk-18" value="ans += 차이 / 30 + bool(차이 % 30)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="KdETH67Fgxt96UE34UPk-16">
+          <mxGeometry x="430" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KdETH67Fgxt96UE34UPk-19" value="maxval = (차이 / 30 + bool(차이 % 30)) * 30 + schedulde[i]&amp;nbsp;.second" style="whiteSpace=wrap;html=1;" vertex="1" parent="KdETH67Fgxt96UE34UPk-16">
+          <mxGeometry x="430" y="350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KdETH67Fgxt96UE34UPk-22" value="maxDuration 과 schedulde[i] .first 이 같은가?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="KdETH67Fgxt96UE34UPk-16">
+          <mxGeometry x="81.5" y="110" width="225" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="KdETH67Fgxt96UE34UPk-24" value="i번째 스케줄의 남은기간 // 이&amp;nbsp;&lt;br&gt;prevMaxVal보다 작은가? 혹은&lt;br&gt;i의 남은 기간이 제출 기한 보다 작은가?&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;shape=rhombus;perimeter=rhombusPerimeter;" vertex="1" parent="KdETH67Fgxt96UE34UPk-16">
+          <mxGeometry x="36" y="210" width="316" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="KdETH67Fgxt96UE34UPk-25" value="tmpval = 둘중에 큰 수" style="whiteSpace=wrap;html=1;" vertex="1" parent="KdETH67Fgxt96UE34UPk-16">
+          <mxGeometry x="134" y="330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KdETH67Fgxt96UE34UPk-26" value="ans += 차이 / 30 + bool(차이 % 30)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="KdETH67Fgxt96UE34UPk-16">
+          <mxGeometry x="134" y="410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KdETH67Fgxt96UE34UPk-27" value="maxval = (차이 / 30 + bool(차이 % 30)) * 30 + schedulde[i]&amp;nbsp;.second" style="whiteSpace=wrap;html=1;" vertex="1" parent="KdETH67Fgxt96UE34UPk-16">
+          <mxGeometry x="224" y="490" width="126" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KdETH67Fgxt96UE34UPk-28" value="prevMaxval = maxVal&lt;br&gt;prevMaxDuration = maxDuration" style="whiteSpace=wrap;html=1;" vertex="1" parent="KdETH67Fgxt96UE34UPk-16">
+          <mxGeometry x="20" y="490" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="KdETH67Fgxt96UE34UPk-29" value="tmpval = 둘중에 큰 수" style="whiteSpace=wrap;html=1;" vertex="1" parent="KdETH67Fgxt96UE34UPk-16">
+          <mxGeometry x="430" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KdETH67Fgxt96UE34UPk-20" value="return ans;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="1850" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KdETH67Fgxt96UE34UPk-21" value="정렬된 스케줄의 남은기간이 이전까지의 최대의 남은 기간보다 작다면 수정해줘야한다&lt;br&gt;그리고 스케줄의 제출 기한이 남은 기간보다 작다면 더해줘야 한다." style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-400" y="1275" width="480" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
