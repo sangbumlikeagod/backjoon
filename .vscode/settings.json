@@ -22,6 +22,7 @@
     "__locale": "cpp",
     "string_view": "cpp",
     "__split_buffer": "cpp",
-    "deque": "cpp"
+    "deque": "cpp",
+    "tuple": "cpp"
   }
 }

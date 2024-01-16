@@ -1,0 +1,83 @@
+<mxfile host="Electron" modified="2024-01-13T08:43:14.299Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.16 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="Mi-AqxTCKz-e9Mz2lExJ" version="22.1.16" type="device">
+  <diagram name="페이지-1" id="ShGjVRSIruZooiQjBW9Z">
+    <mxGraphModel dx="2554" dy="1331" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="S9b_bTh98C7eIGHuwLJT-1" value="int ans;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="S9b_bTh98C7eIGHuwLJT-2" value="N개에 대해서 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="350" width="720" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="S9b_bTh98C7eIGHuwLJT-3" value="N번 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="S9b_bTh98C7eIGHuwLJT-2">
+          <mxGeometry x="60" y="65" width="600" height="265" as="geometry" />
+        </mxCell>
+        <mxCell id="S9b_bTh98C7eIGHuwLJT-25" value="ans = max(dfs(matrix[x], matrix[y], ans);" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="S9b_bTh98C7eIGHuwLJT-3">
+          <mxGeometry x="110" y="110" width="370" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="S9b_bTh98C7eIGHuwLJT-14" value="dfs" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="880" y="340" width="860" height="570" as="geometry" />
+        </mxCell>
+        <mxCell id="S9b_bTh98C7eIGHuwLJT-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="S9b_bTh98C7eIGHuwLJT-14" source="S9b_bTh98C7eIGHuwLJT-10" target="S9b_bTh98C7eIGHuwLJT-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="S9b_bTh98C7eIGHuwLJT-10" value="4방향에 대해서 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="S9b_bTh98C7eIGHuwLJT-14">
+          <mxGeometry x="360" y="60" width="440" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="S9b_bTh98C7eIGHuwLJT-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="S9b_bTh98C7eIGHuwLJT-10" source="S9b_bTh98C7eIGHuwLJT-12" target="S9b_bTh98C7eIGHuwLJT-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="S9b_bTh98C7eIGHuwLJT-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="S9b_bTh98C7eIGHuwLJT-10" source="S9b_bTh98C7eIGHuwLJT-12" target="S9b_bTh98C7eIGHuwLJT-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="S9b_bTh98C7eIGHuwLJT-12" value="visited[nx][ny] 가 있는가" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="S9b_bTh98C7eIGHuwLJT-10">
+          <mxGeometry x="30" y="110" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="S9b_bTh98C7eIGHuwLJT-13" value="tmp = max(tmp, visited[nx][ny] + 1)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="S9b_bTh98C7eIGHuwLJT-10">
+          <mxGeometry x="30" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="S9b_bTh98C7eIGHuwLJT-11" value="nx = x + dx[i]&lt;br&gt;ny = y + dy[i]" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="S9b_bTh98C7eIGHuwLJT-10">
+          <mxGeometry x="30" y="30" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="S9b_bTh98C7eIGHuwLJT-17" value="tmpAns = max(1 + dfs(nx, ny))" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="S9b_bTh98C7eIGHuwLJT-10">
+          <mxGeometry x="182" y="125" width="197" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="S9b_bTh98C7eIGHuwLJT-4" value="visited[x][y] 가 있는가" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="S9b_bTh98C7eIGHuwLJT-14">
+          <mxGeometry x="67" y="120" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="S9b_bTh98C7eIGHuwLJT-8" value="np" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="S9b_bTh98C7eIGHuwLJT-14" source="S9b_bTh98C7eIGHuwLJT-4" target="S9b_bTh98C7eIGHuwLJT-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="240" y="70" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="210" y="160" />
+              <mxPoint x="210" y="210" />
+              <mxPoint x="340" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S9b_bTh98C7eIGHuwLJT-5" value="return visited[x][y]" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="S9b_bTh98C7eIGHuwLJT-14">
+          <mxGeometry x="67" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="S9b_bTh98C7eIGHuwLJT-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="S9b_bTh98C7eIGHuwLJT-14" source="S9b_bTh98C7eIGHuwLJT-4" target="S9b_bTh98C7eIGHuwLJT-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="S9b_bTh98C7eIGHuwLJT-9" value="yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="S9b_bTh98C7eIGHuwLJT-14" source="S9b_bTh98C7eIGHuwLJT-4" target="S9b_bTh98C7eIGHuwLJT-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="S9b_bTh98C7eIGHuwLJT-16" value="tmpAns = 1;" style="whiteSpace=wrap;html=1;" vertex="1" parent="S9b_bTh98C7eIGHuwLJT-14">
+          <mxGeometry x="67" y="30" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="S9b_bTh98C7eIGHuwLJT-21" value="visited[x][y] = tmpAns;" style="whiteSpace=wrap;html=1;" vertex="1" parent="S9b_bTh98C7eIGHuwLJT-14">
+          <mxGeometry x="520" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="S9b_bTh98C7eIGHuwLJT-23" value="return tmpAns;" style="whiteSpace=wrap;html=1;" vertex="1" parent="S9b_bTh98C7eIGHuwLJT-14">
+          <mxGeometry x="520" y="470" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="S9b_bTh98C7eIGHuwLJT-26" value="cout &amp;lt;&amp;lt; ans;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="930" width="370" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
