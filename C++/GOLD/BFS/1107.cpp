@@ -2,26 +2,26 @@
 #include <fstream>
 #include <vector>
 #include <unordered_set>
+#include <algorithm>
 #include <queue>
 using namespace std;
 
 
 unordered_set<int> ismalfunction;
 
-bool ispossible(int val){
-    bool ispossible = true;
-    if (val == 100) break;
+int isPossible(int val){
 
+    if (val == 100) return 0;
+    int btn = 0;
+    if (!val) { if (ismalfunction.count(0)) { return -1;} else { return 1; } }
     while (val){
     if (ismalfunction.count(val % 10)) {
-        ispossible = false;
-        return true;
+        return -1;
     }
+    btn++;
+    val /= 10;
     }
-    if (ispossible) {
-        return true;
-    }
-    else false;
+    return btn;
     
 }
 
@@ -42,16 +42,31 @@ int main(){
     int ans = 0;
     int startleft = start, startright = start;
     while (true){
-        int startCopy = start;
-        bool ispossible = true;
-        while (startCopy){
+        int tmpLeft = isPossible(startleft);
+        int tmpRight = isPossible(startright);
+        if (tmpLeft != -1 || tmpRight != -1){
+            // cout << tmpLeft << '\t' << tmpRight << '\n';
+            if (tmpLeft != -1 && tmpRight == -1){
+                ans += tmpLeft;
 
+            }
+            else if (tmpLeft == -1 && tmpRight != -1) {
+                ans += tmpRight;
+
+            }
+            else {
+                ans += min(tmpLeft, tmpRight);
+            }
+            break;
         }
-        
-
+        if (startleft) startleft--;
+        startright++;
+        ans++;
+        // cout << startleft << '\t' << startright << '\n';
 
     }
-    
+    ans = min(abs(100 - start), ans);
+    cout << ans;
 
 
 
