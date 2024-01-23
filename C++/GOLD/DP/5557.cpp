@@ -18,7 +18,7 @@ int main(){
         cin >> TABLE[i];
     }
 
-    long long ans = 0;
+
     for (int i = 0; i < N; i++)
     {
         for (int j = 0; j < 21; j++)
@@ -32,9 +32,7 @@ int main(){
         }
     }
     
-    for (int i = 0; i < 21; i++){
-        ans += VAL[i][N];
-    }
-    cout << ans;
+
+    cout << VAL[TABLE[N - 1]][N - 1];
 
 }
