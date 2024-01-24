@@ -1,0 +1,37 @@
+<mxfile host="Electron" modified="2024-01-22T15:33:18.313Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.16 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="tay7Q8nL5bmrgbCF44Zj" version="22.1.16" type="device">
+  <diagram name="페이지-1" id="_5_DzhR4ss55PmrbIEIS">
+    <mxGraphModel dx="1176" dy="685" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="lo4KOIb1CZJAGBMK9BHz-1" value="chance&amp;nbsp; = 2" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lo4KOIb1CZJAGBMK9BHz-2" value="남은 chance가 있을동안 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="310" width="590" height="540" as="geometry" />
+        </mxCell>
+        <mxCell id="lo4KOIb1CZJAGBMK9BHz-5" value="시작 인덱스의 정렬 리스트에서 인덱스를 찾는다" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="lo4KOIb1CZJAGBMK9BHz-2">
+          <mxGeometry x="20" y="60" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lo4KOIb1CZJAGBMK9BHz-7" value="그냥 리스트의 인덱스와 정렬 리스트의 인덱스의 값이 같고 두개의 인덱스 리스트의 범위가 N안일동안 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="lo4KOIb1CZJAGBMK9BHz-2">
+          <mxGeometry x="15" y="130" width="535" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="lo4KOIb1CZJAGBMK9BHz-8" value="두개의 인덱스 ++&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="lo4KOIb1CZJAGBMK9BHz-7">
+          <mxGeometry x="40" y="65" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lo4KOIb1CZJAGBMK9BHz-9" value="그냥 인덱스가 N - 1인가?" style="rounded=0;whiteSpace=wrap;html=1;shape=rhombus;perimeter=rhombusPerimeter;" vertex="1" parent="lo4KOIb1CZJAGBMK9BHz-2">
+          <mxGeometry x="40" y="300" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lo4KOIb1CZJAGBMK9BHz-10" value="break" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="lo4KOIb1CZJAGBMK9BHz-2">
+          <mxGeometry x="65" y="380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lo4KOIb1CZJAGBMK9BHz-11" value="chance--, continue" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="lo4KOIb1CZJAGBMK9BHz-2">
+          <mxGeometry x="235" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lo4KOIb1CZJAGBMK9BHz-3" value="시작 인덱스&amp;nbsp; = 0&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

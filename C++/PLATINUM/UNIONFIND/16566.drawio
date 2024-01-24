@@ -1,0 +1,82 @@
+<mxfile host="Electron" modified="2024-01-24T13:19:03.812Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.16 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="qLuSRWmWieujcU000f74" version="22.1.16" type="device">
+  <diagram name="페이지-1" id="0rD39pblOmnpPfaXjF8F">
+    <mxGraphModel dx="1180" dy="713" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2n7U7Ub8cv8bOTWgTDOw-1" value="N개의 값을 Card에 받음" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="345" y="480" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2n7U7Ub8cv8bOTWgTDOw-2" value="Struct disjointset" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="130" width="380" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="2n7U7Ub8cv8bOTWgTDOw-3" value="n개의 parent" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="2n7U7Ub8cv8bOTWgTDOw-2">
+          <mxGeometry x="24" y="50" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2n7U7Ub8cv8bOTWgTDOw-4" value="메소드 : Find" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="2n7U7Ub8cv8bOTWgTDOw-2">
+          <mxGeometry x="24" y="140" width="276" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2n7U7Ub8cv8bOTWgTDOw-11" value="메소드 : Union" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="2n7U7Ub8cv8bOTWgTDOw-2">
+          <mxGeometry x="24" y="230" width="276" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2n7U7Ub8cv8bOTWgTDOw-12" value="Card를 정렬" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="345" y="570" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2n7U7Ub8cv8bOTWgTDOw-13" value="최대 N개의 parent를 정리&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="345" y="660" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2n7U7Ub8cv8bOTWgTDOw-16" value="K번 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="760" width="380" height="780" as="geometry" />
+        </mxCell>
+        <mxCell id="2n7U7Ub8cv8bOTWgTDOw-17" value="낼 카드 받기" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="2n7U7Ub8cv8bOTWgTDOw-16">
+          <mxGeometry x="50" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2n7U7Ub8cv8bOTWgTDOw-18" value="upperbound 이진탐색" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="2n7U7Ub8cv8bOTWgTDOw-16">
+          <mxGeometry x="50" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2n7U7Ub8cv8bOTWgTDOw-22" value="Vertical Container" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="2n7U7Ub8cv8bOTWgTDOw-16">
+          <mxGeometry x="24" y="300" width="356" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="2n7U7Ub8cv8bOTWgTDOw-19" value="정렬된 리스트 중간값의 조상이 q보다 크거나 같나?" style="rounded=0;whiteSpace=wrap;html=1;shape=rhombus;perimeter=rhombusPerimeter;" vertex="1" parent="2n7U7Ub8cv8bOTWgTDOw-22">
+          <mxGeometry x="36" y="40" width="260" height="101" as="geometry" />
+        </mxCell>
+        <mxCell id="2n7U7Ub8cv8bOTWgTDOw-21" value="end = mid" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="2n7U7Ub8cv8bOTWgTDOw-22">
+          <mxGeometry x="196" y="150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2n7U7Ub8cv8bOTWgTDOw-20" value="start = mid + 1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="2n7U7Ub8cv8bOTWgTDOw-22">
+          <mxGeometry x="16" y="150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2n7U7Ub8cv8bOTWgTDOw-23" value="조상이 q보다 upperbound인 값 출력" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="2n7U7Ub8cv8bOTWgTDOw-16">
+          <mxGeometry x="44" y="570" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2n7U7Ub8cv8bOTWgTDOw-24" value="경우에 따라 그 값이 최소값일때를 제외할떄 (root)&amp;nbsp;&lt;br&gt;더는 이 값을 사용하지 못한다는 뜻에서 이값과 0또는 바로 이전값을 서로 union한다" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="2n7U7Ub8cv8bOTWgTDOw-16">
+          <mxGeometry x="44" y="660" width="316" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="2n7U7Ub8cv8bOTWgTDOw-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2n7U7Ub8cv8bOTWgTDOw-25" target="2n7U7Ub8cv8bOTWgTDOw-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2n7U7Ub8cv8bOTWgTDOw-25" value="근데 이러면 M 이외의 숫자들에 대해선 어떻게 union하는지" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="740" y="1420" width="310" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2n7U7Ub8cv8bOTWgTDOw-26" value="card에서 찾은 값 (m 안에 속함)을 기준으로 찾기 때문에 합치기 쉬움" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="1420" width="265" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2n7U7Ub8cv8bOTWgTDOw-28" value="결국 전부다 root로 이동하게 되는거 사실임 부모가 root이면 사실상 이 값은 쓰이지 않을 확률이 높음" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="1550" width="510" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2n7U7Ub8cv8bOTWgTDOw-29" value="이전값이 쓰인적 있는지를 확인하기 위해 부모를 쓰는 것" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="710" y="1510" width="360" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="2n7U7Ub8cv8bOTWgTDOw-30" value="확인됐다면 자기보다 작은 직전값 또는 직전값의 부모값을 받게되어 자연스레 사용했다는 처지가된다&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="770" y="1640" width="250" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="2n7U7Ub8cv8bOTWgTDOw-31" value="이 리스트에서 사용 했음 안했음을 체크하게 해주는 값인 거다&amp;nbsp; 부모의 존재가 그런 것" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="772.5" y="1770" width="245" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="2n7U7Ub8cv8bOTWgTDOw-32" value="자기보다 바로 작은값의 사용여부를 보고 따라가면 된다는 혁신적인 생각이 이 문제의 풀이였다" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1090" y="1780" width="250" height="130" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
