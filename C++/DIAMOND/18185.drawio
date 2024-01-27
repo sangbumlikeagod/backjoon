@@ -1,0 +1,85 @@
+<mxfile host="Electron" modified="2024-01-26T13:44:40.179Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.16 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="bWf-5ZOm0KNxcb7HIKcO" version="22.1.16" type="device">
+  <diagram name="페이지-1" id="jFidafPHT723bShay6t_">
+    <mxGraphModel dx="1573" dy="996" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="GhMisFS2ZbmcRL45iRyv-2" value="/" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="380" width="730" height="850" as="geometry" />
+        </mxCell>
+        <mxCell id="GhMisFS2ZbmcRL45iRyv-8" value="i가 2보다 큰가?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="GhMisFS2ZbmcRL45iRyv-2">
+          <mxGeometry x="138.5" y="550" width="190" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="GhMisFS2ZbmcRL45iRyv-9" value="2작은값 , 1작은값 , 지금 값중에서 가장 작은 값을 찾음" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="GhMisFS2ZbmcRL45iRyv-2">
+          <mxGeometry x="133.5" y="640" width="206.5" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GhMisFS2ZbmcRL45iRyv-10" value="i가 1보다 크면서&amp;nbsp; 0번째가&amp;nbsp;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="GhMisFS2ZbmcRL45iRyv-2">
+          <mxGeometry x="141.75" y="290" width="190" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="GhMisFS2ZbmcRL45iRyv-12" value="1작은 값과 지금 값중에서 작은값을 찾음" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="GhMisFS2ZbmcRL45iRyv-2">
+          <mxGeometry x="133.5" y="370" width="211" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="GhMisFS2ZbmcRL45iRyv-13" value="그 개수만큼 dp[i - 1][0]에서 1뺀값 에 3 * [k] 값 을 저장" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="GhMisFS2ZbmcRL45iRyv-2">
+          <mxGeometry x="138.5" y="460" width="201" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GhMisFS2ZbmcRL45iRyv-14" value="그 개수만큼 dp[i - 1][1] 에서 1뺀값에 3 + [k] 값을 저장" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="GhMisFS2ZbmcRL45iRyv-2">
+          <mxGeometry x="133.5" y="720" width="206.5" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GhMisFS2ZbmcRL45iRyv-15" value="dp[i - 1][2] , dp[i - 1][1] , dp[i - 1][0] 에 값 저장" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="GhMisFS2ZbmcRL45iRyv-2">
+          <mxGeometry x="141" y="204.5" width="196" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="GhMisFS2ZbmcRL45iRyv-17" value="&lt;h1&gt;Heading&lt;/h1&gt;&lt;p&gt;몇개는 두개씩 페어로 사고 그냥 사는게 이득인데&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;어차피 근데 앞에서 싸지고 뒤에서는 정가를 내는 시스템이니까 괜찮지 않을까?&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="GhMisFS2ZbmcRL45iRyv-2">
+          <mxGeometry x="410" y="220" width="290" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="GhMisFS2ZbmcRL45iRyv-3" value="10000 * 3 배열 생성" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GhMisFS2ZbmcRL45iRyv-19" value="10000 * 3 배열 생성" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GhMisFS2ZbmcRL45iRyv-20" value="Vertical Container" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="996" y="400" width="625" height="1060" as="geometry" />
+        </mxCell>
+        <mxCell id="GhMisFS2ZbmcRL45iRyv-21" value="dp[0][0]에 factory[0] - 크기차를 저장" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="GhMisFS2ZbmcRL45iRyv-20">
+          <mxGeometry x="30" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GhMisFS2ZbmcRL45iRyv-23" value="dp[1][0] 에 factory[1] 을 저장" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="GhMisFS2ZbmcRL45iRyv-20">
+          <mxGeometry x="30" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GhMisFS2ZbmcRL45iRyv-24" value="1번째와 0번째의 크기 차 계산" style="whiteSpace=wrap;html=1;" vertex="1" parent="GhMisFS2ZbmcRL45iRyv-20">
+          <mxGeometry x="34" y="70" width="270" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GhMisFS2ZbmcRL45iRyv-25" value="dp[0][1]에&amp;nbsp; 크기차를 저장" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="GhMisFS2ZbmcRL45iRyv-20">
+          <mxGeometry x="164" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GhMisFS2ZbmcRL45iRyv-26" value="N번 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="GhMisFS2ZbmcRL45iRyv-20">
+          <mxGeometry x="46" y="350" width="580" height="710" as="geometry" />
+        </mxCell>
+        <mxCell id="GhMisFS2ZbmcRL45iRyv-27" value="이전 값중 아직 안쓰인 값과 지금 값의 최소값을 구함" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="GhMisFS2ZbmcRL45iRyv-26">
+          <mxGeometry x="39" y="70" width="281" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="GhMisFS2ZbmcRL45iRyv-28" value="가능한 개수를 구하기 위해 양수의 수만큼 앞에 안쓰인 값에서 빼고 1에서 더한다" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="GhMisFS2ZbmcRL45iRyv-26">
+          <mxGeometry x="39" y="160" width="251" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GhMisFS2ZbmcRL45iRyv-29" value="new가 남아있을떄만 ( 이미 다 2칸 되지 않은 이상 )" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="GhMisFS2ZbmcRL45iRyv-26">
+          <mxGeometry x="39" y="240" width="261" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GhMisFS2ZbmcRL45iRyv-30" value="두칸 전의 5의 값과 남은 나를 비교해 작은값을 구함" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="GhMisFS2ZbmcRL45iRyv-26">
+          <mxGeometry x="39" y="320" width="261" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GhMisFS2ZbmcRL45iRyv-31" value="이 값을 add에 더함&amp;nbsp;&lt;br&gt;new에서는 뺌" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="GhMisFS2ZbmcRL45iRyv-26">
+          <mxGeometry x="39" y="400" width="281" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GhMisFS2ZbmcRL45iRyv-32" value="new가 남아있다면 자신의 0에 new를 설정" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="GhMisFS2ZbmcRL45iRyv-26">
+          <mxGeometry x="39" y="490" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GhMisFS2ZbmcRL45iRyv-33" value="&lt;h1&gt;3개를 사는건 뒤에서 맡아줄거라는 가정&lt;/h1&gt;&lt;div&gt;이럴 일련의 병렬화가 가능해야하는데 난 이런걸 잘 못함.&lt;/div&gt;&lt;div&gt;항상 양쪽을 비교하는 모습을 취하는데 진짜 일부러라도 그리디를 많이 풀어서 앞에서 처리할경우 뒤를 생각 안해도 되는 이런 문제를 풀어야겠음&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="GhMisFS2ZbmcRL45iRyv-26">
+          <mxGeometry x="85.5" y="590" width="495.5" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="GhMisFS2ZbmcRL45iRyv-22" value="10000 * 3 배열 생성" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
