@@ -35,16 +35,17 @@ int main()
     int xleft = 0;
     int xRight = N / 2 + N % 2 - 1;
 
-    int yleft = N - 1 - N / 2 + 1;
+    int yleft = N - N / 2;
     int yRight = N - 1;
 
     int leftend = 0;
     int rightend = N - 1;
     for (int i = 0; i < N; i++)
     {
+        // 큐브의 턴
         if (i % 2)
         {
-            if (cube[yRight] < apple[xleft] && i != N - 1)
+            if ((cube[yRight] < apple[xleft]) && i != N - 1)
             {
                 ans[rightend--] = cube[yleft++];
             }
@@ -54,8 +55,9 @@ int main()
             }
         }
         else
+        // 사과의 턴
         {
-            if (apple[xleft] > cube[yRight] && i != N - 1)
+            if ((apple[xleft] > cube[yRight]) && i != N - 1)
             {
                 ans[rightend--] = apple[xRight--];
             }
