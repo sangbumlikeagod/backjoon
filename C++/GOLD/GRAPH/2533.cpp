@@ -76,11 +76,11 @@ int main()
                 }
             }
         }
-        for (int arg : childs)
-        {
-            cout << arg << '\t';
-        }
-        cout << '\n';
+        // for (int arg : childs)
+        // {
+        //     cout << arg << '\t';
+        // }
+        // cout << '\n';
 
         childs = newChild;
     }
