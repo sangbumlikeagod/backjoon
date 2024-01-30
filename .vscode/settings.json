@@ -23,6 +23,7 @@
     "string_view": "cpp",
     "__split_buffer": "cpp",
     "deque": "cpp",
-    "tuple": "cpp"
+    "tuple": "cpp",
+    "unordered_map": "cpp"
   }
 }
