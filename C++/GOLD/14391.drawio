@@ -1,0 +1,70 @@
+<mxfile host="Electron" modified="2024-02-04T14:32:25.355Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.16 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="Zkc1ZMtQe71eNMGIb2l5" version="22.1.16" type="device">
+  <diagram name="페이지-1" id="g1mW3xqmLEIrNjLyCrIl">
+    <mxGraphModel dx="922" dy="481" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="XHHczPF9lft6So_suA8t-1" value="0, 0 부터 시작 M, N 까지" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="200" width="590" height="930" as="geometry" />
+        </mxCell>
+        <mxCell id="XHHczPF9lft6So_suA8t-7" value="template[i][j] 에 mask입력" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="XHHczPF9lft6So_suA8t-1">
+          <mxGeometry x="60" y="430" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XHHczPF9lft6So_suA8t-8" value="i가 M인가?" style="rounded=0;whiteSpace=wrap;html=1;shape=rhombus;perimeter=rhombusPerimeter;" vertex="1" parent="XHHczPF9lft6So_suA8t-1">
+          <mxGeometry x="60" y="502" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XHHczPF9lft6So_suA8t-12" value="J가 N인가?" style="rounded=0;whiteSpace=wrap;html=1;shape=rhombus;perimeter=rhombusPerimeter;" vertex="1" parent="XHHczPF9lft6So_suA8t-1">
+          <mxGeometry x="60" y="740" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XHHczPF9lft6So_suA8t-13" value="i + 1 , j = 0" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="XHHczPF9lft6So_suA8t-1">
+          <mxGeometry x="220" y="740" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XHHczPF9lft6So_suA8t-14" value="i&amp;nbsp; = 0 , j = j + 1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="XHHczPF9lft6So_suA8t-1">
+          <mxGeometry x="220" y="502" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XHHczPF9lft6So_suA8t-15" value="i = i , j = j + 1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="XHHczPF9lft6So_suA8t-1">
+          <mxGeometry x="220" y="815" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XHHczPF9lft6So_suA8t-16" value="mask더할떄와 안더할떄로 재귀" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="XHHczPF9lft6So_suA8t-1">
+          <mxGeometry x="60" y="567" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XHHczPF9lft6So_suA8t-17" value="i = i + 1, j = j" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="XHHczPF9lft6So_suA8t-1">
+          <mxGeometry x="220" y="567" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XHHczPF9lft6So_suA8t-19" value="mask더할떄와 안더할떄로&amp;nbsp;&lt;br&gt;재귀" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="XHHczPF9lft6So_suA8t-1">
+          <mxGeometry x="60" y="815" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XHHczPF9lft6So_suA8t-20" value="I 가 M이거나 J가 N인가?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="XHHczPF9lft6So_suA8t-1">
+          <mxGeometry x="80" y="50" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XHHczPF9lft6So_suA8t-21" value="M * N 조회" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="XHHczPF9lft6So_suA8t-1">
+          <mxGeometry x="310" y="50" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="XHHczPF9lft6So_suA8t-22" value="ans[ template[i][j] ] 본인에 10 곱하고 pan[i][j] 더함&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="XHHczPF9lft6So_suA8t-21">
+          <mxGeometry x="20" y="40" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XHHczPF9lft6So_suA8t-24" value="16번 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="XHHczPF9lft6So_suA8t-1">
+          <mxGeometry x="310" y="180" width="240" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="XHHczPF9lft6So_suA8t-25" value="tmpAns 에 ans[i] 더함" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="XHHczPF9lft6So_suA8t-24">
+          <mxGeometry x="30" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XHHczPF9lft6So_suA8t-26" value="찐 ans 에 max한다" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="XHHczPF9lft6So_suA8t-1">
+          <mxGeometry x="320" y="330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XHHczPF9lft6So_suA8t-3" value="masking&amp;nbsp;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="10" width="140" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="XHHczPF9lft6So_suA8t-4" value="int i" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="XHHczPF9lft6So_suA8t-3">
+          <mxGeometry y="30" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="XHHczPF9lft6So_suA8t-5" value="int j" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="XHHczPF9lft6So_suA8t-3">
+          <mxGeometry y="60" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="XHHczPF9lft6So_suA8t-6" value="int mask" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="XHHczPF9lft6So_suA8t-3">
+          <mxGeometry y="90" width="140" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
