@@ -16,10 +16,9 @@ int M, N;
 void tracking(int i, int j, int mask)
 {
     // cout << i << ' ' << j << ' ' << mask << '\n';
-    masking[i][j] = mask;
-    if (i == M - 1 && j == N - 1)
+    if (i == M)
     {
-        for (int i = 0; i < M * N; i++)
+        for (int i = 0; i < M * N + 1; i++)
         {
             ansAr[i] = 0;
         }
@@ -33,59 +32,37 @@ void tracking(int i, int j, int mask)
             }
         }
         int tmpAns = 0;
-        for (int i = 0; i < M * N; i++)
+        for (int i = 0; i < M * N + 1; i++)
         {
             tmpAns += ansAr[i];
         }
-        cout << tmpAns << '\n';
         Ans = max(Ans, tmpAns);
         return;
     }
+    masking[i][j] = mask;
 
-    int ni = 0;
-    int nj = 0;
-    int nm = 0;
-    ni = i == M - 1 ? 0 : i + 1;
-    nj = i == M - 1 ? j + 1 : j;
-    nm = i == M - 1 ? mask + 1 : mask;
-    if (!masking[ni][nj])
-    {
-        if (i != M - 1)
-        {
-            // 아래 쪽으로 더 갈 수 있을 때
-            if (j == 0 || masking[i][j - 1] != masking[i][j])
-                tracking(ni, nj, nm);
-            tracking(ni, nj, nm + 1);
-        }
-        else
-        {
-            tracking(ni, nj, nm);
-        }
-        masking[ni][nj] = 0;
-    }
-
+    int ni, nj;
     ni = j == N - 1 ? i + 1 : i;
     nj = j == N - 1 ? 0 : j + 1;
-    nm = j == N - 1 ? mask + 1 : mask;
-    if (!masking[ni][nj])
+    if (i)
     {
-        // tracking(ni, nj, nm);
-        // if (j != N - 1)
-        //     tracking(ni, nj, nm + 1);
-
-        if (j != N - 1)
+        if ((!j || masking[i - 1][j - 1] != masking[i - 1][j]) && (j == N - 1 || masking[i - 1][j + 1] != masking[i - 1][j]))
         {
-            // 아래 쪽으로 더 갈 수 있을 때
-            if (i == 0 || masking[i - 1][j] != masking[i][j])
-                tracking(ni, nj, nm);
-            tracking(ni, nj, nm + 1);
+            masking[i][j] = masking[i - 1][j];
+            tracking(ni, nj, mask);
         }
-        else
-        {
-            tracking(ni, nj, nm);
-        }
-        masking[ni][nj] = 0;
     }
+    if (j)
+    {
+        if ((!i || masking[i - 1][j - 1] != masking[i][j - 1]) && (i == M - 1 || masking[i + 1][j - 1] != masking[i][j - 1]))
+        {
+            masking[i][j] = masking[i][j - 1];
+            tracking(ni, nj, mask);
+        }
+    }
+    masking[i][j] = mask;
+    tracking(ni, nj, mask + 1);
+    // 옆에애가 위에 있을때로 변경
 }
 
 int main()
