@@ -1,0 +1,43 @@
+<mxfile host="Electron" modified="2024-02-19T13:48:23.550Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.16 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="8Sukr-m6-bJ8pq_9wHS5" version="22.1.16" type="device">
+  <diagram name="페이지-1" id="QhQAPv7h47tIAddaMBhb">
+    <mxGraphModel dx="1475" dy="891" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Yew1VTgoaulUI_6hj4jH-1" value="int Dfs(int start, int node)" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="520" width="453.33" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="Yew1VTgoaulUI_6hj4jH-2" value="모든 자식 요소에 대해서 반복" style="rounded=0;whiteSpace=wrap;html=1;shape=swimlane;fontStyle=1;startSize=23;" vertex="1" parent="Yew1VTgoaulUI_6hj4jH-1">
+          <mxGeometry x="41.66" y="50" width="298.34" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="Yew1VTgoaulUI_6hj4jH-3" value="start = dfs(start + 1);" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Yew1VTgoaulUI_6hj4jH-2">
+          <mxGeometry x="59.17" y="114" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Yew1VTgoaulUI_6hj4jH-8" value="visited를 위해 left[i] 가 0이 아닌지 확인" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Yew1VTgoaulUI_6hj4jH-2">
+          <mxGeometry x="59.17" y="40" width="160.83" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Yew1VTgoaulUI_6hj4jH-4" value="return start + 1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Yew1VTgoaulUI_6hj4jH-1">
+          <mxGeometry x="100.83000000000001" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Yew1VTgoaulUI_6hj4jH-5" value="left 배열, right배열 생성" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="430" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Yew1VTgoaulUI_6hj4jH-6" value="인접 리스트[10000]&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="10" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Yew1VTgoaulUI_6hj4jH-7" value="입력파트 N번 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="100" width="590" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="Yew1VTgoaulUI_6hj4jH-9" value="첫번 쨰 요소 입력" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Yew1VTgoaulUI_6hj4jH-7">
+          <mxGeometry x="30" y="50" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Yew1VTgoaulUI_6hj4jH-11" value="다음입력이 -1 일때까지 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="Yew1VTgoaulUI_6hj4jH-7">
+          <mxGeometry x="200" y="80" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Yew1VTgoaulUI_6hj4jH-13" value="입력리스트 정렬" style="whiteSpace=wrap;html=1;" vertex="1" parent="Yew1VTgoaulUI_6hj4jH-7">
+          <mxGeometry x="190" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

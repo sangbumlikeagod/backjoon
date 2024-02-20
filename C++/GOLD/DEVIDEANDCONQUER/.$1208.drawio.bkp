@@ -1,0 +1,19 @@
+<mxfile host="Electron" modified="2024-02-19T14:10:58.657Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.16 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="cjMBq4RP_PDMBqYMbIul" version="22.1.16" type="device">
+  <diagram name="페이지-1" id="bSyX6AP_AvFDKyPmUHOx">
+    <mxGraphModel dx="1180" dy="713" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="C-H-yYpJ3sPRFyArDiIb-2" value="N / 2동안 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="410" width="450" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="C-H-yYpJ3sPRFyArDiIb-3" value="BackTracking(int val, int, index, int limit, int[] &amp;amp;container)" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="40" width="450" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="C-H-yYpJ3sPRFyArDiIb-4" value="&lt;h1&gt;백트래킹 코드&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="C-H-yYpJ3sPRFyArDiIb-3">
+          <mxGeometry x="130" y="85" width="190" height="120" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
