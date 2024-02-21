@@ -1,0 +1,118 @@
+<mxfile host="Electron" modified="2024-02-21T04:00:23.668Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.1.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="RtZ246qnYjMPC0QmHovU" version="23.1.5" type="device">
+  <diagram name="페이지-1" id="MfUvxNBR7QGocHIggNye">
+    <mxGraphModel dx="955" dy="1122" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="B3tPS9RlYUsnbYLJWmKf-1" value="&lt;h1&gt;입력&lt;/h1&gt;&lt;p&gt;길이 N&lt;/p&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="10" y="175" width="190" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="B3tPS9RlYUsnbYLJWmKf-2" value="&lt;h1&gt;과정&lt;/h1&gt;&lt;p&gt;직렬화 : 길이 N - 1의 계단수까지의 결과물들은 N길이의 계단수에 영향을 끼침&lt;/p&gt;&lt;p&gt;그리고 정답에 영향을 끼치는 계단수는 0부터 9까지 모든 수가 등장하는 계단수임&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="10" y="285" width="190" height="225" as="geometry" />
+        </mxCell>
+        <mxCell id="B3tPS9RlYUsnbYLJWmKf-3" value="직렬화  :딜레마 논리 / 이전 상태 저장값 " style="shape=table;childLayout=tableLayout;startSize=40;collapsible=0;recursiveResize=0;expand=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="290" y="100" width="470" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="B3tPS9RlYUsnbYLJWmKf-4" value="DP" style="shape=tableRow;horizontal=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;strokeColor=inherit;bottom=0;right=0;dropTarget=0;fontStyle=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;startSize=30;collapsible=0;recursiveResize=0;expand=0;fontSize=16;" vertex="1" parent="B3tPS9RlYUsnbYLJWmKf-3">
+          <mxGeometry y="40" width="470" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="B3tPS9RlYUsnbYLJWmKf-5" value="" style="swimlane;swimlaneHead=0;swimlaneBody=0;fontStyle=0;strokeColor=inherit;connectable=0;fillColor=none;startSize=40;collapsible=0;recursiveResize=0;expand=0;fontSize=16;" vertex="1" parent="B3tPS9RlYUsnbYLJWmKf-4">
+          <mxGeometry x="30" width="146" height="120" as="geometry">
+            <mxRectangle width="146" height="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B3tPS9RlYUsnbYLJWmKf-6" value="숫자 10개" style="swimlane;swimlaneHead=0;swimlaneBody=0;fontStyle=0;strokeColor=inherit;connectable=0;fillColor=none;startSize=40;collapsible=0;recursiveResize=0;expand=0;fontSize=16;" vertex="1" parent="B3tPS9RlYUsnbYLJWmKf-4">
+          <mxGeometry x="176" width="148" height="120" as="geometry">
+            <mxRectangle width="148" height="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B3tPS9RlYUsnbYLJWmKf-27" value="지금 숫자에서 &lt;br&gt;숫자 - 1, + 1로&lt;br&gt;자신을 더함&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="B3tPS9RlYUsnbYLJWmKf-6">
+          <mxGeometry x="10" y="50" width="100" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="B3tPS9RlYUsnbYLJWmKf-7" value="숫자 10개 with 상태" style="swimlane;swimlaneHead=0;swimlaneBody=0;fontStyle=0;strokeColor=inherit;connectable=0;fillColor=none;startSize=40;collapsible=0;recursiveResize=0;expand=0;fontSize=16;" vertex="1" parent="B3tPS9RlYUsnbYLJWmKf-4">
+          <mxGeometry x="324" width="146" height="120" as="geometry">
+            <mxRectangle width="146" height="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B3tPS9RlYUsnbYLJWmKf-8" value="0부터 9까지 확인" style="shape=tableRow;horizontal=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;strokeColor=inherit;bottom=0;right=0;dropTarget=0;fontStyle=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;startSize=30;collapsible=0;recursiveResize=0;expand=0;fontSize=16;" vertex="1" parent="B3tPS9RlYUsnbYLJWmKf-3">
+          <mxGeometry y="160" width="470" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="B3tPS9RlYUsnbYLJWmKf-9" value="" style="swimlane;swimlaneHead=0;swimlaneBody=0;fontStyle=0;connectable=0;strokeColor=inherit;fillColor=none;startSize=0;collapsible=0;recursiveResize=0;expand=0;fontSize=16;" vertex="1" parent="B3tPS9RlYUsnbYLJWmKf-8">
+          <mxGeometry x="30" width="146" height="150" as="geometry">
+            <mxRectangle width="146" height="150" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B3tPS9RlYUsnbYLJWmKf-10" value="" style="swimlane;swimlaneHead=0;swimlaneBody=0;fontStyle=0;connectable=0;strokeColor=inherit;fillColor=none;startSize=0;collapsible=0;recursiveResize=0;expand=0;fontSize=16;" vertex="1" parent="B3tPS9RlYUsnbYLJWmKf-8">
+          <mxGeometry x="176" width="148" height="150" as="geometry">
+            <mxRectangle width="148" height="150" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B3tPS9RlYUsnbYLJWmKf-11" value="" style="swimlane;swimlaneHead=0;swimlaneBody=0;fontStyle=0;connectable=0;strokeColor=inherit;fillColor=none;startSize=0;collapsible=0;recursiveResize=0;expand=0;fontSize=16;" vertex="1" parent="B3tPS9RlYUsnbYLJWmKf-8">
+          <mxGeometry x="324" width="146" height="150" as="geometry">
+            <mxRectangle width="146" height="150" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B3tPS9RlYUsnbYLJWmKf-30" value="3차원 리스트를 &lt;br&gt;도는거라고 &lt;br&gt;생각하면 쉬움" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="B3tPS9RlYUsnbYLJWmKf-11">
+          <mxGeometry x="16.5" y="45" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="B3tPS9RlYUsnbYLJWmKf-12" value="총 계산량" style="shape=tableRow;horizontal=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;strokeColor=inherit;bottom=0;right=0;dropTarget=0;fontStyle=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;startSize=30;collapsible=0;recursiveResize=0;expand=0;fontSize=16;" vertex="1" parent="B3tPS9RlYUsnbYLJWmKf-3">
+          <mxGeometry y="310" width="470" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="B3tPS9RlYUsnbYLJWmKf-13" value="" style="swimlane;swimlaneHead=0;swimlaneBody=0;fontStyle=0;connectable=0;strokeColor=inherit;fillColor=none;startSize=0;collapsible=0;recursiveResize=0;expand=0;fontSize=16;" vertex="1" parent="B3tPS9RlYUsnbYLJWmKf-12">
+          <mxGeometry x="30" width="146" height="120" as="geometry">
+            <mxRectangle width="146" height="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B3tPS9RlYUsnbYLJWmKf-14" value="" style="swimlane;swimlaneHead=0;swimlaneBody=0;fontStyle=0;connectable=0;strokeColor=inherit;fillColor=none;startSize=0;collapsible=0;recursiveResize=0;expand=0;fontSize=16;" vertex="1" parent="B3tPS9RlYUsnbYLJWmKf-12">
+          <mxGeometry x="176" width="148" height="120" as="geometry">
+            <mxRectangle width="148" height="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B3tPS9RlYUsnbYLJWmKf-15" value="" style="swimlane;swimlaneHead=0;swimlaneBody=0;fontStyle=0;connectable=0;strokeColor=inherit;fillColor=none;startSize=0;collapsible=0;recursiveResize=0;expand=0;fontSize=16;" vertex="1" parent="B3tPS9RlYUsnbYLJWmKf-12">
+          <mxGeometry x="324" width="146" height="120" as="geometry">
+            <mxRectangle width="146" height="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B3tPS9RlYUsnbYLJWmKf-33" value="1024 * 10 * 100" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="B3tPS9RlYUsnbYLJWmKf-15">
+          <mxGeometry x="8" y="45" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="B3tPS9RlYUsnbYLJWmKf-28" value="&lt;h1&gt;Heading&lt;/h1&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="465" width="190" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="B3tPS9RlYUsnbYLJWmKf-34" value="int lisT[101][1024][10]&lt;br&gt;&lt;br&gt;N번째 계단수가&amp;nbsp;&lt;br&gt;( 10000001) 0과 9를 지난 상태에서 마지막이 0일때의 가지수" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="70" y="640" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="B3tPS9RlYUsnbYLJWmKf-35" value="1부터 9까지 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="880" width="180" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="B3tPS9RlYUsnbYLJWmKf-36" value="list[1][1 &amp;lt;&amp;lt; i ][i] = 1" style="whiteSpace=wrap;html=1;" vertex="1" parent="B3tPS9RlYUsnbYLJWmKf-35">
+          <mxGeometry x="30" y="70" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="B3tPS9RlYUsnbYLJWmKf-39" value="int MODULO = 1000000000" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="310" y="640" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="B3tPS9RlYUsnbYLJWmKf-40" value="총 N번 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="302" y="860" width="508" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="B3tPS9RlYUsnbYLJWmKf-42" value="1023 번 * 10번 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="B3tPS9RlYUsnbYLJWmKf-40">
+          <mxGeometry x="81" y="40" width="379" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="B3tPS9RlYUsnbYLJWmKf-41" value="j - 1, j 가 범위 안에 있을때" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="B3tPS9RlYUsnbYLJWmKf-42">
+          <mxGeometry x="20" y="65" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="B3tPS9RlYUsnbYLJWmKf-43" value="lisT[x + 1][i | j +- 1][ j +- 1] += 자기자신" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="B3tPS9RlYUsnbYLJWmKf-42">
+          <mxGeometry x="20" y="110" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="B3tPS9RlYUsnbYLJWmKf-44" value="총 10번 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="1160" width="350" height="211" as="geometry" />
+        </mxCell>
+        <mxCell id="B3tPS9RlYUsnbYLJWmKf-47" value="ans += lisT[N][1023][i] % MODULO&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="B3tPS9RlYUsnbYLJWmKf-44">
+          <mxGeometry x="22" y="75.5" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="B3tPS9RlYUsnbYLJWmKf-49" value="cout &amp;lt;&amp;lt; ans;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="1235.5" width="200" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

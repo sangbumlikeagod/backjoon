@@ -1,0 +1,256 @@
+.result-wait, .result-rejudge-wait, .result-no-judge {
+	color: #a49e9e;
+}
+.result-compile, .result-judging {
+	color: #e67e22;
+}
+.result-ac {
+	color: #009874;
+	font-weight: bold;
+}
+.result-ac a {
+	text-decoration: underline;
+}
+.result-ac a:focus, .result-ac a:hover, .result-ac a:active {
+	color: #009874;
+}
+.result-pac {
+	color: #efc050;
+	font-weight: bold;
+}
+.result-pac a {
+	text-decoration: underline;
+}
+.result-pac a:focus, .result-pac a:hover, .result-pac a:active {
+	color: #efc050;
+}
+.result-pe, .result-tle, .result-mle, .result-ole {
+	color: #fa7268;
+}
+.result-wa {
+	color: #dd4124;
+}
+.result-awa {
+	color: #dd4124;
+	font-weight: bold;
+}
+.result-rte {
+	color: #5f4b8b;
+}
+.result-rte a {
+	text-decoration: underline;
+}
+.result-rte a:focus, .result-rte a:hover, .result-rte a:active {
+	color: #5f4b8b;
+}
+.result-ce {
+	color: #0f4c81;
+}
+.result-ce a {
+	text-decoration: underline;
+}
+a.result-ce:focus, a.result-ce:hover, a.result-ce:active {
+	color: #0f4c81;
+}
+.result-co, .result-del {
+	color: black;
+	text-decoration: line-through;
+}
+a.result-ac:hover, a.result-ac:active,  a.result-ac:focus {
+	color: #009874;
+	font-weight: bold;
+}
+a.result-pac:hover, a.result-pac:active,  a.result-pac:focus {
+	color: #efc050;
+	font-weight: bold;
+}
+a.result-wa:hover, a.result-wa:active, a.result-wa:focus {
+	color: #dd4124;
+}
+a.result-awa:hover, a.result-awa:active, a.result-awa:focus {
+	color: #dd4124;
+	font-weight: bold;
+}
+
+.result-wait-text::after {
+	content: "기다리는 중";
+	color: #a49e9e;
+}
+.result-wait-text-eng::after {
+	content: "Pending";
+	color: #a49e9e;
+}
+.result-rejudge-wait-text::after {
+	content: "재채점을 기다리는 중";
+	color: #a49e9e;
+}
+.result-rejudge-wait-text-eng::after {
+	content: "Pending Rejudge";
+	color: #a49e9e;
+}
+.result-no-judge-text::after {
+	content: "채점하지 않음";
+	color: #a49e9e;
+}
+.result-compile-text::after {
+	content: "채점 준비 중";
+	color: #e67e22;
+}
+.result-compile-text-eng::after {
+	content: "Prepare for Judge";
+	color: #e67e22;
+}
+.result-judging-text::after {
+	content: "채점 중";
+	color: #e67e22;
+}
+.result-judging-text-eng::after {
+	content: "Judging";
+	color: #e67e22;
+}
+.result-ac-text::after {
+	content: "맞았습니다!!";
+	color: #009874;
+	font-weight: bold;
+}
+.result-ac-text-eng::after {
+	content: "Accepted";
+	color: #009874;
+	font-weight: bold;
+}
+.result-pac-text::after {
+	content: "맞았습니다!!";
+	color: #efc050;
+	font-weight: bold;
+}
+.result-pac-text-eng::after {
+	content: "Partially Accepted";
+	color: #efc050;
+	font-weight: bold;
+}
+.result-pe-text::after {
+	content: "출력 형식이 잘못되었습니다";
+	color: #fa7268;
+}
+.result-pe-text-eng::after {
+	content: "Presentation Error";
+	color: #fa7268;
+}
+.result-wa-text::after {
+	content: "틀렸습니다";
+	color: #dd4124;
+}
+.result-wa-text-eng::after {
+	content: "Wrong Answer";
+	color: #dd4124;
+}
+.result-awa-text::after {
+	content: "!맞았습니다";
+	color: #dd4124;
+	font-weight: bold;
+}
+.result-awa-text-eng::after {
+	content: "!Accepted";
+	color: #dd4124;
+	font-weight: bold;
+}
+.result-tle-text::after {
+	content: "시간 초과";
+	color: #fa7268;
+}
+.result-tle-text-eng::after {
+	content: "Time Limit Exceeded";
+	color: #fa7268;
+}
+.result-mle-text::after {
+	content: "메모리 초과";
+	color: #fa7268;
+}
+.result-mle-text-eng::after {
+	content: "Memory Limit Exceeded";
+	color: #fa7268;
+}
+.result-ole-text::after {
+	content: "출력 초과";
+	color: #fa7268;
+}
+.result-ole-text-eng::after {
+	content: "Output Limit Exceeded";
+	color: #fa7268;
+}
+.result-rte-text::after {
+	content: "런타임 에러";
+	color: #5f4b8b;
+}
+.result-rte-text-eng::after {
+	content: "Runtime Error";
+	color: #5f4b8b;
+}
+.result-ce-text::after {
+	content: "컴파일 에러";
+	color: #0f4c81;
+}
+.result-ce-text-eng::after {
+	content: "Compilation Error";
+	color: #0f4c81;
+}
+.result-co-text::after {
+	content: "채점 불가";
+	color: black;
+	text-decoration: line-through;
+}
+.result-co-text-eng::after {
+	content: "Unavailable";
+	color: black;
+	text-decoration: line-through;
+}
+.result-del-text::after {
+	content: "삭제된 제출";
+	color: black;
+	text-decoration: line-through;
+}
+.result-del-text-eng::after {
+	content: "Deleted";
+	color: black;
+	text-decoration: line-through;
+}
+a.result-ac-text:hover::after, a.result-ac-text:active::after,  a.result-ac-text:focus::after {
+	color: #009874;
+	font-weight: bold;
+}
+a.result-pac-text:hover::after, a.result-pac-text:active::after,  a.result-pac-text:focus::after {
+	color: #efc050;
+	font-weight: bold;
+}
+a.result-wa-text:hover::after, a.result-wa-text:active::after, a.result-wa-text:focus::after {
+	color: #dd4124;
+}
+a.result-awa-text:hover::after, a.result-awa-text:active::after, a.result-awa-text:focus::after {
+	color: #dd4124;
+	font-weight: bold;
+}
+a.result-ac-text-eng:hover::after, a.result-ac-text-eng:active::after,  a.result-ac-text-eng:focus::after {
+	color: #009874;
+	font-weight: bold;
+}
+a.result-pac-text-eng:hover::after, a.result-pac-text-eng:active::after,  a.result-pac-text-eng:focus::after {
+	color: #efc050;
+	font-weight: bold;
+}
+a.result-wa-text-eng:hover::after, a.result-wa-text-eng:active::after, a.result-wa-text-eng:focus::after {
+	color: #dd4124;
+}
+a.result-awa-text-eng:hover::after, a.result-awa-text-eng:active::after, a.result-awa-text-eng:focus::after {
+	color: #dd4124;
+	font-weight: bold;
+}
+.result-will-be-change {
+	color: #a49e9e !important;
+}
+
+.result-will-be-change-text::after {
+	color: #a49e9e !important;
+}
+.result-text a {
+	color: inherit !important;
+}

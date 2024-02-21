@@ -1,0 +1,146 @@
+var result_progress = {};
+function display_solution(solution_id, ans) {
+    var result = ans['result'];
+    if (result == 11) ans['compile_error'] = true;
+    if (result == 10) ans['runtime_error'] = true;
+    var $s = $("#solution-"+solution_id);
+    if (ans['compile_error']) {
+        if (parseInt($s.attr('data-can-view')) != 1) {
+            ans['compile_error'] = false;
+        }
+    }
+    var has_detail = false;
+    if (result == 4) {
+        if (ans['subtask_score']) {
+            has_detail = true;
+        }
+        if (ans['ac'] && ans['tot'] && ans['ac'] > 0 && ans['tot'] > 0) {
+            has_detail = true;
+        }
+        if (has_detail) {
+            if (parseInt($s.attr('data-can-view')) != 1) {
+                has_detail = false;
+            }
+        }
+    }
+    ans['result_color'] = result_colors[result];
+    ans['result_name'] = result_names[result];
+    var progress = 0;
+    if (ans['progress']) {
+        progress = parseInt(ans['progress']);
+        if (result_progress[solution_id] > progress) {
+            return;
+        }
+        ans['result_name'] += " (" + progress + "%";
+
+        result_progress[solution_id] = progress;
+        ans['result_name'] += ')';
+    }
+    if (result >= 4) {
+        result_progress[solution_id] = 0;
+    }
+    if (result == 6 && ans['feedback']) {
+        ans['result_name'] += ' ['+ans['feedback']+']';
+    }
+    if (result == 10 && ans['rte_reason']) {
+        ans['result_name'] += ' ('+ans['rte_reason']+')';
+    }
+    if (result == 14) {
+        var remain = ans['remain'] || 0;
+        ans['result_name'] = ans['result_name'].replace("%(remain)", remain);
+    }
+    var r = "";
+    if (ans['compile_error']) {
+        r += '<a href="/ceinfo/'+solution_id+'">';
+    }
+    if (ans['runtime_error']) {
+        r += '<a href="https://help.acmicpc.net/judge/rte">';
+    }
+    if (has_detail) {
+        r += '<a href="/source/'+solution_id+'#points">';
+    }
+    if (ans['partial_score']) {
+        var score = (Math.round(ans['partial_score'] * 100) / 100);
+        r += score;
+        if (user_language == 1) r += ' ';
+        r += point_text;
+        if (user_language == 1 && score != 1) r += 's';
+        if (ans['custom_result']) {
+            r += " (" + ans['custom_result'] + ")";
+        }
+    } else if (ans['subtask_score']) {
+        var score = (ans['subtask_score']);
+        r += score;
+        if (user_language == 1) r += ' ';
+        r += point_text;
+        if (user_language == 1 && score != 1) r += 's';
+        if (ans['custom_result']) {
+            r += " (" + ans['custom_result'] + ")";
+        }
+    } else {
+        if (ans['custom_result']) {
+            r += ans['custom_result'];
+        } else {
+            r += ans['result_name'];
+            if (ans['ac'] && ans['tot'] && ans['ac'] > 0 && ans['tot'] > 0) {
+                r += ' (' + ans['ac'] + '/' + ans['tot'] + ')';
+            }
+        }
+    }
+    if (ans['compile_error']) r += '</a>';
+    if (ans['runtime_error']) r += '</a>';
+    if (has_detail) r += '</a>';
+    $s.find("td.result span.result-text").html(r);
+    var prev_color = $s.find("td.result span.result-text").attr('data-color');
+    if (prev_color != ans['result_color']) {
+        $s.find("td.result span.result-text").removeClass('result-'+prev_color).addClass('result-'+ans['result_color']).attr('data-color', ans['result_color']);
+    }
+    if ('memory' in ans) {
+        $s.find("td.memory").html(ans['memory']+"<span class='kb-text'></span>");
+    } else {
+        $s.find("td.memory").html('');
+    }
+    if ('time' in ans) {
+        $s.find("td.time").html(ans['time']+"<span class='ms-text'></span>");
+    } else {
+        $s.find("td.time").html('');
+    }
+}
+function watch_solution(solution_id) {
+    var channel = pusher.subscribe('solution-' + solution_id);
+    channel.bind('pusher:subscription_succeeded', function() {
+        $.ajax({
+            type: "POST",
+            url: "/status/ajax",
+            data: {
+                solution_id: solution_id,
+            },
+        }).done(function(ans) {
+            if (ans['error']) {
+            } else {
+                display_solution(solution_id, ans);
+                channel.bind('update', function(data) {
+                    display_solution(solution_id, data);
+                });
+            }
+        }).fail(function() {
+        }).always(function() {			
+        });
+    });
+}
+$(function() {
+    var channels = {};
+    solution_ids.forEach(function(solution) {
+        var solution_id = solution[0];
+        var result = solution[1];
+        result_progress[solution_id] = 0;
+        if (result < 4) {
+            watch_solution(solution_id);
+        } else {
+            channels[solution_id] = pusher.subscribe('solution-'+solution_id);
+            channels[solution_id].bind('update', function(data) {
+                display_solution(solution_id, data);
+            });
+        }
+    });
+});

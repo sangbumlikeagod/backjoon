@@ -1,0 +1,18 @@
+key('right', function(){ 
+	var page = $("#next_page");
+	if (page && (typeof page != "undefined")) {
+		var url = page.attr('href');
+		if (typeof url != "undefined") {
+			window.location=url;
+		}
+	}
+});
+key('left', function(){ 
+	var page = $("#prev_page");
+	if (page && (typeof page != "undefined")) {
+		var url = page.attr('href');
+		if (typeof url != "undefined") {
+			window.location=url;
+		}
+	}
+});

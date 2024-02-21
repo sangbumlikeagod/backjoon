@@ -1,0 +1,104 @@
+span.problem-label + span.problem-label {
+    margin-left: 3px;
+}
+span.problem-label {
+    display: inline;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    font-size: 11px;
+    font-weight: 400;
+    padding: 4px 7px;
+}
+.sky-form span.problem-label {
+    font-size: 13px;
+}
+span.problem-label-spj {
+	background-color: #5bc0de;
+}
+span.problem-label-partial {
+	background-color: #5bc0de;
+}
+span.problem-label-full {
+	background-color: #27d7e7;
+}
+span.problem-label-func {
+	background-color: #27d7e7;
+}
+span.problem-label-interactive {
+	background-color: #27d7e7;
+}
+span.problem-label-time-acc {
+	background-color: #9c8061;
+}
+span.problem-label-random-killer {
+	background-color: #1abc9c;
+}
+span.problem-label-unofficial {
+	background-color: #1abc9c;
+}
+span.problem-label-preparing {
+	background-color: #f0ad4e;
+}
+span.problem-label-deleted {
+	background-color: #f0ad4e;
+}
+span.problem-label-subtask {
+	background-color: #555;
+}
+span.problem-label-beta {
+	background-color: #f1c40f;
+}
+span.problem-label-pac {
+	background-color: #efc050;
+}
+span.problem-label-two-steps {
+	background-color: #27d7e7;
+}
+span.problem-label-class {
+	background-color: #27d7e7;
+}
+span.problem-label-ac {
+	background-color: #5cb85c;
+}
+span.problem-label-wa {
+	background-color: #d9534f;
+}
+span.problem-label-bookmark {
+	background-color: #777;
+}
+span.problem-label-multilang {
+	background-color: #777;
+}
+span.problem-label-source {
+	background-color: #428bca;
+}
+span.problem-label-debug {
+	background-color: #79d5b3; 
+}
+span.problem-label-language-restrict {
+	background-color: #4765a0;
+}
+span.problem-label-submit-limit {
+	background-color: #4765a0;
+}
+span.problem-label-tag {
+	background-color: #9b6bcc;
+}
+span.problem-label-s3 {
+	background-color: #1abc9c;
+}
+span.problem-label-stack {
+	background-color: #1abc9c;
+}
+span.problem-label-challenging {
+	background-color: #428bca;
+}
+span.problem-label-private {
+	background-color: #f0ad4e;
+}
+span.problem-label-feedback {
+	background-color: #5bc0de;
+}
