@@ -1,0 +1,37 @@
+<mxfile host="Electron" modified="2024-02-26T03:53:28.432Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.1.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="vesahlalyZwDzEnMYRJt" version="23.1.5" type="device">
+  <diagram id="wFE0QG_FPsp0jaGvCLVb" name="Page-1">
+    <mxGraphModel dx="1194" dy="705" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="x_4n2nlvyULqoizmoBoV-1" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="130" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="x_4n2nlvyULqoizmoBoV-2" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="x_4n2nlvyULqoizmoBoV-3" value="N번 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="350" width="610" height="500" as="geometry" />
+        </mxCell>
+        <mxCell id="x_4n2nlvyULqoizmoBoV-4" value="Deq가 있는동안 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="x_4n2nlvyULqoizmoBoV-3">
+          <mxGeometry x="50" y="140" width="270" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="x_4n2nlvyULqoizmoBoV-5" value="deq에서 popright()" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="x_4n2nlvyULqoizmoBoV-4">
+          <mxGeometry x="30" y="55" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="x_4n2nlvyULqoizmoBoV-6" value="deq에서 popleft()" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="x_4n2nlvyULqoizmoBoV-3">
+          <mxGeometry x="80" y="70" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="x_4n2nlvyULqoizmoBoV-7" value="Deq가 비어있지 않다면" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="x_4n2nlvyULqoizmoBoV-3">
+          <mxGeometry x="20" y="30" width="310" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="x_4n2nlvyULqoizmoBoV-10" value="deq에서 pushright()" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="x_4n2nlvyULqoizmoBoV-3">
+          <mxGeometry x="90" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="x_4n2nlvyULqoizmoBoV-11" value="ans += deq.left()" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="x_4n2nlvyULqoizmoBoV-3">
+          <mxGeometry x="250" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
