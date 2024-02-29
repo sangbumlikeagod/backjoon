@@ -1,10 +1,17 @@
 #include <iostream>
 #include <stdio.h>
+#include <vector>
+#include <string>
+#include <fstream>
+
+
+
 using namespace std;
 
 
 int main(){
-
+    ios::sync_with_stdio(false), cin.tie(0);
+    ifstream cin("11.txt", ios_base::in);
     int a = 5;
     int b = a;
     cout << b << endl; 

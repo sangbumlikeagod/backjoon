@@ -1,0 +1,17 @@
+3 4 5
+abcb
+bcaa
+abac
+aba
+abc
+cab
+z
+x
+
+3 3 2
+aaa
+aba
+aaa
+aa
+bb
+
