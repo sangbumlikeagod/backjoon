@@ -27,8 +27,9 @@ int Dp(int i, int j)
     {
         nx = dx[z] * save + i;
         ny = dy[z] * save + j;
-        // cout << nx << ' ' << ny << '\n';
-        if (0 <= nx && nx < M && 0 <= ny && ny < N && pann[nx][ny] != 24)
+        d
+            // cout << nx << ' ' << ny << '\n';
+            if (0 <= nx && nx < M && 0 <= ny && ny < N && pann[nx][ny] != 24)
         {
             int beforeCompare = Dp(nx, ny) + 1;
             if (beforeCompare == 0)
