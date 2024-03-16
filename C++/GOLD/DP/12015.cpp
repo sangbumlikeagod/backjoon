@@ -38,6 +38,7 @@ int main()
             }
             else
             {
+                end = m;
                 break;
             }
         }
