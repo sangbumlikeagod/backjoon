@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/sangbumlikeagod/virtcloud/backjoon/C++/GOLD/DEVIDEANDCONQUER",
-      "program": "/Users/sangbumlikeagod/virtcloud/backjoon/C++/GOLD/DEVIDEANDCONQUER/build/Debug/outDebug"
+      "cwd": "/Users/sangbumlikeagod/virtcloud/backjoon/C++/GOLD",
+      "program": "/Users/sangbumlikeagod/virtcloud/backjoon/C++/GOLD/build/Debug/outDebug"
     }
   ]
 }

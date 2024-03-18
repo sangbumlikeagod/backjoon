@@ -6,11 +6,11 @@
 #include <cstring>
 using namespace std;
 
-
 int A[1000001] = {0};
 // int AParents[1000000] = {0};
 
-int main(){
+int main()
+{
     ios::sync_with_stdio(false), cin.tie(0);
     ifstream cin("12015.txt", ios_base::in);
     int N;
@@ -31,23 +31,25 @@ int main(){
             if (A[m] < s)
             {
                 start = m + 1;
-            } 
+            }
             else if (A[m] > s)
             {
                 end = m;
             }
-            else {break;}
+            else
+            {
+                end = m;
+                break;
+            }
         }
         if (end == x)
         {
-            A[x++] = s; 
+            A[x++] = s;
         }
-        else 
+        else
         {
             A[end] = s;
         }
     }
     cout << x;
-    
-    
 }
