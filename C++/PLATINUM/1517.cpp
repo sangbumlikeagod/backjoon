@@ -4,8 +4,8 @@
 #include <queue>
 using namespace std;
 
-int inputList[500001] = {0};
-int sortedInputList[500001] = {0};
+int inputList[500001]{0};
+int sortedInputList[500001]{0};
 
 int N;
 long long ans = 0;
