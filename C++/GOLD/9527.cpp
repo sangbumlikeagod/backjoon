@@ -20,7 +20,6 @@ long long countTotal1(long long inp){
     }
     // cout << GreatIndex << '\n'; 
     GreatIndex--;
-    
     while (GreatIndex >= 0)
     {
         ans += (forLeft / 2);
