@@ -6,9 +6,8 @@
 #include <algorithm>
 using namespace std;
 
-
-
-int main(){
+int main()
+{
     ios::sync_with_stdio(false), cin.tie(0);
     ifstream cin("1014.txt", ios_base::in);
 
@@ -19,7 +18,7 @@ int main(){
     {
         int x, y;
         cin >> x >> y;
-        
+
         int shouldNot[10][10] = {0};
         int Dp[11][1024] = {0};
 
@@ -29,19 +28,17 @@ int main(){
             cin >> s;
             // 거꾸로 저장함
             for (int yV = 0; yV < y; yV++)
-            {   
+            {
                 shouldNot[xV][yV] = 0;
                 if (s[yV] == 'x')
                 {
                     shouldNot[xV][yV] = 1;
                 }
             }
-
         }
 
         // cout << "저장 완료" << '\n';
-        
-        
+
         for (int xV = 0; xV < x; xV++)
         {
             for (int chance = 0; chance < (1 << y); chance++)
@@ -53,7 +50,7 @@ int main(){
                 int nextLineShouldNotSeatHere = 0;
                 // cout << '\n' << '\n' << "***********************************" << '\n' << chance  << '\n';
 
-                while (yPointer < y) 
+                while (yPointer < y)
                 {
 
                     // int rightNow = 1 << yPointer;
@@ -99,13 +96,12 @@ int main(){
                 {
                     if ((caseForNext & nextLineShouldNotSeatHere) == 0)
                     {
-                        Dp[xV + 1][caseForNext] = max(Dp[xV + 1][caseForNext],  Dp[xV][chance] + totalSeat);
+                        Dp[xV + 1][caseForNext] = max(Dp[xV + 1][caseForNext], Dp[xV][chance] + totalSeat);
                     }
                 }
-                
             }
         }
-        
+
         int maxVal = 0;
         for (int totalNthCase = 0; totalNthCase < 1024; totalNthCase++)
         {
@@ -113,5 +109,5 @@ int main(){
         }
         cout << maxVal << '\n';
         // break;
-    }    
+    }
 }
