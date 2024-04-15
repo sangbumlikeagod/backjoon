@@ -63,6 +63,7 @@ int main()
                 {
                     forOverlap[end]++;
                     ans++;
+                    ans++;
                 }
             }
         }
