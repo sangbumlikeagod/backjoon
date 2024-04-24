@@ -8,66 +8,75 @@ using namespace std;
 
 struct Trie
 {
-    int val;
-    Trie* SubTrie[10];
-    Trie(int val) : val(val) {};
-    bool SearchTrie(Trie* node, bool isSame)
-    {   
-        cout << node -> val << '\t' << isSame << '\n';
-        if (!isSame)
+    char val;
+    Trie* SubTrie[10] = {nullptr, };
+    Trie(char val) : val(val) {
+        for (int i = 0; i < 10; i++)
         {
-            int isThereOthers = 0;
+            SubTrie[i] = nullptr;
+        }
+    };
+    bool SearchTrie(string val, bool madeByMe)
+    {   
+        // 지금 내 값을 나누기
+        if (madeByMe == false)
+        {
+            bool NoSubStr = true;
             for (int i = 0; i < 10; i++)
             {
                 if (SubTrie[i])
                 {
-                    isThereOthers++;
+                    NoSubStr = false;
+                    break;
                 }
             }
-            if (!isThereOthers)
+            if (NoSubStr)
             {
                 return false;
             }
         }
-        int degree = 1;
-        while (node -> val / degree)
-        {
-            degree *= 10;
-        }
-        degree /= 10;
+        // cout << val << '\n';
         
-        int wherePut = node -> val / degree;
-        int nextVal = node -> val % degree;
-
-        if (nextVal == 0)
+        char nextTrie = val[0];
+        string nextEnt;
+        if (val.length() > 1)
         {
-            for (int i = 0; i < 10; i++)
-            {
-                if (SubTrie[i])
-                {
-                    return false;
-                }
-            }
-            return true;
-        }
-
-        Trie* nextTrie = new Trie(nextVal);
-
-        if (SubTrie[wherePut])
-        {
-            return SubTrie[wherePut] ->SearchTrie(nextTrie, false);
+            nextEnt = val.substr(1);
         }
         else
         {
-            SubTrie[wherePut] = nextTrie;
-            return SubTrie[wherePut] ->SearchTrie(nextTrie, true);
+            char nextTrie = val[0];
+            if (SubTrie[nextTrie - '0'])
+            {
+                return false;
+            }
+            else
+            {
+                SubTrie[nextTrie - '0'] = new Trie(nextTrie);
+                return true;
+            }
         }
+
+    
+    
+        if (SubTrie[nextTrie - '0'])
+        {
+            // cout << val << '\n';
+
+            return SubTrie[nextTrie - '0'] -> SearchTrie(nextEnt, false);
+        }
+        else
+        {
+
+            SubTrie[nextTrie - '0'] = new Trie(nextTrie);
+            return SubTrie[nextTrie - '0'] -> SearchTrie(nextEnt, true);
+        }
+
     } 
 };
 
 
-Trie *Head = new Trie(-1);
-int N;
+int N = 0;
 
 int main(){
     ios::sync_with_stdio(false), cin.tie(0);
@@ -75,19 +84,30 @@ int main(){
     cin >> N;
     for (int tc = 0; tc < N; tc++)
     {
+        Trie *Head = new Trie('1');
+
+        
         int numofPhone;
         cin >> numofPhone;
+        // cout << numofPhone << '\n';
+        bool isNotFound = true;
         for (int ppPhone = 0; ppPhone < numofPhone; ppPhone++)
         {
-            int phoneNumber;
+            string phoneNumber;
             cin >> phoneNumber;
-            if (!Head -> SearchTrie(new Trie(phoneNumber), true))
+
+            // cout << phoneNumber <<  '\n' << phoneNumber.substr(1) << '\n';
+            if (isNotFound && !Head -> SearchTrie(phoneNumber, true))
             {
-                cout << "FALSE" << '\n';
+                isNotFound = false;
+                cout << "NO" << '\n';
                 continue;
             }
         }
-        cout << "TRUE" << '\n';
+        if (isNotFound)
+        {
+            cout << "YES" << '\n';
+        }
     }
     
 

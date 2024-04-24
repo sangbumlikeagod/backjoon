@@ -1,0 +1,37 @@
+<mxfile host="Electron" modified="2024-04-24T09:38:34.070Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.1.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="ZRjK9TCuepFN_UuCzSTF" version="23.1.5" type="device">
+  <diagram name="페이지-1" id="kLltJjQFEEnbKR9ZzVzn">
+    <mxGraphModel dx="432" dy="629" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="0FhcHeM9_hyhKQes5jGh-2" value="Trie 자료구조" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="110" width="470" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="0FhcHeM9_hyhKQes5jGh-3" value="속성" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="0FhcHeM9_hyhKQes5jGh-2">
+          <mxGeometry x="20" y="40" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="0FhcHeM9_hyhKQes5jGh-4" value="문자" style="whiteSpace=wrap;html=1;" vertex="1" parent="0FhcHeM9_hyhKQes5jGh-3">
+          <mxGeometry x="40" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0FhcHeM9_hyhKQes5jGh-5" value="다음 벡터" style="whiteSpace=wrap;html=1;" vertex="1" parent="0FhcHeM9_hyhKQes5jGh-3">
+          <mxGeometry x="40" y="110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0FhcHeM9_hyhKQes5jGh-6" value="메소드" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="0FhcHeM9_hyhKQes5jGh-2">
+          <mxGeometry x="250" y="40" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="0FhcHeM9_hyhKQes5jGh-7" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0FhcHeM9_hyhKQes5jGh-6">
+          <mxGeometry x="40" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0FhcHeM9_hyhKQes5jGh-8" value="다음 트라이 입력값 등장" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="600" width="510" height="410" as="geometry" />
+        </mxCell>
+        <mxCell id="0FhcHeM9_hyhKQes5jGh-9" value="&lt;h1&gt;목표값&lt;/h1&gt;&lt;p&gt;문자열의 입력값에서 한개를 취한다 -&amp;gt; 자식으로 넘기는 과정에서 취하는 것으로&lt;/p&gt;&lt;p&gt;취하고 넘기는 과정에서 더이상 넘길게 없는 상황에서만, 입력값이 빈칸인 상황에서&lt;/p&gt;&lt;p&gt;본인이 누군가의 접두어일때를 고려해줘야한다&lt;/p&gt;&lt;p&gt;누가 내 접두어일때를 고려해줘야 한다.&lt;/p&gt;&lt;p&gt;내가 누군가의 접두어라면 빈칸이 되었을때 혹은 한칸만 남았을때. 전달해줄 트라이가 비어있어야만한다.&lt;/p&gt;&lt;p&gt;누군가가 내 접두어라면 지금 내가있는 트라이가, 내가 만든게 아니고 다른 놈들이 전부다 비워져 있을때&lt;/p&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="0FhcHeM9_hyhKQes5jGh-8">
+          <mxGeometry x="5" y="30" width="415" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="0FhcHeM9_hyhKQes5jGh-10" value="입력값 : 문자열" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="354" y="470" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
