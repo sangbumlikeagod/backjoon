@@ -8,6 +8,8 @@
 using namespace std;
 
 unordered_map<int, int> forOverlap;
+unordered_map<int, int> forMinus;
+
 vector<int> container;
 int ans = 0;
 int binarySearch(int start, int end, int target)
@@ -25,7 +27,7 @@ int binarySearch(int start, int end, int target)
         }
         else
         {
-            end = mid - 1;
+            end = mid;
         }
     }
     return container[start] == target;
@@ -38,6 +40,7 @@ int main()
 
     int N;
     int countForZero = 0;
+    int comple = 0;
     cin >> N;
     for (int inp = 0; inp < N; inp++)
     {
@@ -46,6 +49,15 @@ int main()
         {
             countForZero++;
         }
+        else if (in < 0)
+        {
+            forMinus[in]++;
+            if (forMinus[in] == 2)
+            {
+                comple++;
+            }
+        }
+        
         cin >> in;
         container.push_back(in);
     }
@@ -61,8 +73,8 @@ int main()
             {
                 if (forOverlap.find(end) == forOverlap.end())
                 {
+                    cout << start  <<  ' ' << end << ' ' << container[end] - container[start]  << '\n';
                     forOverlap[end]++;
-                    ans++;
                     ans++;
                 }
             }
@@ -70,7 +82,11 @@ int main()
     }
     if (countForZero > 2)
     {
-        ans += 2;
+        comple += 2;
+    }
+    if (countForZero >= 1)
+    {
+        ans += comple;
     }
     cout << ans;
 }
