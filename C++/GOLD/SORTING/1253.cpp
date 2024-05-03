@@ -1,92 +1,145 @@
 #include <iostream>
-#include <fstream>
+#include <stdio.h>
 #include <vector>
-#include <queue>
+#include <string>
+#include <fstream>
+#include <cstring>
 #include <algorithm>
 #include <unordered_map>
-
 using namespace std;
 
-unordered_map<int, int> forOverlap;
-unordered_map<int, int> forMinus;
+int forOverlap[2001] {0};
+unordered_map<int, int> mapps;
+unordered_map<int, int> OVERLAP;
+vector<int> stackwithoutDouble {};
 
-vector<int> container;
-int ans = 0;
-int binarySearch(int start, int end, int target)
-{
-    while (start < end)
+
+int binarySearch(int i, int j, int val)
+{   
+    // cout << val << '\n';
+    while (i < j)
     {
-        int mid = (start + end) / 2;
-        if (container[mid] == target)
+    
+        int mid = (i + j) / 2;
+        // cout << i << ' ' << j << ' ' << mid << ' ' << val << ' ' <<  stackwithoutDouble[mid] << '\n';  
+    
+        if (stackwithoutDouble[mid] == val)
         {
-            return 1;
+            // cout << mid << '\n';
+            return mid;
         }
-        else if (container[mid] < target)
+        else if (stackwithoutDouble[mid] > val)
         {
-            start = mid + 1;
+            // cout << stackwithoutDouble[mid]  << '\n';
+            j = mid;
+            // cout << "우웩" << '\n';
         }
         else
         {
-            end = mid;
+            i = mid + 1;
         }
     }
-    return container[start] == target;
+    if (stackwithoutDouble[i] == val)
+    {
+        return i;
+    }
+    return -1;
+
 }
 
-int main()
+int check(int next, int i, int j, int target)
 {
-    ios::sync_with_stdio(false), cin.tie(0), cin.tie(0);
-    ifstream cin("1253.txt", ios_base::in);
+    if (next == -1)
+    {
+        return 0;
+    }
+    else if (next == i && mapps[stackwithoutDouble[i]]<= 1)
+    {
+        return 0;
+    }
+    else if (next == j && mapps[stackwithoutDouble[j]] <= 1)
+    {
+        return 0;
+    }
+    else if (i == j && i != next && mapps[stackwithoutDouble[i]] <= 1)
+    {
+        return 0;
+    }
+    else if (i == j && i == next && mapps[stackwithoutDouble[i]] <= 2)
+    {
+        return 0;
+    }
+    else
+    {
+        return mapps[stackwithoutDouble[target]];
+    }
+}
 
+int main(){
+    ios::sync_with_stdio(false), cin.tie(0);
+    ifstream cin("1253.txt", ios_base::in);
     int N;
-    int countForZero = 0;
-    int comple = 0;
     cin >> N;
-    for (int inp = 0; inp < N; inp++)
+    int ans = 0;
+
+    for (int i = 0; i < N; i++)
     {
         int in;
-        if (in == 0)
-        {
-            countForZero++;
+        cin >> in; 
+        if (mapps.find(in) == mapps.end())
+        {   
+            stackwithoutDouble.push_back(in);
         }
-        else if (in < 0)
+        mapps[in]++;
+        // cout << in << '\t' << mapps[in] << '\n';
+    }
+    sort(stackwithoutDouble.begin(), stackwithoutDouble.end());
+    // for (int i = 0; i < stackwithoutDouble.size(); i++)
+    // {
+    //     cout << stackwithoutDouble[i] << '\t';
+    // }
+    // cout << '\n' << '\n';
+    
+
+    for (int i = 0; i < stackwithoutDouble.size(); i++)
+    {
+        for (int j = stackwithoutDouble.size() - 1; j >= i; j--)
         {
-            forMinus[in]++;
-            if (forMinus[in] == 2)
+            // cout  << '\t' << i << '\t' << j << '\n'; 
+
+            int next = binarySearch(0, stackwithoutDouble.size() - 1, stackwithoutDouble[j] + stackwithoutDouble[i]);
+            // cout <<  next << '\t' << i << '\t' << j << '\n'; 
+
+            int checkNum = check(next, i, j, next);
+
+            if (checkNum && !OVERLAP[next]) 
             {
-                comple++;
+                OVERLAP[next]++;
+                ans += checkNum;
             }
+
+            next = binarySearch(0, stackwithoutDouble.size() - 1, stackwithoutDouble[j] - stackwithoutDouble[i]);
+            checkNum = check(next, i, j, j);
+            if (checkNum && !OVERLAP[j])
+            {
+                OVERLAP[j]++;
+                // cout << '\t' << stackwithoutDouble[i] << ' ' << stackwithoutDouble[next] << ' ' << stackwithoutDouble[j] << '\n';
+                ans += checkNum;
+            }
+
+            next = binarySearch(0, stackwithoutDouble.size() - 1, stackwithoutDouble[i] - stackwithoutDouble[j]);
+            checkNum = check(next, i, j, i);
+            if (checkNum && !OVERLAP[i])
+            {
+                OVERLAP[i]++;
+                // cout << "\t\t" << stackwithoutDouble[j] << ' ' << stackwithoutDouble[next] << ' ' << stackwithoutDouble[i] << '\n';
+
+                ans += checkNum;
+            }
+            
         }
-        
-        cin >> in;
-        container.push_back(in);
     }
 
-    sort(container.begin(), container.end());
-
-    for (int start = 0; start < N - 1; start++)
-    {
-        for (int end = N - 1; end > start + 1; end--)
-        {
-            int tmpAns = binarySearch(start + 1, end - 1, container[end] - container[start]);
-            if (tmpAns)
-            {
-                if (forOverlap.find(end) == forOverlap.end())
-                {
-                    cout << start  <<  ' ' << end << ' ' << container[end] - container[start]  << '\n';
-                    forOverlap[end]++;
-                    ans++;
-                }
-            }
-        }
-    }
-    if (countForZero > 2)
-    {
-        comple += 2;
-    }
-    if (countForZero >= 1)
-    {
-        ans += comple;
-    }
-    cout << ans;
+    cout << ans << '\n';
+    
 }
