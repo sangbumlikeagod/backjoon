@@ -1,0 +1,13 @@
+<mxfile host="Electron" modified="2024-05-05T13:28:30.098Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.1.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="e77lp7Rfj9IPvDEDaCo_" version="23.1.5" type="device">
+  <diagram name="페이지-1" id="mJYvhLLfE5og2Ke-VDfa">
+    <mxGraphModel dx="475" dy="692" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="LCphp6mL7q4igyLH_SFF-1" value="people을 정렬한다" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="190" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
