@@ -11,6 +11,49 @@ using namespace std;
 unordered_map<string, int> A[1001];
 unordered_map<string, int> B[1001];
 
+
+class Trie
+{
+    int num;
+    char val;
+    Trie* next[26];
+
+    Trie(char val) : val(val) {}; 
+    void addWord(string word)
+    {
+        if (word.empty() == false)
+        {
+            int nextidx = word[0] - 'a';
+            if (next[nextidx] == nullptr)
+            {
+                next[nextidx] = new Trie(word[0]);
+            }
+            num++;
+        }
+    }
+    void deleteWord(string word)
+    {   
+        if (word.empty() == false)
+        {
+            int nextidx = word[0] - 'a';
+            next[word[0] - 'a']->deleteWord(word.substr(1));
+            if (next[nextidx]->empty())
+            {
+                delete next[nextidx];
+            }
+            num--;
+        }
+    }
+    Trie* fillUpTable()
+    {
+        
+    }
+    bool empty()
+    {
+        return num == 0;
+    }
+};
+
 int countWord(string word)
 {
     int length = word.length();
