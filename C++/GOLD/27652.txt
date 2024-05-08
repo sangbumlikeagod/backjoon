@@ -1,8 +1,18 @@
-7
-add A aba
+6
 add A a
-add A ab
-add B bab
 add B b
-add B ab
-find abab
+find a
+find z
+find za
+find ba
+
+
+8
+add A a
+add B bcd
+add A ab
+add B cd
+find abcd
+delete A a
+delete B bcd
+find abcd
