@@ -1,128 +1,11 @@
-<mxfile host="Electron" modified="2024-05-08T05:53:28.874Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.1.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="nYalmB5W3NQebkzgCLyc" version="23.1.5" type="device">
+<mxfile host="Electron" modified="2024-05-08T15:57:28.190Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.1.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="fl8j7z7Bk-moxzOedEKL" version="23.1.5" type="device">
   <diagram name="페이지-1" id="mJYvhLLfE5og2Ke-VDfa">
-    <mxGraphModel dx="1327" dy="783" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1837" dy="1085" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="FhvKxsoOaMsX3Fl6zh21-1" value="" style="swimlane;startSize=0;" parent="1" vertex="1">
-          <mxGeometry x="540" y="30" width="278" height="370" as="geometry" />
-        </mxCell>
-        <mxCell id="FhvKxsoOaMsX3Fl6zh21-2" value="" style="ellipse;whiteSpace=wrap;html=1;" parent="FhvKxsoOaMsX3Fl6zh21-1" vertex="1">
-          <mxGeometry x="24" y="20" width="120" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="FhvKxsoOaMsX3Fl6zh21-3" value=": 변수 선언" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="FhvKxsoOaMsX3Fl6zh21-1" vertex="1">
-          <mxGeometry x="170" y="50" width="60" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="FhvKxsoOaMsX3Fl6zh21-4" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="FhvKxsoOaMsX3Fl6zh21-1" vertex="1">
-          <mxGeometry x="24" y="110" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="FhvKxsoOaMsX3Fl6zh21-5" value=": 행동 코드" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="FhvKxsoOaMsX3Fl6zh21-1" vertex="1">
-          <mxGeometry x="170" y="120" width="60" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="FhvKxsoOaMsX3Fl6zh21-6" value="~ 동안" style="swimlane;whiteSpace=wrap;html=1;" parent="FhvKxsoOaMsX3Fl6zh21-1" vertex="1">
-          <mxGeometry x="24" y="180" width="120" height="70" as="geometry" />
-        </mxCell>
-        <mxCell id="FhvKxsoOaMsX3Fl6zh21-7" value=": 반복 구문" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="FhvKxsoOaMsX3Fl6zh21-1" vertex="1">
-          <mxGeometry x="170" y="200" width="60" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="FhvKxsoOaMsX3Fl6zh21-8" value="" style="rhombus;whiteSpace=wrap;html=1;" parent="FhvKxsoOaMsX3Fl6zh21-1" vertex="1">
-          <mxGeometry x="24" y="260" width="120" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="FhvKxsoOaMsX3Fl6zh21-9" value=": if문" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="FhvKxsoOaMsX3Fl6zh21-1" vertex="1">
-          <mxGeometry x="156" y="285" width="60" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="FhvKxsoOaMsX3Fl6zh21-10" value="unordered_map&amp;lt;string, int&amp;gt; A[1001]&lt;br&gt;unordered_map&amp;lt;string, int&amp;gt; B[1001]" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="40" y="50" width="220" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="FhvKxsoOaMsX3Fl6zh21-12" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="10" y="170" width="640" height="650" as="geometry" />
-        </mxCell>
-        <mxCell id="FhvKxsoOaMsX3Fl6zh21-13" value="Q의 개수 만큼 반복" style="swimlane;whiteSpace=wrap;html=1;" parent="FhvKxsoOaMsX3Fl6zh21-12" vertex="1">
-          <mxGeometry x="1" width="410" height="570" as="geometry" />
-        </mxCell>
-        <mxCell id="FhvKxsoOaMsX3Fl6zh21-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="FhvKxsoOaMsX3Fl6zh21-13" source="FhvKxsoOaMsX3Fl6zh21-15" target="FhvKxsoOaMsX3Fl6zh21-16" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="FhvKxsoOaMsX3Fl6zh21-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="FhvKxsoOaMsX3Fl6zh21-13" source="FhvKxsoOaMsX3Fl6zh21-15" target="FhvKxsoOaMsX3Fl6zh21-20" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="FhvKxsoOaMsX3Fl6zh21-15" value="command가 add인가" style="rhombus;whiteSpace=wrap;html=1;" parent="FhvKxsoOaMsX3Fl6zh21-13" vertex="1">
-          <mxGeometry x="29" y="80" width="131" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="FhvKxsoOaMsX3Fl6zh21-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="FhvKxsoOaMsX3Fl6zh21-13" source="FhvKxsoOaMsX3Fl6zh21-16" target="FhvKxsoOaMsX3Fl6zh21-18" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="FhvKxsoOaMsX3Fl6zh21-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="FhvKxsoOaMsX3Fl6zh21-13" source="FhvKxsoOaMsX3Fl6zh21-16" target="FhvKxsoOaMsX3Fl6zh21-22" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="FhvKxsoOaMsX3Fl6zh21-16" value="command가 delete인가" style="rhombus;whiteSpace=wrap;html=1;" parent="FhvKxsoOaMsX3Fl6zh21-13" vertex="1">
-          <mxGeometry x="29" y="240" width="131" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="FhvKxsoOaMsX3Fl6zh21-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="FhvKxsoOaMsX3Fl6zh21-13" source="FhvKxsoOaMsX3Fl6zh21-18" target="FhvKxsoOaMsX3Fl6zh21-27" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="FhvKxsoOaMsX3Fl6zh21-18" value="command가 find인가" style="rhombus;whiteSpace=wrap;html=1;" parent="FhvKxsoOaMsX3Fl6zh21-13" vertex="1">
-          <mxGeometry x="29" y="400" width="131" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="FhvKxsoOaMsX3Fl6zh21-20" value="A또는 B[s.length()][s] ++" style="rounded=0;whiteSpace=wrap;html=1;" parent="FhvKxsoOaMsX3Fl6zh21-13" vertex="1">
-          <mxGeometry x="189" y="90" width="191" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="FhvKxsoOaMsX3Fl6zh21-22" value="A또는 B[s.length()].erase(s)" style="rounded=0;whiteSpace=wrap;html=1;" parent="FhvKxsoOaMsX3Fl6zh21-13" vertex="1">
-          <mxGeometry x="189" y="250" width="191" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="FhvKxsoOaMsX3Fl6zh21-26" value="cout &amp;lt;&amp;lt; countWord(word)" style="whiteSpace=wrap;html=1;" parent="FhvKxsoOaMsX3Fl6zh21-13" vertex="1">
-          <mxGeometry x="189" y="490" width="191" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="FhvKxsoOaMsX3Fl6zh21-27" value="cin &amp;gt;&amp;gt; string word;" style="ellipse;whiteSpace=wrap;html=1;" parent="FhvKxsoOaMsX3Fl6zh21-13" vertex="1">
-          <mxGeometry x="189" y="410" width="191" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="FhvKxsoOaMsX3Fl6zh21-14" value="&lt;h1&gt;예외처리&lt;/h1&gt;&lt;p&gt;1.&amp;nbsp;&lt;/p&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="FhvKxsoOaMsX3Fl6zh21-12" vertex="1">
-          <mxGeometry x="450" y="265" width="190" height="120" as="geometry" />
-        </mxCell>
-        <mxCell id="FhvKxsoOaMsX3Fl6zh21-35" value="" style="swimlane;startSize=0;" parent="1" vertex="1">
-          <mxGeometry x="4" y="830" width="730" height="320" as="geometry" />
-        </mxCell>
-        <mxCell id="FhvKxsoOaMsX3Fl6zh21-29" value="int countWord" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="FhvKxsoOaMsX3Fl6zh21-35" vertex="1">
-          <mxGeometry x="11" y="10" width="140" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="FhvKxsoOaMsX3Fl6zh21-30" value="string word" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="FhvKxsoOaMsX3Fl6zh21-29" vertex="1">
-          <mxGeometry y="30" width="140" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="FhvKxsoOaMsX3Fl6zh21-37" value="int length = word.length()&lt;br&gt;int ans = 0" style="ellipse;whiteSpace=wrap;html=1;" parent="FhvKxsoOaMsX3Fl6zh21-35" vertex="1">
-          <mxGeometry x="170" y="15" width="180" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="FhvKxsoOaMsX3Fl6zh21-40" value="return ans;" style="rounded=0;whiteSpace=wrap;html=1;" parent="FhvKxsoOaMsX3Fl6zh21-35" vertex="1">
-          <mxGeometry x="566" y="230" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="FhvKxsoOaMsX3Fl6zh21-55" value="" style="group" parent="FhvKxsoOaMsX3Fl6zh21-35" vertex="1" connectable="0">
-          <mxGeometry y="80" width="730" height="210" as="geometry" />
-        </mxCell>
-        <mxCell id="FhvKxsoOaMsX3Fl6zh21-57" value="&lt;h1&gt;예외처리&lt;/h1&gt;&lt;p&gt;1.&amp;nbsp;&lt;/p&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="FhvKxsoOaMsX3Fl6zh21-55" vertex="1">
-          <mxGeometry x="556" y="10" width="155" height="120" as="geometry" />
-        </mxCell>
-        <mxCell id="FhvKxsoOaMsX3Fl6zh21-39" value="int i = 1부터 length 보다 작을때까지 반복" style="swimlane;whiteSpace=wrap;html=1;" parent="FhvKxsoOaMsX3Fl6zh21-55" vertex="1">
-          <mxGeometry x="11" y="10" width="534" height="200" as="geometry" />
-        </mxCell>
-        <mxCell id="FhvKxsoOaMsX3Fl6zh21-42" value="A[i]가 empty() 거나 B[length - i] 가 empty 인가" style="rhombus;whiteSpace=wrap;html=1;" parent="FhvKxsoOaMsX3Fl6zh21-39" vertex="1">
-          <mxGeometry x="20" y="30" width="180" height="70" as="geometry" />
-        </mxCell>
-        <mxCell id="FhvKxsoOaMsX3Fl6zh21-44" value="continue" style="rounded=0;whiteSpace=wrap;html=1;" parent="FhvKxsoOaMsX3Fl6zh21-39" vertex="1">
-          <mxGeometry x="50" y="110" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="FhvKxsoOaMsX3Fl6zh21-47" value="A[i].find(word.subStr(0, i) == null 거나&amp;nbsp;&lt;br&gt;B[i].find(word.subStr(i, length) == null" style="rhombus;whiteSpace=wrap;html=1;" parent="FhvKxsoOaMsX3Fl6zh21-39" vertex="1">
-          <mxGeometry x="210" y="30" width="180" height="70" as="geometry" />
-        </mxCell>
-        <mxCell id="FhvKxsoOaMsX3Fl6zh21-48" value="continue" style="rounded=0;whiteSpace=wrap;html=1;" parent="FhvKxsoOaMsX3Fl6zh21-39" vertex="1">
-          <mxGeometry x="240" y="110" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="FhvKxsoOaMsX3Fl6zh21-54" value="ans++" style="rounded=0;whiteSpace=wrap;html=1;" parent="FhvKxsoOaMsX3Fl6zh21-39" vertex="1">
-          <mxGeometry x="399" y="40" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="P_EoNst60TyOaDxSn-2_-1" value="&lt;h1&gt;Heading&lt;/h1&gt;&lt;p&gt;Trie &lt;br/&gt;{&lt;br/&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;private:&lt;br/&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;int num : 호출값 add될시 1씩 더해지고 delete 될시 1씩 작아짐 &lt;br/&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;Trie* next[26] : 다음 Trie들을 담아두고있는 배열&lt;br/&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;public:&lt;br/&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;void addWord : input문장의 0번 인덱스에 해당하는 자식 배열에게 1번부터 마지막까지의 문자열을 제공&lt;br/&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;자기의 값 ++  &lt;br/&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;void removeWord : 들어온 완전한 문장의 0번 인덱스에 해당하는 자식 배열에게 1번부터 마지막까지 문자열 제공&lt;br/&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;자기자신 num --, 자기 자식이 비어있는지 확인한뒤 비었다면 delete해준다&lt;br/&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;void fillUpTable : B라면뒤집고 A라면 그대로인 트라이에 대해서 n번째 까지의 인덱스가 얼마나 차있는가를 적는다. -1이 아니라면&lt;br/&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;주어진 문자열의 다음 인덱스가 있는질 확인하고 없다면 리턴하며 있다면&lt;br/&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;br/&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;boolean isEmpty : 비어있는지 확인한다. num을 통해&lt;br/&gt;}&amp;nbsp;&lt;br/&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="920" y="410" width="670" height="390" as="geometry" />
-        </mxCell>
         <mxCell id="P_EoNst60TyOaDxSn-2_-7" value="\" style="swimlane;startSize=0;" parent="1" vertex="1">
-          <mxGeometry x="826" y="825" width="693" height="1785" as="geometry" />
+          <mxGeometry x="160" y="40" width="1447" height="1090" as="geometry" />
         </mxCell>
         <mxCell id="P_EoNst60TyOaDxSn-2_-8" value="Class Trie" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="P_EoNst60TyOaDxSn-2_-7" vertex="1">
           <mxGeometry x="11" y="10" width="140" height="120" as="geometry" />
@@ -191,10 +74,10 @@
           <mxGeometry x="30" y="360" width="250" height="60" as="geometry" />
         </mxCell>
         <mxCell id="P_EoNst60TyOaDxSn-2_-35" value="" style="swimlane;startSize=0;" parent="P_EoNst60TyOaDxSn-2_-7" vertex="1">
-          <mxGeometry x="60" y="1045" width="410" height="575" as="geometry" />
+          <mxGeometry x="560" y="410" width="530" height="635" as="geometry" />
         </mxCell>
-        <mxCell id="P_EoNst60TyOaDxSn-2_-36" value="void fillUpTable" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="P_EoNst60TyOaDxSn-2_-35" vertex="1">
-          <mxGeometry x="11" y="10" width="140" height="120" as="geometry" />
+        <mxCell id="P_EoNst60TyOaDxSn-2_-36" value="Trie* fillUpTable" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="P_EoNst60TyOaDxSn-2_-35" vertex="1">
+          <mxGeometry x="370" y="15" width="140" height="120" as="geometry" />
         </mxCell>
         <mxCell id="P_EoNst60TyOaDxSn-2_-39" value="int &amp;amp;table[1001]" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="P_EoNst60TyOaDxSn-2_-36" vertex="1">
           <mxGeometry y="30" width="140" height="30" as="geometry" />
@@ -205,23 +88,84 @@
         <mxCell id="P_EoNst60TyOaDxSn-2_-63" value="char c" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="P_EoNst60TyOaDxSn-2_-36" vertex="1">
           <mxGeometry y="90" width="140" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="P_EoNst60TyOaDxSn-2_-42" value="인덱스가 마지막 번호( 0 또는 n - 1) 인가 ( 문자로서 활성화 )" style="rhombus;whiteSpace=wrap;html=1;" parent="P_EoNst60TyOaDxSn-2_-35" vertex="1">
-          <mxGeometry x="57.5" y="140" width="195" height="81" as="geometry" />
+        <mxCell id="3bpHc3tVTAas9SbpANvd-10" value="no" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="P_EoNst60TyOaDxSn-2_-35" source="P_EoNst60TyOaDxSn-2_-42" target="3bpHc3tVTAas9SbpANvd-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="263" y="180.51851851851848" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="290" y="81" />
+              <mxPoint x="290" y="260" />
+              <mxPoint x="235" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3bpHc3tVTAas9SbpANvd-13" value="yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="P_EoNst60TyOaDxSn-2_-35" source="P_EoNst60TyOaDxSn-2_-42" target="3bpHc3tVTAas9SbpANvd-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P_EoNst60TyOaDxSn-2_-42" value="인덱스가 -1이 아닌가?" style="rhombus;whiteSpace=wrap;html=1;" parent="P_EoNst60TyOaDxSn-2_-35" vertex="1">
+          <mxGeometry x="40" y="40" width="195" height="81" as="geometry" />
+        </mxCell>
+        <mxCell id="3bpHc3tVTAas9SbpANvd-17" value="no" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="P_EoNst60TyOaDxSn-2_-35" source="P_EoNst60TyOaDxSn-2_-48" target="P_EoNst60TyOaDxSn-2_-50">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3bpHc3tVTAas9SbpANvd-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="P_EoNst60TyOaDxSn-2_-35" source="P_EoNst60TyOaDxSn-2_-48" target="P_EoNst60TyOaDxSn-2_-62">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="P_EoNst60TyOaDxSn-2_-48" value="next[c - &#39;a&#39;] null아님" style="rhombus;whiteSpace=wrap;html=1;" parent="P_EoNst60TyOaDxSn-2_-35" vertex="1">
-          <mxGeometry x="57.5" y="250" width="195" height="81" as="geometry" />
+          <mxGeometry x="40" y="390" width="195" height="81" as="geometry" />
         </mxCell>
         <mxCell id="P_EoNst60TyOaDxSn-2_-50" value="nullptr 리턴" style="rounded=0;whiteSpace=wrap;html=1;" parent="P_EoNst60TyOaDxSn-2_-35" vertex="1">
-          <mxGeometry x="263" y="260.5" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="P_EoNst60TyOaDxSn-2_-51" value="nullptr 리턴" style="rounded=0;whiteSpace=wrap;html=1;" parent="P_EoNst60TyOaDxSn-2_-35" vertex="1">
-          <mxGeometry x="263" y="150.5" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="P_EoNst60TyOaDxSn-2_-52" value="인덱스가 -1이 아니라면&lt;br&gt;table[index] = num" style="rounded=0;whiteSpace=wrap;html=1;" parent="P_EoNst60TyOaDxSn-2_-35" vertex="1">
-          <mxGeometry x="95" y="350" width="120" height="60" as="geometry" />
+          <mxGeometry x="360" y="270.5" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="P_EoNst60TyOaDxSn-2_-62" value="next[c - &#39;a&#39;] 리턴" style="rounded=0;whiteSpace=wrap;html=1;" parent="P_EoNst60TyOaDxSn-2_-35" vertex="1">
-          <mxGeometry x="95" y="420" width="120" height="60" as="geometry" />
+          <mxGeometry x="77.5" y="520" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3bpHc3tVTAas9SbpANvd-12" value="no" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="P_EoNst60TyOaDxSn-2_-35" source="3bpHc3tVTAas9SbpANvd-8" target="P_EoNst60TyOaDxSn-2_-50">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3bpHc3tVTAas9SbpANvd-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="P_EoNst60TyOaDxSn-2_-35" source="3bpHc3tVTAas9SbpANvd-8" target="P_EoNst60TyOaDxSn-2_-48">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3bpHc3tVTAas9SbpANvd-8" value="c가 유효하지 않은 문자인가?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="P_EoNst60TyOaDxSn-2_-35">
+          <mxGeometry x="40" y="260" width="195" height="81" as="geometry" />
+        </mxCell>
+        <mxCell id="3bpHc3tVTAas9SbpANvd-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="P_EoNst60TyOaDxSn-2_-35" source="3bpHc3tVTAas9SbpANvd-16" target="3bpHc3tVTAas9SbpANvd-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3bpHc3tVTAas9SbpANvd-16" value="table[index] += num" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="P_EoNst60TyOaDxSn-2_-35">
+          <mxGeometry x="77.5" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="P_EoNst60TyOaDxSn-2_-1" value="&lt;h1&gt;Trie&lt;/h1&gt;&lt;p&gt;Trie &lt;br&gt;{&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;private:&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;int num : 호출값 add될시 1씩 더해지고 delete 될시 1씩 작아짐 &lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;Trie* next[26] : 다음 Trie들을 담아두고있는 배열&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;public:&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;void addWord : input문장의 0번 인덱스에 해당하는 자식 배열에게 1번부터 마지막까지의 문자열을 제공&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;자기의 값 ++  &lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;void removeWord : 들어온 완전한 문장의 0번 인덱스에 해당하는 자식 배열에게 1번부터 마지막까지 문자열 제공&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;자기자신 num --, 자기 자식이 비어있는지 확인한뒤 비었다면 delete해준다&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;void fillUpTable : B라면뒤집고 A라면 그대로인 트라이에 대해서 n번째 까지의 인덱스가 얼마나 차있는가를 적는다. -1이 아니라면&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;주어진 문자열의 다음 인덱스가 있는질 확인하고 없다면 리턴하며 있다면&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;boolean isEmpty : 비어있는지 확인한다. num을 통해&lt;br&gt;}&amp;nbsp;&lt;br&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="P_EoNst60TyOaDxSn-2_-7" vertex="1">
+          <mxGeometry x="580" width="437" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="FhvKxsoOaMsX3Fl6zh21-1" value="" style="swimlane;startSize=0;" parent="P_EoNst60TyOaDxSn-2_-7" vertex="1">
+          <mxGeometry x="1100" y="215" width="278" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="FhvKxsoOaMsX3Fl6zh21-2" value="" style="ellipse;whiteSpace=wrap;html=1;" parent="FhvKxsoOaMsX3Fl6zh21-1" vertex="1">
+          <mxGeometry x="24" y="20" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="FhvKxsoOaMsX3Fl6zh21-3" value=": 변수 선언" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="FhvKxsoOaMsX3Fl6zh21-1" vertex="1">
+          <mxGeometry x="170" y="50" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="FhvKxsoOaMsX3Fl6zh21-4" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="FhvKxsoOaMsX3Fl6zh21-1" vertex="1">
+          <mxGeometry x="24" y="110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FhvKxsoOaMsX3Fl6zh21-5" value=": 행동 코드" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="FhvKxsoOaMsX3Fl6zh21-1" vertex="1">
+          <mxGeometry x="170" y="120" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="FhvKxsoOaMsX3Fl6zh21-6" value="~ 동안" style="swimlane;whiteSpace=wrap;html=1;" parent="FhvKxsoOaMsX3Fl6zh21-1" vertex="1">
+          <mxGeometry x="24" y="180" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="FhvKxsoOaMsX3Fl6zh21-7" value=": 반복 구문" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="FhvKxsoOaMsX3Fl6zh21-1" vertex="1">
+          <mxGeometry x="170" y="200" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="FhvKxsoOaMsX3Fl6zh21-8" value="" style="rhombus;whiteSpace=wrap;html=1;" parent="FhvKxsoOaMsX3Fl6zh21-1" vertex="1">
+          <mxGeometry x="24" y="260" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="FhvKxsoOaMsX3Fl6zh21-9" value=": if문" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="FhvKxsoOaMsX3Fl6zh21-1" vertex="1">
+          <mxGeometry x="156" y="285" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3bpHc3tVTAas9SbpANvd-4" value="&lt;h1&gt;예외처리&lt;/h1&gt;&lt;p&gt;1. 지금 노드에서 (head)에서 다음노드를 보는 일이기 때문에&lt;br&gt;&amp;nbsp;head 노드에서 table을 채우는 일이 없어야함&lt;br&gt;&lt;br&gt;2. 접두어 접미어는 길이가 최소 1이어야하기 때문에 마지막문자에 대해서는 가지 못하게해야함&lt;br&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="P_EoNst60TyOaDxSn-2_-7">
+          <mxGeometry x="1160" y="770" width="190" height="180" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
