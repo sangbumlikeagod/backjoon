@@ -10,7 +10,7 @@ using namespace std;
 
 int main(){
     ios::sync_with_stdio(false), cin.tie(0);
-    ifstream cin("14658.txt", ios_base::in);
+    // ifstream cin("14658.txt", ios_base::in);
     
     int n, m, l, k;
     int ans = 0;
@@ -24,8 +24,11 @@ int main(){
     }
     for (int x = 0; x < k; x++)
     {
-        for (int y = 0; y < x; y++)
+        for (int y = 0; y < k; y++)
         {
+            if (x == y) continue;
+            // cout << "(" << stars[x].first << ", " << stars[x].second << "), " <<   "(" << stars[y].first << ", " << stars[y].second << ")" << '\n';
+
             if (max(stars[x].first , stars[y].first) - min(stars[x].first, stars[y].first) > l || max(stars[x].second , stars[y].second) - min(stars[x].second, stars[y].second) > l)
             {
                 continue;
@@ -64,7 +67,5 @@ int main(){
         ans = max(ans, tmp);   
     }
     cout << k - ans;
-    
-    
     
 }
