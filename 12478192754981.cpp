@@ -1,1 +1,1 @@
-inr
+int mas = 5;
