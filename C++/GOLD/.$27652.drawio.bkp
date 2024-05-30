@@ -1,11 +1,171 @@
-<mxfile host="Electron" modified="2024-05-05T13:28:30.098Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.1.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="e77lp7Rfj9IPvDEDaCo_" version="23.1.5" type="device">
+<mxfile host="Electron" modified="2024-05-30T07:38:35.967Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.16 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="GcaAh297-Os5Yb1IY-pk" version="22.1.16" type="device">
   <diagram name="페이지-1" id="mJYvhLLfE5og2Ke-VDfa">
-    <mxGraphModel dx="475" dy="692" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="756" dy="1358" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="LCphp6mL7q4igyLH_SFF-1" value="people을 정렬한다" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="190" y="210" width="120" height="60" as="geometry" />
+        <mxCell id="P_EoNst60TyOaDxSn-2_-7" value="\" style="swimlane;startSize=0;" parent="1" vertex="1">
+          <mxGeometry x="160" y="40" width="1447" height="1090" as="geometry" />
+        </mxCell>
+        <mxCell id="P_EoNst60TyOaDxSn-2_-8" value="Class Trie" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="P_EoNst60TyOaDxSn-2_-7" vertex="1">
+          <mxGeometry x="11" y="10" width="140" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="P_EoNst60TyOaDxSn-2_-12" value="int num" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="P_EoNst60TyOaDxSn-2_-8" vertex="1">
+          <mxGeometry y="30" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="P_EoNst60TyOaDxSn-2_-13" value="char val" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="P_EoNst60TyOaDxSn-2_-8" vertex="1">
+          <mxGeometry y="60" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="P_EoNst60TyOaDxSn-2_-9" value="Trie* next[26]" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="P_EoNst60TyOaDxSn-2_-8" vertex="1">
+          <mxGeometry y="90" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="P_EoNst60TyOaDxSn-2_-14" value="" style="swimlane;startSize=0;" parent="P_EoNst60TyOaDxSn-2_-7" vertex="1">
+          <mxGeometry x="53" y="185" width="420" height="365" as="geometry" />
+        </mxCell>
+        <mxCell id="P_EoNst60TyOaDxSn-2_-15" value="void addWord" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="P_EoNst60TyOaDxSn-2_-14" vertex="1">
+          <mxGeometry x="11" y="10" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="P_EoNst60TyOaDxSn-2_-16" value="string word" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="P_EoNst60TyOaDxSn-2_-15" vertex="1">
+          <mxGeometry y="30" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="P_EoNst60TyOaDxSn-2_-18" value="next[ word[0] - &#39;a&#39;].addWord( word.substr(1) )&lt;br&gt;num++" style="rounded=0;whiteSpace=wrap;html=1;" parent="P_EoNst60TyOaDxSn-2_-14" vertex="1">
+          <mxGeometry x="12.5" y="280" width="250" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="P_EoNst60TyOaDxSn-2_-21" value="no" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.076;entryY=0.491;entryDx=0;entryDy=0;entryPerimeter=0;" parent="P_EoNst60TyOaDxSn-2_-14" source="P_EoNst60TyOaDxSn-2_-19" target="P_EoNst60TyOaDxSn-2_-46" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P_EoNst60TyOaDxSn-2_-19" value="word.empty() 인가" style="rhombus;whiteSpace=wrap;html=1;" parent="P_EoNst60TyOaDxSn-2_-14" vertex="1">
+          <mxGeometry x="40" y="80" width="195" height="81" as="geometry" />
+        </mxCell>
+        <mxCell id="P_EoNst60TyOaDxSn-2_-24" value="&lt;br&gt;&lt;span style=&quot;color: rgb(240, 240, 240); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(27, 29, 30); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;input문장의 0번 인덱스에 해당하는 자식 배열에게 1번부터 마지막까지의 문자열을 제공&lt;/span&gt;&lt;br style=&quot;border-color: rgb(0, 0, 0); color: rgb(240, 240, 240); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(27, 29, 30); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: left;&quot;&gt;&lt;span style=&quot;border-color: rgb(0, 0, 0); color: rgb(240, 240, 240); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(27, 29, 30); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: left;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;border-color: rgb(0, 0, 0); color: rgb(240, 240, 240); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(27, 29, 30); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: left;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;border-color: rgb(0, 0, 0); color: rgb(240, 240, 240); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(27, 29, 30); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: left;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;border-color: rgb(0, 0, 0); color: rgb(240, 240, 240); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(27, 29, 30); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: left;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;border-color: rgb(0, 0, 0); color: rgb(240, 240, 240); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(27, 29, 30); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: left;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;border-color: rgb(0, 0, 0); color: rgb(240, 240, 240); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(27, 29, 30); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: left;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;border-color: rgb(0, 0, 0); color: rgb(240, 240, 240); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(27, 29, 30); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: left;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;border-color: rgb(0, 0, 0); color: rgb(240, 240, 240); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(27, 29, 30); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: left;&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;border-color: rgb(0, 0, 0); color: rgb(240, 240, 240); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(27, 29, 30); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: left;&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;border-color: rgb(0, 0, 0); color: rgb(240, 240, 240); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(27, 29, 30); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: left;&quot;&gt;자기의 값 ++&lt;/span&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="P_EoNst60TyOaDxSn-2_-14" vertex="1">
+          <mxGeometry x="160" y="40" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="P_EoNst60TyOaDxSn-2_-45" value="next[word[0] - &#39;a&#39;] = new Trie()" style="rounded=0;whiteSpace=wrap;html=1;" parent="P_EoNst60TyOaDxSn-2_-14" vertex="1">
+          <mxGeometry x="170" y="210" width="250" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="P_EoNst60TyOaDxSn-2_-46" value="next[ word[0] - &#39;a&#39;] == nullptr 인가" style="rhombus;whiteSpace=wrap;html=1;" parent="P_EoNst60TyOaDxSn-2_-14" vertex="1">
+          <mxGeometry x="220" y="119" width="195" height="81" as="geometry" />
+        </mxCell>
+        <mxCell id="P_EoNst60TyOaDxSn-2_-29" value="" style="swimlane;startSize=0;" parent="P_EoNst60TyOaDxSn-2_-7" vertex="1">
+          <mxGeometry x="53" y="585" width="410" height="435" as="geometry" />
+        </mxCell>
+        <mxCell id="P_EoNst60TyOaDxSn-2_-30" value="void&amp;nbsp;removeWord&amp;nbsp;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="P_EoNst60TyOaDxSn-2_-29" vertex="1">
+          <mxGeometry x="11" y="10" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="P_EoNst60TyOaDxSn-2_-31" value="string word" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="P_EoNst60TyOaDxSn-2_-30" vertex="1">
+          <mxGeometry y="30" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="P_EoNst60TyOaDxSn-2_-32" value="word.empty() 인가" style="rhombus;whiteSpace=wrap;html=1;" parent="P_EoNst60TyOaDxSn-2_-29" vertex="1">
+          <mxGeometry x="57.5" y="90" width="195" height="81" as="geometry" />
+        </mxCell>
+        <mxCell id="P_EoNst60TyOaDxSn-2_-33" value="next[ word[0] - &#39;a&#39;].removeWord( word.substr(1) )&lt;br&gt;num--" style="rounded=0;whiteSpace=wrap;html=1;" parent="P_EoNst60TyOaDxSn-2_-29" vertex="1">
+          <mxGeometry x="30" y="200" width="250" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="P_EoNst60TyOaDxSn-2_-34" value="no" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="P_EoNst60TyOaDxSn-2_-29" source="P_EoNst60TyOaDxSn-2_-32" target="P_EoNst60TyOaDxSn-2_-33" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="190" y="10" as="sourcePoint" />
+            <mxPoint x="190" y="59" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P_EoNst60TyOaDxSn-2_-44" value="next[ word[0] - &#39;a&#39;].empty()&amp;nbsp;" style="rhombus;whiteSpace=wrap;html=1;" parent="P_EoNst60TyOaDxSn-2_-29" vertex="1">
+          <mxGeometry x="57.5" y="270" width="195" height="81" as="geometry" />
+        </mxCell>
+        <mxCell id="P_EoNst60TyOaDxSn-2_-43" value="delete next[word[0] - &#39;a&#39;]" style="rounded=0;whiteSpace=wrap;html=1;" parent="P_EoNst60TyOaDxSn-2_-29" vertex="1">
+          <mxGeometry x="30" y="360" width="250" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="P_EoNst60TyOaDxSn-2_-35" value="" style="swimlane;startSize=0;" parent="P_EoNst60TyOaDxSn-2_-7" vertex="1">
+          <mxGeometry x="560" y="410" width="530" height="635" as="geometry" />
+        </mxCell>
+        <mxCell id="P_EoNst60TyOaDxSn-2_-36" value="Trie* fillUpTable" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="P_EoNst60TyOaDxSn-2_-35" vertex="1">
+          <mxGeometry x="370" y="15" width="140" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="P_EoNst60TyOaDxSn-2_-39" value="int &amp;amp;table[1001]" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="P_EoNst60TyOaDxSn-2_-36" vertex="1">
+          <mxGeometry y="30" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="P_EoNst60TyOaDxSn-2_-40" value="int index" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="P_EoNst60TyOaDxSn-2_-36" vertex="1">
+          <mxGeometry y="60" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="P_EoNst60TyOaDxSn-2_-63" value="char c" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="P_EoNst60TyOaDxSn-2_-36" vertex="1">
+          <mxGeometry y="90" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3bpHc3tVTAas9SbpANvd-10" value="no" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="P_EoNst60TyOaDxSn-2_-35" source="P_EoNst60TyOaDxSn-2_-42" target="3bpHc3tVTAas9SbpANvd-8" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="263" y="180.51851851851848" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="290" y="81" />
+              <mxPoint x="290" y="260" />
+              <mxPoint x="235" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3bpHc3tVTAas9SbpANvd-13" value="yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="P_EoNst60TyOaDxSn-2_-35" source="P_EoNst60TyOaDxSn-2_-42" target="3bpHc3tVTAas9SbpANvd-16" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P_EoNst60TyOaDxSn-2_-42" value="인덱스가 -1이 아닌가?" style="rhombus;whiteSpace=wrap;html=1;" parent="P_EoNst60TyOaDxSn-2_-35" vertex="1">
+          <mxGeometry x="40" y="40" width="195" height="81" as="geometry" />
+        </mxCell>
+        <mxCell id="3bpHc3tVTAas9SbpANvd-17" value="no" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="P_EoNst60TyOaDxSn-2_-35" source="P_EoNst60TyOaDxSn-2_-48" target="P_EoNst60TyOaDxSn-2_-50" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3bpHc3tVTAas9SbpANvd-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="P_EoNst60TyOaDxSn-2_-35" source="P_EoNst60TyOaDxSn-2_-48" target="P_EoNst60TyOaDxSn-2_-62" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P_EoNst60TyOaDxSn-2_-48" value="next[c - &#39;a&#39;] null아님" style="rhombus;whiteSpace=wrap;html=1;" parent="P_EoNst60TyOaDxSn-2_-35" vertex="1">
+          <mxGeometry x="40" y="390" width="195" height="81" as="geometry" />
+        </mxCell>
+        <mxCell id="P_EoNst60TyOaDxSn-2_-50" value="nullptr 리턴" style="rounded=0;whiteSpace=wrap;html=1;" parent="P_EoNst60TyOaDxSn-2_-35" vertex="1">
+          <mxGeometry x="360" y="270.5" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="P_EoNst60TyOaDxSn-2_-62" value="next[c - &#39;a&#39;] 리턴" style="rounded=0;whiteSpace=wrap;html=1;" parent="P_EoNst60TyOaDxSn-2_-35" vertex="1">
+          <mxGeometry x="77.5" y="520" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3bpHc3tVTAas9SbpANvd-12" value="no" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="P_EoNst60TyOaDxSn-2_-35" source="3bpHc3tVTAas9SbpANvd-8" target="P_EoNst60TyOaDxSn-2_-50" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3bpHc3tVTAas9SbpANvd-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="P_EoNst60TyOaDxSn-2_-35" source="3bpHc3tVTAas9SbpANvd-8" target="P_EoNst60TyOaDxSn-2_-48" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3bpHc3tVTAas9SbpANvd-8" value="c가 유효하지 않은 문자인가?" style="rhombus;whiteSpace=wrap;html=1;" parent="P_EoNst60TyOaDxSn-2_-35" vertex="1">
+          <mxGeometry x="40" y="260" width="195" height="81" as="geometry" />
+        </mxCell>
+        <mxCell id="3bpHc3tVTAas9SbpANvd-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="P_EoNst60TyOaDxSn-2_-35" source="3bpHc3tVTAas9SbpANvd-16" target="3bpHc3tVTAas9SbpANvd-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3bpHc3tVTAas9SbpANvd-16" value="table[index] += num" style="rounded=0;whiteSpace=wrap;html=1;" parent="P_EoNst60TyOaDxSn-2_-35" vertex="1">
+          <mxGeometry x="77.5" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="P_EoNst60TyOaDxSn-2_-1" value="&lt;h1&gt;Trie&lt;/h1&gt;&lt;p&gt;Trie &lt;br&gt;{&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;private:&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;int num : 호출값 add될시 1씩 더해지고 delete 될시 1씩 작아짐 &lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;Trie* next[26] : 다음 Trie들을 담아두고있는 배열&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;public:&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;void addWord : input문장의 0번 인덱스에 해당하는 자식 배열에게 1번부터 마지막까지의 문자열을 제공&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;자기의 값 ++  &lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;void removeWord : 들어온 완전한 문장의 0번 인덱스에 해당하는 자식 배열에게 1번부터 마지막까지 문자열 제공&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;자기자신 num --, 자기 자식이 비어있는지 확인한뒤 비었다면 delete해준다&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;void fillUpTable : B라면뒤집고 A라면 그대로인 트라이에 대해서 n번째 까지의 인덱스가 얼마나 차있는가를 적는다. -1이 아니라면&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;주어진 문자열의 다음 인덱스가 있는질 확인하고 없다면 리턴하며 있다면&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;boolean isEmpty : 비어있는지 확인한다. num을 통해&lt;br&gt;}&amp;nbsp;&lt;br&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="P_EoNst60TyOaDxSn-2_-7" vertex="1">
+          <mxGeometry x="580" width="437" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="FhvKxsoOaMsX3Fl6zh21-1" value="" style="swimlane;startSize=0;" parent="P_EoNst60TyOaDxSn-2_-7" vertex="1">
+          <mxGeometry x="1116" y="140" width="278" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="FhvKxsoOaMsX3Fl6zh21-2" value="" style="ellipse;whiteSpace=wrap;html=1;" parent="FhvKxsoOaMsX3Fl6zh21-1" vertex="1">
+          <mxGeometry x="24" y="20" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="FhvKxsoOaMsX3Fl6zh21-3" value=": 변수 선언" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="FhvKxsoOaMsX3Fl6zh21-1" vertex="1">
+          <mxGeometry x="170" y="50" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="FhvKxsoOaMsX3Fl6zh21-4" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="FhvKxsoOaMsX3Fl6zh21-1" vertex="1">
+          <mxGeometry x="24" y="110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FhvKxsoOaMsX3Fl6zh21-5" value=": 행동 코드" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="FhvKxsoOaMsX3Fl6zh21-1" vertex="1">
+          <mxGeometry x="170" y="120" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="FhvKxsoOaMsX3Fl6zh21-6" value="~ 동안" style="swimlane;whiteSpace=wrap;html=1;" parent="FhvKxsoOaMsX3Fl6zh21-1" vertex="1">
+          <mxGeometry x="24" y="180" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="FhvKxsoOaMsX3Fl6zh21-7" value=": 반복 구문" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="FhvKxsoOaMsX3Fl6zh21-1" vertex="1">
+          <mxGeometry x="170" y="200" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="FhvKxsoOaMsX3Fl6zh21-8" value="" style="rhombus;whiteSpace=wrap;html=1;" parent="FhvKxsoOaMsX3Fl6zh21-1" vertex="1">
+          <mxGeometry x="24" y="260" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="FhvKxsoOaMsX3Fl6zh21-9" value=": if문" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="FhvKxsoOaMsX3Fl6zh21-1" vertex="1">
+          <mxGeometry x="156" y="285" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3bpHc3tVTAas9SbpANvd-4" value="&lt;h1&gt;예외처리&lt;/h1&gt;&lt;p&gt;1. 지금 노드에서 (head)에서 다음노드를 보는 일이기 때문에&lt;br&gt;&amp;nbsp;head 노드에서 table을 채우는 일이 없어야함&lt;br&gt;&lt;br&gt;2. 접두어 접미어는 길이가 최소 1이어야하기 때문에 마지막문자에 대해서는 가지 못하게해야함&lt;br&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="P_EoNst60TyOaDxSn-2_-7" vertex="1">
+          <mxGeometry x="1160" y="770" width="190" height="180" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
