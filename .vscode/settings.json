@@ -58,7 +58,8 @@
     "streambuf": "cpp",
     "typeinfo": "cpp",
     "__bit_reference": "cpp",
-    "locale": "cpp"
+    "locale": "cpp",
+    "complex": "cpp"
   },
   "C_Cpp_Runner.cCompilerPath": "clang",
   "C_Cpp_Runner.cppCompilerPath": "clang++",
