@@ -1,0 +1,259 @@
+<mxfile host="Electron" modified="2024-06-13T07:21:32.631Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.16 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="DHAq3dvTQD3PhGzs2Uzz" version="22.1.16" type="device">
+  <diagram name="페이지-1" id="ZOlBnPzdEGIDWD6JYkOG">
+    <mxGraphModel dx="814" dy="492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-1" value="void 인덱스 아래쪽을 점거 ( int column, int cond )" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="190" width="380" height="285" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-8" value="true" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="ddpLx5PsYMnSzPhSN78j-1" source="ddpLx5PsYMnSzPhSN78j-4" target="ddpLx5PsYMnSzPhSN78j-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-4" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;내 열의 밑의칸 + 다음열 밑의칸의 합이 W를 넘는가&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-1">
+          <mxGeometry x="55" y="110" width="100" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-7" value="return" style="whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-1">
+          <mxGeometry x="215" y="118.75" width="120" height="37.5" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-9" value="dp[column + 1][2] max= dp[column][cond] + 2 - (cond &amp;gt;= 1)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-1">
+          <mxGeometry x="45" y="180" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-23" value="true" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="ddpLx5PsYMnSzPhSN78j-1" source="ddpLx5PsYMnSzPhSN78j-21" target="ddpLx5PsYMnSzPhSN78j-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-21" value="cond 가 2인가?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-1">
+          <mxGeometry x="50" y="40" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-22" value="return" style="whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-1">
+          <mxGeometry x="215" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-11" value="" style="swimlane;startSize=0;" vertex="1" parent="1">
+          <mxGeometry x="530" y="20" width="278" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-12" value="" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-11">
+          <mxGeometry x="24" y="20" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-13" value=": 변수 선언" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-11">
+          <mxGeometry x="170" y="50" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-14" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-11">
+          <mxGeometry x="24" y="110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-15" value=": 행동 코드" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-11">
+          <mxGeometry x="170" y="120" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-16" value="~ 동안" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-11">
+          <mxGeometry x="24" y="180" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-17" value=": 반복 구문" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-11">
+          <mxGeometry x="170" y="200" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-18" value="" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-11">
+          <mxGeometry x="24" y="260" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-19" value=": if문" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-11">
+          <mxGeometry x="156" y="285" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-20" value="0 : 둘다 뚫려있는 상황, &lt;br&gt;1 : 위에만 막혀있는 상황&lt;br&gt;2 : 아래만 막혀있는 상황" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="80" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-24" value="void 인덱스 위쪽을 점거 ( int column, int cond )" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="500" width="380" height="285" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-25" value="true" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="ddpLx5PsYMnSzPhSN78j-24" source="ddpLx5PsYMnSzPhSN78j-26" target="ddpLx5PsYMnSzPhSN78j-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-26" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;내 열의 위의칸 + 다음열 위의칸의 합이 W를 넘는가&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-24">
+          <mxGeometry x="55" y="110" width="100" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-27" value="return" style="whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-24">
+          <mxGeometry x="215" y="118.75" width="120" height="37.5" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-28" value="dp[column + 1][1] max= dp[column][cond] + 2 - (cond &amp;gt;= 1)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-24">
+          <mxGeometry x="60" y="180" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-29" value="true" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="ddpLx5PsYMnSzPhSN78j-24" source="ddpLx5PsYMnSzPhSN78j-30" target="ddpLx5PsYMnSzPhSN78j-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-30" value="cond 가 1인가?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-24">
+          <mxGeometry x="50" y="40" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-31" value="return" style="whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-24">
+          <mxGeometry x="215" y="50" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-32" value="void 인덱스 둘다 점거 ( int column, int cond )" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="820" width="380" height="285" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-33" value="true" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="ddpLx5PsYMnSzPhSN78j-32" source="ddpLx5PsYMnSzPhSN78j-34" target="ddpLx5PsYMnSzPhSN78j-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-34" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;내 열의 양 칸 + 다음열 양 칸의 합이 W를 넘는가&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-32">
+          <mxGeometry x="55" y="150" width="100" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-35" value="return" style="whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-32">
+          <mxGeometry x="215" y="158.75" width="120" height="37.5" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-36" value="dp[column + 2][0] max= dp[column][0] + 2" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-32">
+          <mxGeometry x="45" y="220" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-37" value="true" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="ddpLx5PsYMnSzPhSN78j-32" source="ddpLx5PsYMnSzPhSN78j-38" target="ddpLx5PsYMnSzPhSN78j-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-38" value="cond 가 0 이 아닌가?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-32">
+          <mxGeometry x="50" y="80" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-39" value="return" style="whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-32">
+          <mxGeometry x="215" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-40" value="void 인덱스 점거 없음( int column, int cond )" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="447" y="500" width="380" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-41" value="true" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="ddpLx5PsYMnSzPhSN78j-40" source="ddpLx5PsYMnSzPhSN78j-42" target="ddpLx5PsYMnSzPhSN78j-43">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-42" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;내 열의 위 칸 + 내 열의 밑칸의 합이 W를 넘는가&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-40">
+          <mxGeometry x="50" y="170" width="100" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-43" value="dp[column + 1][0] max= dp[column][0] + 1" style="whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-40">
+          <mxGeometry x="210" y="178.75" width="120" height="37.5" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-44" value="dp[column +1][0] max= dp[column][0] + 2" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-40">
+          <mxGeometry x="43" y="290" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-45" value="true" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="ddpLx5PsYMnSzPhSN78j-40" source="ddpLx5PsYMnSzPhSN78j-46" target="ddpLx5PsYMnSzPhSN78j-47">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-46" value="cond 가 0 이 아닌가?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-40">
+          <mxGeometry x="50" y="40" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-47" value="dp[column + 1][0] max= dp[column][0] + 1&lt;br&gt;return&amp;nbsp;" style="whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-40">
+          <mxGeometry x="215" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-48" value="각 테스트케이스 마다 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="52" y="1140" width="748" height="2990" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-49" value="int dp[10001][3]&amp;nbsp;&lt;br&gt;int N, W&amp;nbsp;&lt;br&gt;int onetagon[10001][2]&amp;nbsp;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-48">
+          <mxGeometry x="38" y="60" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-78" value="위 아래 둘다 뚫려있을 떄" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-48">
+          <mxGeometry x="28" y="194" width="712" height="646" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-79" value="dp[0][0]&amp;nbsp; = 0" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-78">
+          <mxGeometry x="28" y="136" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-80" value="col = 0 부터 N - 2까지 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-78">
+          <mxGeometry x="178" y="50" width="522" height="490" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-81" value="&lt;h1&gt;예외처리&lt;/h1&gt;&lt;p&gt;1. 없음&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-80">
+          <mxGeometry x="330" y="35" width="190" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-82" value="cond 0부터 3까지 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-80">
+          <mxGeometry x="62" y="155" width="398" height="315" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-83" value="&lt;h1&gt;예외처리&lt;/h1&gt;1. (0, 1) (0, 2) 에서 스킵" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-82">
+          <mxGeometry x="220" y="35" width="169" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-123" value="모든 프로세스" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-82">
+          <mxGeometry x="70" y="171" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-84" value="정답은 oneTagon[N - 1][0] + oneTagon[N - 1][1] &amp;lt;= W&amp;nbsp; ?&lt;br&gt;정답은 , dp[N - 1][1] + 1 + dp[N - 1][2] + 1 &lt;br&gt;,dp[N][0]&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-78">
+          <mxGeometry x="40" y="566" width="610" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-128" value="모든 항 초기화" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-78">
+          <mxGeometry x="28" y="50" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-105" value="아래 막혀있을 떄" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-48">
+          <mxGeometry x="28" y="1550" width="712" height="646" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-106" value="dp[0][2] = 1&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-105">
+          <mxGeometry x="28" y="233" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-107" value="col = 0 부터 N - 2까지 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-105">
+          <mxGeometry x="178" y="50" width="522" height="490" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-108" value="&lt;h1&gt;예외처리&lt;/h1&gt;&lt;p&gt;1. 없음&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-107">
+          <mxGeometry x="330" y="35" width="190" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-109" value="cond 0부터 3까지 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-107">
+          <mxGeometry x="62" y="155" width="398" height="315" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-110" value="&lt;h1&gt;예외처리&lt;/h1&gt;1. (0, 1) (0, 0) 에서 스킵" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-109">
+          <mxGeometry x="199" y="35" width="190" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-125" value="모든 프로세스" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-109">
+          <mxGeometry x="80" y="145" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-112" value="정답은 dp[N - 1][0] + 1 , dp[N - 1][1]&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-105">
+          <mxGeometry x="40" y="566" width="450" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-130" value="모든 항 초기화" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-105">
+          <mxGeometry x="28" y="150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-113" value="위 아래 둘다 막혀있을 떄" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-48">
+          <mxGeometry x="28" y="2210" width="712" height="650" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-114" value="dp[1][0]&amp;nbsp; = 2" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-113">
+          <mxGeometry x="28" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-115" value="col = 1 부터 N - 2까지 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-113">
+          <mxGeometry x="178" y="50" width="522" height="490" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-116" value="&lt;h1&gt;예외처리&lt;/h1&gt;&lt;p&gt;1. 0인덱스 안친다&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-115">
+          <mxGeometry x="330" y="35" width="190" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-117" value="cond 0부터 3까지 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-115">
+          <mxGeometry x="62" y="155" width="398" height="315" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-118" value="&lt;h1&gt;예외처리&lt;/h1&gt;1. (1, 1) (1, 2) 에서 스킵" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-117">
+          <mxGeometry x="199" y="35" width="190" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-126" value="모든 프로세스" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-117">
+          <mxGeometry x="90" y="185" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-120" value="정답은 dp[N - 1][0]&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-113">
+          <mxGeometry x="40" y="566" width="450" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-131" value="모든 항 초기화" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-113">
+          <mxGeometry x="28" y="90" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-50" value="int tc" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="492" y="1060" width="178" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-97" value="위 막혀있을 때" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="2010" width="712" height="670" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-98" value="dp[0][1] = 1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-97">
+          <mxGeometry x="28" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-99" value="col = 0 부터 N - 2까지 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-97">
+          <mxGeometry x="178" y="50" width="522" height="490" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-100" value="&lt;h1&gt;예외처리&lt;/h1&gt;&lt;p&gt;1. 없음&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-99">
+          <mxGeometry x="330" y="35" width="190" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-101" value="cond 0부터 3까지 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-99">
+          <mxGeometry x="62" y="155" width="398" height="315" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-102" value="&lt;h1&gt;예외처리&lt;/h1&gt;1. (0, 0) (0, 2) 에서 스킵" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-101">
+          <mxGeometry x="199" y="35" width="190" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-124" value="모든 프로세스" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-101">
+          <mxGeometry x="70" y="165" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-104" value="정답은 dp[N - 1][0] + 1 , dp[N - 1][2]" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-97">
+          <mxGeometry x="40" y="566" width="450" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-122" value="&lt;h1&gt;예외처리&lt;/h1&gt;&lt;p&gt;1. 앞의 직렬화 애들은 모른다는 컨셉그니까 끝에서 처리해준다&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-97">
+          <mxGeometry x="510" y="540" width="190" height="106" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-129" value="모든 항 초기화" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="ddpLx5PsYMnSzPhSN78j-97">
+          <mxGeometry x="28" y="90" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ddpLx5PsYMnSzPhSN78j-132" value="n" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="120" y="1870" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
