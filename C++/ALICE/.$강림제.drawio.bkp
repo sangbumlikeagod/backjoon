@@ -1,0 +1,145 @@
+<mxfile host="Electron" modified="2024-07-17T06:22:40.979Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.16 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="Yo_E8ta9rqAVF_j9cuXp" version="22.1.16" type="device">
+  <diagram name="페이지-1" id="6y6j5mo17U16pPH_T35O">
+    <mxGraphModel dx="874" dy="507" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-1" value="" style="swimlane;startSize=0;" vertex="1" parent="1">
+          <mxGeometry x="540" y="10" width="278" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-2" value=": 변수 선언" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="YKrNYs3uijNxPuMnNGaO-1">
+          <mxGeometry x="170" y="50" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-3" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="YKrNYs3uijNxPuMnNGaO-1">
+          <mxGeometry x="24" y="110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-4" value=": 행동 코드" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="YKrNYs3uijNxPuMnNGaO-1">
+          <mxGeometry x="170" y="120" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-5" value="~ 동안" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="YKrNYs3uijNxPuMnNGaO-1">
+          <mxGeometry x="24" y="180" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-6" value=": 반복 구문" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="YKrNYs3uijNxPuMnNGaO-1">
+          <mxGeometry x="170" y="200" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-7" value="" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="YKrNYs3uijNxPuMnNGaO-1">
+          <mxGeometry x="24" y="260" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-8" value=": if문" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="YKrNYs3uijNxPuMnNGaO-1">
+          <mxGeometry x="156" y="285" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-9" value="" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=10;" vertex="1" parent="YKrNYs3uijNxPuMnNGaO-1">
+          <mxGeometry x="19" y="10" width="130" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-10" value="vector&amp;lt;int&amp;gt; entry {};&lt;br&gt;vector&amp;lt;int&amp;gt; exit {};&lt;br&gt;int entryIndex = 0;&lt;br&gt;int exitIndex = 0;&lt;br&gt;int dp[301][301][301] = {0};&lt;br&gt;&lt;br&gt;int N;&lt;br&gt;int M;&lt;br&gt;int T;&lt;br&gt;int K;&lt;br&gt;&lt;br&gt;int prayer = 0;" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="50" width="390" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-11" value="sort(entry.begin(), entry.end())&lt;br&gt;sort(exit.begin(), exit.end())" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="310" width="380" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-13" value="DP 기능 구현" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="520" width="1000" height="2080" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-14" value="int i = 0 부터 N 까지 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="YKrNYs3uijNxPuMnNGaO-13">
+          <mxGeometry x="12" y="109" width="988" height="1971" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-15" value="&lt;h1&gt;예외처리&lt;/h1&gt;&lt;p&gt;1. 현재 I의 prayer이 누구인지 알아야함.&amp;nbsp; 몇명&amp;nbsp;&lt;/p&gt;&lt;p&gt;2. 주어진 값이 유효한 값인지를 검증하기 위해 00K 부분에서 1을 채우고&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;나중에 답에서 1을 뺴는방식으로&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;3.&amp;nbsp;&lt;/span&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="YKrNYs3uijNxPuMnNGaO-14">
+          <mxGeometry x="10" y="30" width="430" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-24" value="entryIndex&amp;nbsp; &amp;lt; M이고 entry[entryIndex] 가 i + 1보다 작거나 같을 때 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="YKrNYs3uijNxPuMnNGaO-14">
+          <mxGeometry x="38" y="221" width="410" height="269" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-25" value="&lt;h1&gt;예외처리&lt;/h1&gt;&lt;p&gt;1. 없음&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="YKrNYs3uijNxPuMnNGaO-24">
+          <mxGeometry x="10" y="30" width="386" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-26" value="entryIndex++;&lt;br&gt;prayer ++;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="YKrNYs3uijNxPuMnNGaO-24">
+          <mxGeometry x="22.57" y="170" width="237.43" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-34" value="exitIndex&amp;nbsp; &amp;lt; M&amp;nbsp; 이고 exit[exitIndex] 가 i + 1보다 작거나 같을&amp;nbsp;때 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="YKrNYs3uijNxPuMnNGaO-14">
+          <mxGeometry x="38.00000000000001" y="501" width="410" height="269" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-35" value="&lt;h1&gt;예외처리&lt;/h1&gt;&lt;p&gt;1. 없음&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="YKrNYs3uijNxPuMnNGaO-34">
+          <mxGeometry x="10" y="30" width="386" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-36" value="prayer --;&lt;br&gt;exitIndex++;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="YKrNYs3uijNxPuMnNGaO-34">
+          <mxGeometry x="22.57" y="170" width="237.43" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-43" value="int kOnFest = 0&amp;nbsp; 부터 K 까지 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="YKrNYs3uijNxPuMnNGaO-14">
+          <mxGeometry x="38" y="771" width="950" height="1200" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-44" value="&lt;h1&gt;예외처리&lt;/h1&gt;&lt;p&gt;1. 없음&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="YKrNYs3uijNxPuMnNGaO-43">
+          <mxGeometry x="10" y="30" width="386" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-45" value="int kRemain = 0부터 K 까지 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="YKrNYs3uijNxPuMnNGaO-43">
+          <mxGeometry x="40" y="170" width="910" height="1030" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-46" value="&lt;h1&gt;예외처리&lt;/h1&gt;&lt;p&gt;1. 없음&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="YKrNYs3uijNxPuMnNGaO-45">
+          <mxGeometry x="10" y="30" width="386" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-47" value="" style="group" vertex="1" connectable="0" parent="YKrNYs3uijNxPuMnNGaO-45">
+          <mxGeometry x="45" y="110" width="436.85" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-48" value="dp[i][kOnFest][kRemain] == 0인가" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="YKrNYs3uijNxPuMnNGaO-47">
+          <mxGeometry x="-37.32203389830508" width="236.37288135593218" height="96.66666666666666" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-49" value="continue" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="YKrNYs3uijNxPuMnNGaO-47">
+          <mxGeometry y="130.00333333333333" width="161.72881355932202" height="96.66666666666666" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-50" value="yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="YKrNYs3uijNxPuMnNGaO-47" source="YKrNYs3uijNxPuMnNGaO-48" target="YKrNYs3uijNxPuMnNGaO-49">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-55" value="" style="group" vertex="1" connectable="0" parent="YKrNYs3uijNxPuMnNGaO-45">
+          <mxGeometry x="50" y="710" width="820" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-56" value="prayer + kOnFest가 T보다 같거나 큰가?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="YKrNYs3uijNxPuMnNGaO-55">
+          <mxGeometry x="-37.32203389830508" width="236.37288135593218" height="96.66666666666666" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-57" value="dp[i + 1][kOnFest][kRemain] max()= dp[i][kOnFest][kRemain] + 1" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="YKrNYs3uijNxPuMnNGaO-55">
+          <mxGeometry y="193.33" width="370" height="96.67" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-58" value="yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="YKrNYs3uijNxPuMnNGaO-55" source="YKrNYs3uijNxPuMnNGaO-56" target="YKrNYs3uijNxPuMnNGaO-57">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-59" value="int supplement =&amp;nbsp; (T - prayer - kOnFest);&lt;br&gt;dp[i + 1][kOnFest][kRemain] max()= dp[i][kOnFest][kRemain]&lt;br&gt;&lt;br&gt;kRemain이 supplement보다 클때만&lt;br&gt;dp[i + 1][kOnFest +&amp;nbsp;supplement][kRemain -supplement] max()= dp[i][kOnFest][kRemain] + 1" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="YKrNYs3uijNxPuMnNGaO-55">
+          <mxGeometry x="280" y="-36.67" width="540" height="166.67" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-60" value="no" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="YKrNYs3uijNxPuMnNGaO-55" source="YKrNYs3uijNxPuMnNGaO-56" target="YKrNYs3uijNxPuMnNGaO-59">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-61" value="" style="group" vertex="1" connectable="0" parent="YKrNYs3uijNxPuMnNGaO-45">
+          <mxGeometry x="50" y="380" width="630" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-62" value="prayer이 T보다 같거나 큰가?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="YKrNYs3uijNxPuMnNGaO-61">
+          <mxGeometry x="-37.32203389830508" width="236.37288135593218" height="96.66666666666666" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-63" value="dp[i + 1][0][kRemain] max()= dp[i][kOnFest][kRemain] + 1;&lt;br&gt;continue;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="YKrNYs3uijNxPuMnNGaO-61">
+          <mxGeometry x="275.12" width="354.88" height="96.67" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-64" value="yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="YKrNYs3uijNxPuMnNGaO-61" source="YKrNYs3uijNxPuMnNGaO-62" target="YKrNYs3uijNxPuMnNGaO-63">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-70" value="int i = 0 부터 K 까지 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="2720" width="960" height="480" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-71" value="&lt;h1&gt;예외처리&lt;/h1&gt;&lt;p&gt;1. 없음&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="YKrNYs3uijNxPuMnNGaO-70">
+          <mxGeometry x="10" y="30" width="386" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-73" value="int j = 0 부터 K 까지 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="YKrNYs3uijNxPuMnNGaO-70">
+          <mxGeometry x="70" y="150" width="840" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-74" value="&lt;h1&gt;예외처리&lt;/h1&gt;&lt;p&gt;1. 없음&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="YKrNYs3uijNxPuMnNGaO-73">
+          <mxGeometry x="10" y="30" width="386" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-81" value="answer max()= dp[N][i][j]" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="YKrNYs3uijNxPuMnNGaO-73">
+          <mxGeometry x="170" y="140" width="330" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-72" value="int answer = 0;" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=10;" vertex="1" parent="1">
+          <mxGeometry x="150" y="2610" width="130" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="YKrNYs3uijNxPuMnNGaO-82" value="cout &amp;lt;&amp;lt; answer - 1;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="3220" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
