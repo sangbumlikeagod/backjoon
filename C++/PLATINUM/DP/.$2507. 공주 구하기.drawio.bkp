@@ -1,0 +1,193 @@
+<mxfile host="Electron" modified="2024-08-06T15:34:26.302Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.16 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="Dj7jOw5f81eEZc4HibrT" version="22.1.16" type="device">
+  <diagram name="페이지-1" id="hRX4eO1yUiXFwOmeSaes">
+    <mxGraphModel dx="1044" dy="792" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="lIufUDoAkRaFjsURu-YP-1" value="Int N;&lt;br&gt;int dp[501][501] = {0}&amp;nbsp;&lt;br&gt;int isOneWay[501] = {0}&lt;br&gt;int position[501] = {0}&lt;br&gt;int jumpPower[501] = {0}" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=10;" parent="1" vertex="1">
+          <mxGeometry x="130" y="110" width="190" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="lIufUDoAkRaFjsURu-YP-2" value="dp[0][0] = 1" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="125" y="510" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lIufUDoAkRaFjsURu-YP-3" value="JumpPower, Position, isOneWay 채우는 코드" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="130" y="280" width="396" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="lIufUDoAkRaFjsURu-YP-4" value="dp 채우는 코드" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="600" width="790" height="1080" as="geometry" />
+        </mxCell>
+        <mxCell id="lIufUDoAkRaFjsURu-YP-5" value="int k = 1 부터 N와 같을때 까지 반복" style="swimlane;whiteSpace=wrap;html=1;" parent="lIufUDoAkRaFjsURu-YP-4" vertex="1">
+          <mxGeometry x="37" y="40" width="703" height="970" as="geometry" />
+        </mxCell>
+        <mxCell id="lIufUDoAkRaFjsURu-YP-6" value="&lt;h1&gt;예외처리&lt;/h1&gt;&lt;p&gt;1. 없음&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="lIufUDoAkRaFjsURu-YP-5" vertex="1">
+          <mxGeometry x="10" y="30" width="386" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="lIufUDoAkRaFjsURu-YP-7" value="int i = 0 부터 k와 작을 때 까지 반복" style="swimlane;whiteSpace=wrap;html=1;" parent="lIufUDoAkRaFjsURu-YP-5" vertex="1">
+          <mxGeometry x="27.5" y="120" width="625" height="810" as="geometry" />
+        </mxCell>
+        <mxCell id="lIufUDoAkRaFjsURu-YP-8" value="&lt;h1&gt;예외처리&lt;/h1&gt;&lt;p&gt;1. 요시섬에서 i섬까지 온 경우의 수에서 k섬까지 올 수 있다면 그 경우의 수를 더해줄건데&amp;nbsp;&lt;/p&gt;&lt;p&gt;dp[k][j] 그야 J는 안움직였으니까&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="lIufUDoAkRaFjsURu-YP-7" vertex="1">
+          <mxGeometry x="10" y="30" width="386" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="lIufUDoAkRaFjsURu-YP-16" value="int j = 0 부터 k와 같을때 까지 반복" style="swimlane;whiteSpace=wrap;html=1;" parent="lIufUDoAkRaFjsURu-YP-7" vertex="1">
+          <mxGeometry x="25.5" y="180" width="550" height="580" as="geometry" />
+        </mxCell>
+        <mxCell id="lIufUDoAkRaFjsURu-YP-17" value="&lt;h1&gt;예외처리&lt;/h1&gt;&lt;p&gt;1. 이전에 J섬에서 요시섬까지 돌아간적이 있는지에 대한 코드,&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;여기서는 dp[i][k] 로 정해질거임 여기선 isOneWay가 아닌지도 파악해야함&lt;/span&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="lIufUDoAkRaFjsURu-YP-16" vertex="1">
+          <mxGeometry x="10" y="30" width="386" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="lIufUDoAkRaFjsURu-YP-18" value="" style="group" parent="lIufUDoAkRaFjsURu-YP-16" vertex="1" connectable="0">
+          <mxGeometry x="82.5" y="350" width="330" height="207.43" as="geometry" />
+        </mxCell>
+        <mxCell id="lIufUDoAkRaFjsURu-YP-19" value="K 섬이 점프할 수 있고&lt;br&gt;K 섬에서 j섬까지 갈 수 있는가?" style="rhombus;whiteSpace=wrap;html=1;" parent="lIufUDoAkRaFjsURu-YP-18" vertex="1">
+          <mxGeometry x="-44.09" y="-5.43" width="210.36" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lIufUDoAkRaFjsURu-YP-20" value="dp[k][j] += dp[i][j]&lt;br&gt;dp[k][j] %= 1000;" style="whiteSpace=wrap;html=1;rounded=0;" parent="lIufUDoAkRaFjsURu-YP-18" vertex="1">
+          <mxGeometry y="138.28666666666666" width="122.17124522050192" height="69.14333333333333" as="geometry" />
+        </mxCell>
+        <mxCell id="lIufUDoAkRaFjsURu-YP-21" value="yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="lIufUDoAkRaFjsURu-YP-18" source="lIufUDoAkRaFjsURu-YP-19" target="lIufUDoAkRaFjsURu-YP-20" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lIufUDoAkRaFjsURu-YP-22" value="" style="whiteSpace=wrap;html=1;rounded=0;" parent="lIufUDoAkRaFjsURu-YP-18" vertex="1">
+          <mxGeometry x="226.62433096726758" width="103.3756690327324" height="69.14333333333333" as="geometry" />
+        </mxCell>
+        <mxCell id="lIufUDoAkRaFjsURu-YP-23" value="no" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="lIufUDoAkRaFjsURu-YP-18" source="lIufUDoAkRaFjsURu-YP-19" target="lIufUDoAkRaFjsURu-YP-22" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lIufUDoAkRaFjsURu-YP-10" value="" style="group" parent="lIufUDoAkRaFjsURu-YP-16" vertex="1" connectable="0">
+          <mxGeometry x="82.5" y="130" width="330" height="207.43" as="geometry" />
+        </mxCell>
+        <mxCell id="lIufUDoAkRaFjsURu-YP-11" value="i 섬에서 k섬까지 올 수 있는가?" style="rhombus;whiteSpace=wrap;html=1;" parent="lIufUDoAkRaFjsURu-YP-10" vertex="1">
+          <mxGeometry x="-28.19336428165429" width="178.5579737838105" height="69.14333333333333" as="geometry" />
+        </mxCell>
+        <mxCell id="lIufUDoAkRaFjsURu-YP-12" value="dp[k][j] += dp[i][j]&lt;br&gt;dp[k][j] %= 1000;" style="whiteSpace=wrap;html=1;rounded=0;" parent="lIufUDoAkRaFjsURu-YP-10" vertex="1">
+          <mxGeometry y="138.28666666666666" width="122.17124522050192" height="69.14333333333333" as="geometry" />
+        </mxCell>
+        <mxCell id="lIufUDoAkRaFjsURu-YP-13" value="yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="lIufUDoAkRaFjsURu-YP-10" source="lIufUDoAkRaFjsURu-YP-11" target="lIufUDoAkRaFjsURu-YP-12" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lIufUDoAkRaFjsURu-YP-14" value="" style="whiteSpace=wrap;html=1;rounded=0;" parent="lIufUDoAkRaFjsURu-YP-10" vertex="1">
+          <mxGeometry x="226.62433096726758" width="103.3756690327324" height="69.14333333333333" as="geometry" />
+        </mxCell>
+        <mxCell id="lIufUDoAkRaFjsURu-YP-15" value="no" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="lIufUDoAkRaFjsURu-YP-10" source="lIufUDoAkRaFjsURu-YP-11" target="lIufUDoAkRaFjsURu-YP-14" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lIufUDoAkRaFjsURu-YP-24" value="return dp[N][N]" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="260" y="1710" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zRK61dIEepGSGHHuJ48S-1" value="JumpPower, Position, isOneWay 채우는 코드" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="900" y="280" width="396" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="zRK61dIEepGSGHHuJ48S-2" value="Int N;&lt;br&gt;int dp[501][501] = {0}&amp;nbsp;&lt;br&gt;int isOneWay[501] = {0}&lt;br&gt;int position[501] = {0}&lt;br&gt;int jumpPower[501] = {0}" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=10;" vertex="1" parent="1">
+          <mxGeometry x="900" y="110" width="190" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="zRK61dIEepGSGHHuJ48S-3" value="기능 구현" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="834" y="600" width="820" height="1280" as="geometry" />
+        </mxCell>
+        <mxCell id="zRK61dIEepGSGHHuJ48S-24" value="int k = 1 부터 N와 같을때 까지 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="zRK61dIEepGSGHHuJ48S-3">
+          <mxGeometry x="46" y="70" width="703" height="1210" as="geometry" />
+        </mxCell>
+        <mxCell id="zRK61dIEepGSGHHuJ48S-25" value="&lt;h1&gt;예외처리&lt;/h1&gt;&lt;p&gt;1. 없음&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="zRK61dIEepGSGHHuJ48S-24">
+          <mxGeometry x="10" y="30" width="386" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="zRK61dIEepGSGHHuJ48S-26" value="int i = 0 부터 k와 작을 때 까지 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="zRK61dIEepGSGHHuJ48S-24">
+          <mxGeometry x="27.5" y="120" width="625" height="1090" as="geometry" />
+        </mxCell>
+        <mxCell id="zRK61dIEepGSGHHuJ48S-27" value="&lt;h1&gt;예외처리&lt;/h1&gt;&lt;p&gt;1. 요시섬에서 i섬까지 온 경우의 수에서 k섬까지 올 수 있다면 그 경우의 수를 더해줄건데&amp;nbsp;&lt;/p&gt;&lt;p&gt;dp[k][j] 그야 J는 안움직였으니까&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="zRK61dIEepGSGHHuJ48S-26">
+          <mxGeometry x="10" y="30" width="386" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="zRK61dIEepGSGHHuJ48S-28" value="int j = 0 부터 k와 같을때 까지 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="zRK61dIEepGSGHHuJ48S-26">
+          <mxGeometry x="25.5" y="180" width="574.5" height="910" as="geometry" />
+        </mxCell>
+        <mxCell id="zRK61dIEepGSGHHuJ48S-29" value="&lt;h1&gt;예외처리&lt;/h1&gt;&lt;p&gt;1. 이전에 J섬에서 요시섬까지 돌아간적이 있는지에 대한 코드,&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;여기서는 dp[i][k] 로 정해질거임 여기선 isOneWay가 아닌지도 파악해야함&lt;/span&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="zRK61dIEepGSGHHuJ48S-28">
+          <mxGeometry x="10" y="30" width="386" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="zRK61dIEepGSGHHuJ48S-30" value="" style="group" vertex="1" connectable="0" parent="zRK61dIEepGSGHHuJ48S-28">
+          <mxGeometry x="137" y="640" width="330" height="207.43" as="geometry" />
+        </mxCell>
+        <mxCell id="zRK61dIEepGSGHHuJ48S-31" value="K 섬이 점프할 수 있고&lt;br&gt;K 섬에서 j섬까지 갈 수 있는가?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="zRK61dIEepGSGHHuJ48S-30">
+          <mxGeometry x="-44.09" y="-5.43" width="210.36" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="zRK61dIEepGSGHHuJ48S-32" value="dp[k][j] += dp[i][j]&lt;br&gt;dp[k][j] %= 1000;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="zRK61dIEepGSGHHuJ48S-30">
+          <mxGeometry y="138.28666666666666" width="122.17124522050192" height="69.14333333333333" as="geometry" />
+        </mxCell>
+        <mxCell id="zRK61dIEepGSGHHuJ48S-33" value="yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="zRK61dIEepGSGHHuJ48S-30" source="zRK61dIEepGSGHHuJ48S-31" target="zRK61dIEepGSGHHuJ48S-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zRK61dIEepGSGHHuJ48S-34" value="" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="zRK61dIEepGSGHHuJ48S-30">
+          <mxGeometry x="226.62433096726758" width="103.3756690327324" height="69.14333333333333" as="geometry" />
+        </mxCell>
+        <mxCell id="zRK61dIEepGSGHHuJ48S-35" value="no" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="zRK61dIEepGSGHHuJ48S-30" source="zRK61dIEepGSGHHuJ48S-31" target="zRK61dIEepGSGHHuJ48S-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zRK61dIEepGSGHHuJ48S-36" value="" style="group" vertex="1" connectable="0" parent="zRK61dIEepGSGHHuJ48S-28">
+          <mxGeometry x="137" y="420" width="330" height="207.43" as="geometry" />
+        </mxCell>
+        <mxCell id="zRK61dIEepGSGHHuJ48S-37" value="i 섬에서 k섬까지 올 수 있는가?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="zRK61dIEepGSGHHuJ48S-36">
+          <mxGeometry x="-28.19336428165429" width="178.5579737838105" height="69.14333333333333" as="geometry" />
+        </mxCell>
+        <mxCell id="zRK61dIEepGSGHHuJ48S-38" value="dp[k][j] += dp[i][j]&lt;br&gt;dp[k][j] %= 1000;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="zRK61dIEepGSGHHuJ48S-36">
+          <mxGeometry y="138.28666666666666" width="122.17124522050192" height="69.14333333333333" as="geometry" />
+        </mxCell>
+        <mxCell id="zRK61dIEepGSGHHuJ48S-39" value="yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="zRK61dIEepGSGHHuJ48S-36" source="zRK61dIEepGSGHHuJ48S-37" target="zRK61dIEepGSGHHuJ48S-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zRK61dIEepGSGHHuJ48S-40" value="" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="zRK61dIEepGSGHHuJ48S-36">
+          <mxGeometry x="226.62433096726758" width="103.3756690327324" height="69.14333333333333" as="geometry" />
+        </mxCell>
+        <mxCell id="zRK61dIEepGSGHHuJ48S-41" value="no" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="zRK61dIEepGSGHHuJ48S-36" source="zRK61dIEepGSGHHuJ48S-37" target="zRK61dIEepGSGHHuJ48S-40">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zRK61dIEepGSGHHuJ48S-42" value="" style="group" vertex="1" connectable="0" parent="zRK61dIEepGSGHHuJ48S-28">
+          <mxGeometry x="107" y="140" width="413.85" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="zRK61dIEepGSGHHuJ48S-43" value="i가 j와 같으면서 i가 0이 아니라면" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="zRK61dIEepGSGHHuJ48S-42">
+          <mxGeometry x="-35.35704184231099" width="223.92793166796963" height="86.66666666666666" as="geometry" />
+        </mxCell>
+        <mxCell id="zRK61dIEepGSGHHuJ48S-44" value="continue" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="zRK61dIEepGSGHHuJ48S-42">
+          <mxGeometry y="173.33333333333331" width="153.21384798334765" height="86.66666666666666" as="geometry" />
+        </mxCell>
+        <mxCell id="zRK61dIEepGSGHHuJ48S-45" value="yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="zRK61dIEepGSGHHuJ48S-42" source="zRK61dIEepGSGHHuJ48S-43" target="zRK61dIEepGSGHHuJ48S-44">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zRK61dIEepGSGHHuJ48S-46" value="" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="zRK61dIEepGSGHHuJ48S-42">
+          <mxGeometry x="284.2075132448597" width="129.6424867551403" height="86.66666666666666" as="geometry" />
+        </mxCell>
+        <mxCell id="zRK61dIEepGSGHHuJ48S-47" value="no" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="zRK61dIEepGSGHHuJ48S-42" source="zRK61dIEepGSGHHuJ48S-43" target="zRK61dIEepGSGHHuJ48S-46">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zRK61dIEepGSGHHuJ48S-23" value="dp[0][0] = 1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="880" y="500" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zRK61dIEepGSGHHuJ48S-48" value="int i = 0 부터&amp;nbsp;N&lt;span style=&quot;background-color: rgb(31, 31, 31); color: rgb(204, 204, 204); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-size: 15px; font-weight: normal;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-size: 15px; font-weight: normal; color: rgb(212, 212, 212);&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;background-color: rgb(31, 31, 31); color: rgb(204, 204, 204); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-size: 15px; font-weight: normal;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-size: 15px; font-weight: normal; color: rgb(181, 206, 168);&quot;&gt;1&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;까지 반복&lt;/span&gt;" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="860" y="1920" width="770" height="510" as="geometry" />
+        </mxCell>
+        <mxCell id="zRK61dIEepGSGHHuJ48S-49" value="&lt;h1&gt;예외처리&lt;/h1&gt;&lt;p&gt;1. 없음&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="zRK61dIEepGSGHHuJ48S-48">
+          <mxGeometry x="10" y="30" width="386" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="zRK61dIEepGSGHHuJ48S-50" value="int j = 0 부터&amp;nbsp;N&lt;span style=&quot;background-color: rgb(31, 31, 31); color: rgb(204, 204, 204); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-size: 15px; font-weight: normal;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-size: 15px; font-weight: normal; color: rgb(212, 212, 212);&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;background-color: rgb(31, 31, 31); color: rgb(204, 204, 204); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-size: 15px; font-weight: normal;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-size: 15px; font-weight: normal; color: rgb(181, 206, 168);&quot;&gt;1&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;까지 반복&lt;/span&gt;" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="zRK61dIEepGSGHHuJ48S-48">
+          <mxGeometry x="95" y="120" width="645" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="zRK61dIEepGSGHHuJ48S-51" value="&lt;h1&gt;예외처리&lt;/h1&gt;&lt;p&gt;1. 없음&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="zRK61dIEepGSGHHuJ48S-50">
+          <mxGeometry x="10" y="30" width="386" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="zRK61dIEepGSGHHuJ48S-52" value="" style="group" vertex="1" connectable="0" parent="zRK61dIEepGSGHHuJ48S-50">
+          <mxGeometry x="90" y="90" width="501.85" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="zRK61dIEepGSGHHuJ48S-53" value="I 에서 N - 1섬으로 뛸 수 있고&amp;nbsp;&lt;br&gt;N - 1섬에서 j섬으로 뛸 수 있는가" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="zRK61dIEepGSGHHuJ48S-52">
+          <mxGeometry x="-42.875272317418805" width="271.54339134365244" height="96.66666666666666" as="geometry" />
+        </mxCell>
+        <mxCell id="zRK61dIEepGSGHHuJ48S-54" value="" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="zRK61dIEepGSGHHuJ48S-52">
+          <mxGeometry y="193.33333333333331" width="185.79284670881484" height="96.66666666666666" as="geometry" />
+        </mxCell>
+        <mxCell id="zRK61dIEepGSGHHuJ48S-55" value="yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="zRK61dIEepGSGHHuJ48S-52" source="zRK61dIEepGSGHHuJ48S-53" target="zRK61dIEepGSGHHuJ48S-54">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zRK61dIEepGSGHHuJ48S-56" value="" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="zRK61dIEepGSGHHuJ48S-52">
+          <mxGeometry x="344.64066816946433" width="157.20933183053563" height="96.66666666666666" as="geometry" />
+        </mxCell>
+        <mxCell id="zRK61dIEepGSGHHuJ48S-57" value="no" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="zRK61dIEepGSGHHuJ48S-52" source="zRK61dIEepGSGHHuJ48S-53" target="zRK61dIEepGSGHHuJ48S-56">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
