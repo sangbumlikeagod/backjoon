@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2024-08-06T15:34:26.302Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.16 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="Dj7jOw5f81eEZc4HibrT" version="22.1.16" type="device">
+<mxfile host="Electron" modified="2024-08-06T15:35:01.187Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.16 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="KiFcTnIoJAOu9-zbON35" version="22.1.16" type="device">
   <diagram name="페이지-1" id="hRX4eO1yUiXFwOmeSaes">
     <mxGraphModel dx="1044" dy="792" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -175,7 +175,7 @@
         <mxCell id="zRK61dIEepGSGHHuJ48S-53" value="I 에서 N - 1섬으로 뛸 수 있고&amp;nbsp;&lt;br&gt;N - 1섬에서 j섬으로 뛸 수 있는가" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="zRK61dIEepGSGHHuJ48S-52">
           <mxGeometry x="-42.875272317418805" width="271.54339134365244" height="96.66666666666666" as="geometry" />
         </mxCell>
-        <mxCell id="zRK61dIEepGSGHHuJ48S-54" value="" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="zRK61dIEepGSGHHuJ48S-52">
+        <mxCell id="zRK61dIEepGSGHHuJ48S-54" value="dp[N - 1][N- 1] 에 dp[i][j] 더함" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="zRK61dIEepGSGHHuJ48S-52">
           <mxGeometry y="193.33333333333331" width="185.79284670881484" height="96.66666666666666" as="geometry" />
         </mxCell>
         <mxCell id="zRK61dIEepGSGHHuJ48S-55" value="yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="zRK61dIEepGSGHHuJ48S-52" source="zRK61dIEepGSGHHuJ48S-53" target="zRK61dIEepGSGHHuJ48S-54">
