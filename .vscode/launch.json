@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/sangbumlikeagod/virtcloud/backjoon/C++/GOLD/TOPOLOGICALSORTING",
-      "program": "/Users/sangbumlikeagod/virtcloud/backjoon/C++/GOLD/TOPOLOGICALSORTING/build/Debug/outDebug"
+      "cwd": "/Users/sangbumlikeagod/virtcloud/backjoon/C++/PLATINUM/DP",
+      "program": "/Users/sangbumlikeagod/virtcloud/backjoon/C++/PLATINUM/DP/build/Debug/outDebug"
     },
     {
       "name": "C/C++: g++.exe build and debug active file",

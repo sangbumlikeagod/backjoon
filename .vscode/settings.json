@@ -1,5 +1,8 @@
 {
   "files.associations": {
+    "*.page-template": "vue",
+    "*.layout-template": "vue",
+    "*.vue": "vue",
     "**/*.html": "html",
     "**/templates/**/*.html": "django-html",
     "**/templates/**/*": "django-txt",
@@ -59,7 +62,12 @@
     "typeinfo": "cpp",
     "__bit_reference": "cpp",
     "locale": "cpp",
-    "complex": "cpp"
+    "complex": "cpp",
+    "__node_handle": "cpp",
+    "bitset": "cpp",
+    "__memory": "cpp",
+    "optional": "cpp",
+    "ratio": "cpp"
   },
   "C_Cpp_Runner.cCompilerPath": "clang",
   "C_Cpp_Runner.cppCompilerPath": "clang++",
