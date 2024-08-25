@@ -1,0 +1,108 @@
+<mxfile host="Electron" modified="2024-08-25T07:36:17.817Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.16 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="zD6WBdVO2i8y-cy903iV" version="22.1.16" type="device">
+  <diagram name="페이지-1" id="tncaHmoUS6JbMgSsXYBd">
+    <mxGraphModel dx="1186" dy="638" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Gfv1eJ5I3AJOFQ-aX_Xo-1" value="{represent, InCycle} pair&amp;lt;int, int&amp;gt; DFS(int cord)" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="200" width="1670" height="560" as="geometry" />
+        </mxCell>
+        <mxCell id="Gfv1eJ5I3AJOFQ-aX_Xo-30" value="" style="group" vertex="1" connectable="0" parent="Gfv1eJ5I3AJOFQ-aX_Xo-1">
+          <mxGeometry x="50" y="40" width="436.85" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="Gfv1eJ5I3AJOFQ-aX_Xo-31" value="visited[cord]가 참인가" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="Gfv1eJ5I3AJOFQ-aX_Xo-30">
+          <mxGeometry x="-37.32203389830508" width="236.37288135593218" height="96.66666666666666" as="geometry" />
+        </mxCell>
+        <mxCell id="Gfv1eJ5I3AJOFQ-aX_Xo-32" value="DPP[cord]가 비어있다면&lt;br&gt;DPP[cord] = cord&lt;br&gt;DP[cord]++;&lt;br&gt;&lt;br&gt;return {cord, 1}" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="Gfv1eJ5I3AJOFQ-aX_Xo-30">
+          <mxGeometry y="193.33" width="290" height="96.67" as="geometry" />
+        </mxCell>
+        <mxCell id="Gfv1eJ5I3AJOFQ-aX_Xo-33" value="yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Gfv1eJ5I3AJOFQ-aX_Xo-30" source="Gfv1eJ5I3AJOFQ-aX_Xo-31" target="Gfv1eJ5I3AJOFQ-aX_Xo-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Gfv1eJ5I3AJOFQ-aX_Xo-34" value="visited[cord] = 1" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="Gfv1eJ5I3AJOFQ-aX_Xo-30">
+          <mxGeometry x="300.00254237288135" width="136.84745762711864" height="96.66666666666666" as="geometry" />
+        </mxCell>
+        <mxCell id="Gfv1eJ5I3AJOFQ-aX_Xo-35" value="no" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Gfv1eJ5I3AJOFQ-aX_Xo-30" source="Gfv1eJ5I3AJOFQ-aX_Xo-31" target="Gfv1eJ5I3AJOFQ-aX_Xo-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Gfv1eJ5I3AJOFQ-aX_Xo-6" value="int next = cord" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=10;" vertex="1" parent="Gfv1eJ5I3AJOFQ-aX_Xo-1">
+          <mxGeometry x="520" y="85" width="130" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Gfv1eJ5I3AJOFQ-aX_Xo-49" value="" style="group" vertex="1" connectable="0" parent="Gfv1eJ5I3AJOFQ-aX_Xo-1">
+          <mxGeometry x="1020" y="50" width="436.85" height="479" as="geometry" />
+        </mxCell>
+        <mxCell id="Gfv1eJ5I3AJOFQ-aX_Xo-50" value="tmp.second 가 1인가" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="Gfv1eJ5I3AJOFQ-aX_Xo-49">
+          <mxGeometry x="-37.32203389830508" width="236.37288135593218" height="96.66666666666666" as="geometry" />
+        </mxCell>
+        <mxCell id="Gfv1eJ5I3AJOFQ-aX_Xo-52" value="yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Gfv1eJ5I3AJOFQ-aX_Xo-49" source="Gfv1eJ5I3AJOFQ-aX_Xo-50" target="Gfv1eJ5I3AJOFQ-aX_Xo-57">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="80.80952380952385" y="193.33333333333326" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Gfv1eJ5I3AJOFQ-aX_Xo-53" value="DPP[cord] = cord&lt;br&gt;DP[cord] = DP[next + 1]&lt;br&gt;return tmp" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="Gfv1eJ5I3AJOFQ-aX_Xo-49">
+          <mxGeometry x="300.00254237288135" width="136.84745762711864" height="96.66666666666666" as="geometry" />
+        </mxCell>
+        <mxCell id="Gfv1eJ5I3AJOFQ-aX_Xo-54" value="no" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Gfv1eJ5I3AJOFQ-aX_Xo-49" source="Gfv1eJ5I3AJOFQ-aX_Xo-50" target="Gfv1eJ5I3AJOFQ-aX_Xo-53">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Gfv1eJ5I3AJOFQ-aX_Xo-56" value="" style="group" vertex="1" connectable="0" parent="Gfv1eJ5I3AJOFQ-aX_Xo-49">
+          <mxGeometry y="189" width="436.85" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="Gfv1eJ5I3AJOFQ-aX_Xo-57" value="next == tmp.first 인가" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="Gfv1eJ5I3AJOFQ-aX_Xo-56">
+          <mxGeometry x="-37.32203389830508" width="236.37288135593218" height="96.66666666666666" as="geometry" />
+        </mxCell>
+        <mxCell id="Gfv1eJ5I3AJOFQ-aX_Xo-58" value="DPP[cord] = cord&lt;br&gt;DP[cord] = DP[next + 1]&lt;br&gt;return {represent, 0}" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="Gfv1eJ5I3AJOFQ-aX_Xo-56">
+          <mxGeometry y="193.33333333333331" width="161.72881355932202" height="96.66666666666666" as="geometry" />
+        </mxCell>
+        <mxCell id="Gfv1eJ5I3AJOFQ-aX_Xo-59" value="yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Gfv1eJ5I3AJOFQ-aX_Xo-56" source="Gfv1eJ5I3AJOFQ-aX_Xo-57" target="Gfv1eJ5I3AJOFQ-aX_Xo-58">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Gfv1eJ5I3AJOFQ-aX_Xo-60" value="DPP[cord] = tmp.first&lt;br&gt;DP[tmp.first]++;&lt;br&gt;return tmp" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="Gfv1eJ5I3AJOFQ-aX_Xo-56">
+          <mxGeometry x="300.00254237288135" width="136.84745762711864" height="96.66666666666666" as="geometry" />
+        </mxCell>
+        <mxCell id="Gfv1eJ5I3AJOFQ-aX_Xo-61" value="no" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Gfv1eJ5I3AJOFQ-aX_Xo-56" source="Gfv1eJ5I3AJOFQ-aX_Xo-57" target="Gfv1eJ5I3AJOFQ-aX_Xo-60">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Gfv1eJ5I3AJOFQ-aX_Xo-46" value="d" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="Gfv1eJ5I3AJOFQ-aX_Xo-1">
+          <mxGeometry x="520" y="205" width="440" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="Gfv1eJ5I3AJOFQ-aX_Xo-47" value="&lt;h1&gt;예외처리&lt;/h1&gt;&lt;p&gt;1.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="Gfv1eJ5I3AJOFQ-aX_Xo-46">
+          <mxGeometry x="10" y="30" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Gfv1eJ5I3AJOFQ-aX_Xo-48" value="next&amp;nbsp; += cord % 10;&lt;br&gt;next %= n&lt;br&gt;cord / =10" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Gfv1eJ5I3AJOFQ-aX_Xo-46">
+          <mxGeometry x="240" y="50" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Gfv1eJ5I3AJOFQ-aX_Xo-45" value="pair&amp;lt;int, int&amp;gt; tmp =&amp;nbsp; DFS(next)" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=10;" vertex="1" parent="Gfv1eJ5I3AJOFQ-aX_Xo-1">
+          <mxGeometry x="520" y="385" width="200" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Gfv1eJ5I3AJOFQ-aX_Xo-2" value="전체 코드" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="780" width="830" height="980" as="geometry" />
+        </mxCell>
+        <mxCell id="Gfv1eJ5I3AJOFQ-aX_Xo-27" value="int i = 1 부터 N과 작거나 같을떄까지 까지 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="Gfv1eJ5I3AJOFQ-aX_Xo-2">
+          <mxGeometry x="80" y="60" width="570" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="Gfv1eJ5I3AJOFQ-aX_Xo-28" value="&lt;h1&gt;예외처리&lt;/h1&gt;&lt;p&gt;1. 없음&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="Gfv1eJ5I3AJOFQ-aX_Xo-27">
+          <mxGeometry x="10" y="30" width="386" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Gfv1eJ5I3AJOFQ-aX_Xo-29" value="!visited[i] 라면 dfs(i)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Gfv1eJ5I3AJOFQ-aX_Xo-27">
+          <mxGeometry x="70" y="130" width="300" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Gfv1eJ5I3AJOFQ-aX_Xo-40" value="int i = 1 부터 N과 작거나 같을떄까지 까지 반복" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="Gfv1eJ5I3AJOFQ-aX_Xo-2">
+          <mxGeometry x="80" y="570" width="570" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="Gfv1eJ5I3AJOFQ-aX_Xo-41" value="&lt;h1&gt;예외처리&lt;/h1&gt;&lt;p&gt;1. 없음&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="Gfv1eJ5I3AJOFQ-aX_Xo-40">
+          <mxGeometry x="10" y="30" width="386" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Gfv1eJ5I3AJOFQ-aX_Xo-42" value="MVal = max(MVal, value[i]);" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Gfv1eJ5I3AJOFQ-aX_Xo-40">
+          <mxGeometry x="70" y="130" width="300" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Gfv1eJ5I3AJOFQ-aX_Xo-43" value="int MVal = 0" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=10;" vertex="1" parent="Gfv1eJ5I3AJOFQ-aX_Xo-2">
+          <mxGeometry x="300" y="400" width="130" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Gfv1eJ5I3AJOFQ-aX_Xo-4" value="int n&lt;br&gt;visited&amp;lt;int&amp;gt; visited&lt;br&gt;vector&amp;lt;int&amp;gt; DP&lt;br&gt;vector&amp;lt;int&amp;gt; DPP;" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=10;" vertex="1" parent="1">
+          <mxGeometry x="80" y="80" width="470" height="90" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
