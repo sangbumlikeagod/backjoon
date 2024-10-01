@@ -7,80 +7,75 @@ using namespace std;
 
 vector<vector<int>> Game_Map;
 vector<vector<vector<int>>> DP_MAIN;
-vector<vector<vector<int>>> DP_RIGHT;
-vector<vector<vector<int>>> DP_UP;
+int DP_TABLE[20][20][4][20][20][4] = {0};
 
 // 북 동 남 서
 int dx[4] = {-1, 0, 1, 0};
 int dy[4] = {0, 1, 0, -1};
 int N;
 
-void dfs(queue<vector<int>> &nq, int &answer)
+void dfs(priority_queue<vector<int>, vector<vector<int>>, greater<vector<int>>> &nq, int &answer)
 {
     while (!nq.empty())
     {
-        vector<int> tmp = nq.front();
+        vector<int> tmp = nq.top();
         nq.pop();
-        int x = tmp[0], y = tmp[1], direction = tmp[2], sx = tmp[3], sy = tmp[4], sdirection = tmp[5], cost = tmp[6];
-        if ((x == 0 && y == N - 1) || (sx == 0 && sy == N - 1))
+        int cost = tmp[0], x = tmp[1], y = tmp[2], direction = tmp[3], sx = tmp[4], sy = tmp[5], sdirection = tmp[6];
+        if ((x == 0 && y == N - 1))
         {
-            cout << cost << ' ' << DP_MAIN[sx][sy][sdirection] << '\n';
+            cout << sx << ' ' << sy << ' ' << sdirection << ' ' << cost << ' ' << DP_MAIN[sx][sy][sdirection] << '\n';
             answer = min(answer, cost + DP_MAIN[sx][sy][sdirection]);
             continue;
         }
-
         // cout << x << ' ' << y << ' ' << direction << ' ' << answer << '\n';
         int nDirection = direction == 0 ? 3 : direction - 1;
         int nSDirection = sdirection == 0 ? 3 : sdirection - 1;
-        if (!DP_UP[x][y][(nDirection * 4 + nSDirection) * 4 * (sx * 20 + sy)])
+        if (!DP_TABLE[x][y][nDirection][sx][sy][nSDirection])
         {
-            DP_UP[x][y][(nDirection * 4 + nSDirection) * 4 * (sx * 20 + sy)] = 1;
-            nq.push({x,
+            DP_TABLE[x][y][nDirection][sx][sy][nSDirection] = 1;
+            nq.push({cost + 1,
+                     x,
                      y,
                      nDirection,
                      sx,
                      sy,
-                     nSDirection,
-                     cost + 1});
+                     nSDirection});
         }
         // 시계
         nDirection = direction == 3 ? 0 : direction + 1;
         nSDirection = sdirection == 3 ? 0 : sdirection + 1;
-        if (!DP_UP[x][y][(nDirection * 4 + nSDirection) * 4 * (sx * 20 + sy)])
+        if (!DP_TABLE[x][y][nDirection][sx][sy][nSDirection])
         {
-            DP_UP[x][y][(nDirection * 4 + nSDirection) * 4 * (sx * 20 + sy)] = 1;
-            nq.push({x,
+            DP_TABLE[x][y][nDirection][sx][sy][nSDirection] = 1;
+            nq.push({cost + 1,
+                     x,
                      y,
                      nDirection,
                      sx,
                      sy,
-                     nSDirection,
-                     cost + 1});
+                     nSDirection});
         }
         int nx = x + dx[direction];
         int ny = y + dy[direction];
-
         int nsX = sx + dx[sdirection];
         int nsY = sy + dy[sdirection];
         if (0 <= nx && nx < N && 0 <= ny && ny < N && !Game_Map[nx][ny])
         {
-            if (!DP_UP[nx][ny][direction * 4 + sdirection])
+            if (!(0 <= nsX && nsX < N && 0 <= nsY && nsY < N && !Game_Map[nsX][nsY]))
             {
-                DP_UP[nx][ny][direction * 4 + sdirection] = 1;
-
-                if (!(0 <= nsX && nsX < N && 0 <= nsY && nsY < N && !Game_Map[nsX][nsY]))
-                {
-                    nsX = sx;
-                    nsY = sy;
-                }
-
-                nq.push({nx,
+                nsX = sx;
+                nsY = sy;
+            }
+            if (!DP_TABLE[nx][ny][direction][nsX][nsY][sdirection])
+            {
+                DP_TABLE[nx][ny][direction][nsX][nsY][sdirection] = 1;
+                nq.push({cost + 1,
+                         nx,
                          ny,
                          direction,
                          nsX,
                          nsY,
-                         sdirection,
-                         cost + 1});
+                         sdirection});
             }
         }
     }
@@ -95,8 +90,7 @@ int main()
 
     Game_Map = vector<vector<int>>(N, vector<int>(N, 0));
     DP_MAIN = vector<vector<vector<int>>>(N, vector<vector<int>>(N, vector<int>(4, 1000000)));
-    DP_RIGHT = vector<vector<vector<int>>>(N, vector<vector<int>>(N, vector<int>(6400, 0)));
-    DP_UP = vector<vector<vector<int>>>(N, vector<vector<int>>(N, vector<int>(6400, 0)));
+
     for (int i = 0; i < N; i++)
     {
         cin >> s;
@@ -111,6 +105,7 @@ int main()
 
     priority_queue<vector<int>, vector<vector<int>>, greater<vector<int>>> q;
     // 비용, x, y, 방향
+
     q.push({0,
             0,
             N - 1,
@@ -166,30 +161,68 @@ int main()
     for (int i = 0; i < 4; i++)
     {
         DP_MAIN[0][N - 1][i] = 0;
-        DP_RIGHT[N - 1][0][i] = 0;
     }
-    queue<vector<int>> nq;
-    nq.push({N - 1,
-             0,
-             0,
-             N - 1,
-             0,
-             1,
-             0});
+    priority_queue<vector<int>, vector<vector<int>>, greater<vector<int>>> nq;
+    nq.push({
+        0,
+        N - 1,
+        0,
+        0,
+        N - 1,
+        0,
+        1,
+    });
+
+    nq.push({
+        0,
+        N - 1,
+        0,
+        1,
+        N - 1,
+        0,
+        0,
+    });
+
     int answer = 100000;
     dfs(nq, answer);
     cout << answer << '\n';
-    DP_UP = vector<vector<vector<int>>>(N, vector<vector<int>>(N, vector<int>(16, 0)));
-    nq = queue<vector<int>>();
-    nq.push({N - 1,
-             0,
-             1,
-             N - 1,
-             0,
-             0,
-             0});
-    dfs(nq, answer);
-    cout << answer << '\n';
+
+    for (int i = 0; i < N; i++)
+    {
+        for (int j = 0; j < N; j++)
+        {
+            cout << DP_MAIN[i][j][0] % 1000000 << ' ';
+        }
+        cout << '\n';
+    }
+    cout << '\n';
+    for (int i = 0; i < N; i++)
+    {
+        for (int j = 0; j < N; j++)
+        {
+            cout << DP_MAIN[i][j][1] % 1000000 << ' ';
+        }
+        cout << '\n';
+    }
+    cout << '\n';
+    for (int i = 0; i < N; i++)
+    {
+        for (int j = 0; j < N; j++)
+        {
+            cout << DP_MAIN[i][j][2] % 1000000 << ' ';
+        }
+        cout << '\n';
+    }
+    cout << '\n';
+    for (int i = 0; i < N; i++)
+    {
+        for (int j = 0; j < N; j++)
+        {
+            cout << DP_MAIN[i][j][3] % 1000000 << ' ';
+        }
+        cout << '\n';
+    }
+    cout << '\n';
 }
 
 // for (int i = 0; i < N; i++)

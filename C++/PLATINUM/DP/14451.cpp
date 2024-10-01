@@ -23,8 +23,8 @@ int main()
 
     Game_Map = vector<vector<int>>(N, vector<int>(N, 0));
     DP_MAIN = vector<vector<vector<int>>>(N, vector<vector<int>>(N, vector<int>(4, 0)));
-    DP_RIGHT = vector<vector<vector<int>>>(N, vector<vector<int>>(N, vector<int>(4, 0)));
-    DP_UP = vector<vector<vector<int>>>(N, vector<vector<int>>(N, vector<int>(4, 0)));
+    DP_RIGHT = vector<vector<vector<int>>>(N, vector<vector<int>>(N, vector<int>(16, 0)));
+    DP_UP = vector<vector<vector<int>>>(N, vector<vector<int>>(N, vector<int>(16, 0)));
     for (int i = 0; i < N; i++)
     {
         cin >> s;
@@ -91,7 +91,7 @@ int main()
         }
     }
 
-    int limit = 10000, answer = 10000;
+    int limit = 10000;
     // 북쪽 먼저
     q = priority_queue<vector<int>, vector<vector<int>>, greater<vector<int>>>();
     q.push({0,
@@ -117,17 +117,17 @@ int main()
         if (x == 0 && y == N - 1)
         {
             limit = min(limit, cost + DP_MAIN[sX][sY][sDirection]);
-            printf("상세 %d, (%d, %d), %d, (%d, %d), %d , 결과 : %d \n", tmp[0], tmp[1], tmp[2], tmp[3], tmp[4], tmp[5], tmp[6], cost + DP_MAIN[sX][sY][sDirection]);
+            printf("섹스 상세 %d, (%d, %d), %d, (%d, %d), %d , 결과 : %d \n", tmp[0], tmp[1], tmp[2], tmp[3], tmp[4], tmp[5], tmp[6], cost + DP_MAIN[sX][sY][sDirection]);
 
             continue;
         }
-        printf("상세 %d, (%d, %d), %d, (%d, %d), %d \n", tmp[0], tmp[1], tmp[2], tmp[3], tmp[4], tmp[5], tmp[6]);
+        printf("섹스 상세 %d, (%d, %d), %d, (%d, %d), %d \n", tmp[0], tmp[1], tmp[2], tmp[3], tmp[4], tmp[5], tmp[6]);
 
         int nDirection = direction == 0 ? 3 : direction - 1;
         int nSDirection = sDirection == 0 ? 3 : sDirection - 1;
-        if (!DP_RIGHT[x][y][nDirection])
+        if (!DP_RIGHT[x][y][nDirection * 4 + nSDirection])
         {
-            DP_RIGHT[x][y][nDirection] = cost + 1;
+            DP_RIGHT[x][y][nDirection * 4 + nSDirection] = cost + 1;
             q.push({
                 cost + 1,
                 x,
@@ -141,9 +141,9 @@ int main()
         // 시계
         nDirection = direction == 3 ? 0 : direction + 1;
         nSDirection = sDirection == 3 ? 0 : sDirection + 1;
-        if (!DP_RIGHT[x][y][nDirection])
+        if (!DP_RIGHT[x][y][nDirection * 4 + nSDirection])
         {
-            DP_RIGHT[x][y][nDirection] = cost + 1;
+            DP_RIGHT[x][y][nDirection * 4 + nSDirection] = cost + 1;
             q.push({
                 cost + 1,
                 x,
@@ -161,9 +161,9 @@ int main()
         int nsY = sY + dy[sDirection];
         if (0 <= nx && nx < N && 0 <= ny && ny < N && !Game_Map[nx][ny])
         {
-            if (!DP_RIGHT[nx][ny][direction])
+            if (!DP_RIGHT[nx][ny][direction * 4 + sDirection])
             {
-                DP_RIGHT[nx][ny][direction] = cost + 1;
+                DP_RIGHT[nx][ny][direction * 4 + sDirection] = cost + 1;
 
                 if (!(0 <= nsX && nsX < N && 0 <= nsY && nsY < N && !Game_Map[nsX][nsY]))
                 {
@@ -208,13 +208,13 @@ int main()
             printf("상세 %d, (%d, %d), %d, (%d, %d), %d , 결과 : %d \n", tmp[0], tmp[1], tmp[2], tmp[3], tmp[4], tmp[5], tmp[6], cost + DP_MAIN[sX][sY][sDirection]);
             continue;
         }
-        printf("상세 %d, (%d, %d), %d, (%d, %d), %d \n", tmp[0], tmp[1], tmp[2], tmp[3], tmp[4], tmp[5], tmp[6]);
+        printf("시발 상세 %d, (%d, %d), %d, (%d, %d), %d \n", tmp[0], tmp[1], tmp[2], tmp[3], tmp[4], tmp[5], tmp[6]);
 
         int nDirection = direction == 0 ? 3 : direction - 1;
         int nSDirection = sDirection == 0 ? 3 : sDirection - 1;
-        if (!DP_UP[x][y][nDirection])
+        if (!DP_UP[x][y][nDirection * 4 + nSDirection])
         {
-            DP_UP[x][y][nDirection] = cost + 1;
+            DP_UP[x][y][nDirection * 4 + nSDirection] = cost + 1;
             q.push({
                 cost + 1,
                 x,
@@ -228,9 +228,9 @@ int main()
         // 시계
         nDirection = direction == 3 ? 0 : direction + 1;
         nSDirection = sDirection == 3 ? 0 : sDirection + 1;
-        if (!DP_UP[x][y][nDirection])
+        if (!DP_UP[x][y][nDirection * 4 + nSDirection])
         {
-            DP_UP[x][y][nDirection] = cost + 1;
+            DP_UP[x][y][nDirection * 4 + nSDirection] = cost + 1;
             q.push({
                 cost + 1,
                 x,
@@ -248,9 +248,9 @@ int main()
         int nsY = sY + dy[sDirection];
         if (0 <= nx && nx < N && 0 <= ny && ny < N && !Game_Map[nx][ny])
         {
-            if (!DP_UP[nx][ny][direction])
+            if (!DP_UP[nx][ny][direction * 4 + sDirection])
             {
-                DP_UP[nx][ny][direction] = cost + 1;
+                DP_UP[nx][ny][direction * 4 + sDirection] = cost + 1;
 
                 if (!(0 <= nsX && nsX < N && 0 <= nsY && nsY < N && !Game_Map[nsX][nsY]))
                 {
