@@ -1,1 +1,2 @@
-int mas = 5;
+int mas = 5
+shat
